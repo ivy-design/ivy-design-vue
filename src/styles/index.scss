@@ -1,0 +1,8 @@
+@import './common/var.scss';
+@import './icon.scss';
+
+:root {
+  @each $name, $color in $colors {
+    --#{$name}: #{$color};
+  }
+}
