@@ -1,1 +1,1 @@
-export const prefix = 'ivy-'
+export const prefix = "ivy-";

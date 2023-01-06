@@ -1,8 +1,9 @@
-@import './common/var.scss';
-@import './icon.scss';
+@import "./common/var.scss";
+@import "./icon.scss";
+@import "./button.scss";
 
 :root {
-  @each $name, $color in $colors {
-    --#{$name}: #{$color};
-  }
+    @each $name, $color in $colors {
+        --#{$name}: #{$color};
+    }
 }

@@ -1,15 +1,13 @@
-import type {App,Component} from 'vue'
-import icon from './icon/index'
+import type { App, Component } from "vue";
+import Icon from "./icon/index";
+import Button from "./button/index";
 
-const components:Component[] = [
-    icon
-]
+const components: Component[] = [Icon, Button];
 
-export {icon}
+export { Icon, Button };
 
-export default (app:App)=>{
-    components.forEach(comp=>{
-        app.component(comp.name as string, comp)
-    })
-
-}
+export default (app: App) => {
+    components.forEach(comp => {
+        app.component(comp.name as string, comp);
+    });
+};
