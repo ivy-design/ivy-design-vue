@@ -1,24 +1,47 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+// import { reactive } from "vue";
+</script>
 
 <template>
-    <ivy-icon name="arrow-left"></ivy-icon>
-    <ivy-icon name="loading"></ivy-icon>
-
-    <ivy-button>默认</ivy-button>
-    <ivy-button type="primary">主要</ivy-button>
-    <ivy-button type="success">成功</ivy-button>
-    <ivy-button type="warning">警告</ivy-button>
-    <ivy-button type="danger">危险</ivy-button>
-    <ivy-button type="info">信息</ivy-button>
+    <div>
+        <ivy-tag type="primary">tag</ivy-tag>
+        <ivy-tag type="success">tag</ivy-tag>
+        <ivy-tag type="warning">tag</ivy-tag>
+        <ivy-tag type="danger">tag</ivy-tag>
+        <ivy-tag type="info">tag</ivy-tag>
+    </div>
+    <div class="margin-top">
+        <ivy-tag type="primary">tag</ivy-tag>
+        <ivy-tag type="success">tag</ivy-tag>
+        <ivy-tag type="warning">tag</ivy-tag>
+        <ivy-tag type="danger">tag</ivy-tag>
+        <ivy-tag type="info">tag</ivy-tag>
+    </div>
+    <div class="margin-top">
+        <ivy-tag type="primary" theme="dark">tag</ivy-tag>
+        <ivy-tag type="success" theme="dark">tag</ivy-tag>
+        <ivy-tag type="warning" theme="dark">tag</ivy-tag>
+        <ivy-tag type="danger" theme="dark">tag</ivy-tag>
+        <ivy-tag type="info" theme="dark">tag</ivy-tag>
+    </div>
+    <div class="margin-top">
+        <ivy-tag type="primary" theme="plain">tag</ivy-tag>
+        <ivy-tag type="success" theme="plain">tag</ivy-tag>
+        <ivy-tag type="warning" theme="plain">tag</ivy-tag>
+        <ivy-tag type="danger" theme="plain">tag</ivy-tag>
+        <ivy-tag type="info" theme="plain">tag</ivy-tag>
+    </div>
+    <div class="margin-top">
+        <ivy-tag type="primary" size="mini">tag</ivy-tag>
+        <ivy-tag type="primary" size="small">tag</ivy-tag>
+        <ivy-tag type="primary" size="medium">tag</ivy-tag>
+        <ivy-tag type="primary" size="large">tag</ivy-tag>
+    </div>
+    <ivy-tag type="primary" size="large" closable>tag</ivy-tag>
 </template>
 
 <style scoped>
-header {
-    line-height: 1.5;
-}
-
-.logo {
-    display: block;
-    margin: 0 auto 2rem;
+.margin-top {
+    margin-top: 24px;
 }
 </style>

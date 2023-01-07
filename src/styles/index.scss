@@ -1,6 +1,7 @@
 @import "./common/var.scss";
 @import "./icon.scss";
 @import "./button.scss";
+@import "./tag.scss";
 
 :root {
     @each $name, $color in $colors {
