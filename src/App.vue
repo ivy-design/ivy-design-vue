@@ -4,40 +4,38 @@
 
 <template>
     <div>
-        <ivy-tag type="primary">tag</ivy-tag>
-        <ivy-tag type="success">tag</ivy-tag>
-        <ivy-tag type="warning">tag</ivy-tag>
-        <ivy-tag type="danger">tag</ivy-tag>
-        <ivy-tag type="info">tag</ivy-tag>
+        <p>
+            Steven Paul Jobs was an American entrepreneur and business magnate. He was the chairman, chief executive officer, and a
+            co-founder of Apple Inc.
+        </p>
+        <ivy-divider>tag</ivy-divider>
+        <p>
+            Steven Paul Jobs was an American entrepreneur and business magnate. He was the chairman, chief executive officer, and a
+            co-founder of Apple Inc.
+        </p>
+        <ivy-divider placement="left">tag</ivy-divider>
+        <p>
+            Steven Paul Jobs was an American entrepreneur and business magnate. He was the chairman, chief executive officer, and a
+            co-founder of Apple Inc.
+        </p>
+        <ivy-divider placement="center">tag</ivy-divider>
+        <p>
+            Steven Paul Jobs was an American entrepreneur and business magnate. He was the chairman, chief executive officer, and a
+            co-founder of Apple Inc.
+        </p>
+        <ivy-divider placement="right">tag</ivy-divider>
+        <p>
+            Steven Paul Jobs was an American entrepreneur and business magnate. He was the chairman, chief executive officer, and a
+            co-founder of Apple Inc.
+        </p>
+        <div>
+            <span>a</span>
+            <ivy-divider type="vertical">tag</ivy-divider>
+            <span> b </span>
+            <ivy-divider type="vertical">tag</ivy-divider>
+            <span> c </span>
+        </div>
     </div>
-    <div class="margin-top">
-        <ivy-tag type="primary">tag</ivy-tag>
-        <ivy-tag type="success">tag</ivy-tag>
-        <ivy-tag type="warning">tag</ivy-tag>
-        <ivy-tag type="danger">tag</ivy-tag>
-        <ivy-tag type="info">tag</ivy-tag>
-    </div>
-    <div class="margin-top">
-        <ivy-tag type="primary" theme="dark">tag</ivy-tag>
-        <ivy-tag type="success" theme="dark">tag</ivy-tag>
-        <ivy-tag type="warning" theme="dark">tag</ivy-tag>
-        <ivy-tag type="danger" theme="dark">tag</ivy-tag>
-        <ivy-tag type="info" theme="dark">tag</ivy-tag>
-    </div>
-    <div class="margin-top">
-        <ivy-tag type="primary" theme="plain">tag</ivy-tag>
-        <ivy-tag type="success" theme="plain">tag</ivy-tag>
-        <ivy-tag type="warning" theme="plain">tag</ivy-tag>
-        <ivy-tag type="danger" theme="plain">tag</ivy-tag>
-        <ivy-tag type="info" theme="plain">tag</ivy-tag>
-    </div>
-    <div class="margin-top">
-        <ivy-tag type="primary" size="mini">tag</ivy-tag>
-        <ivy-tag type="primary" size="small">tag</ivy-tag>
-        <ivy-tag type="primary" size="medium">tag</ivy-tag>
-        <ivy-tag type="primary" size="large">tag</ivy-tag>
-    </div>
-    <ivy-tag type="primary" size="large" closable>tag</ivy-tag>
 </template>
 
 <style scoped>
