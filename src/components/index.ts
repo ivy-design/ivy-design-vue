@@ -11,10 +11,11 @@ import Footer from "./footer/index";
 import Aside from "./aside/index";
 import Main from "./main/index";
 import Card from "./card/index";
+import Alert from "./alert/index";
 
-const components: Component[] = [Icon, Button, Tag, Divider, Row, Col, Layout, Header, Footer, Aside, Main, Card];
+const components: Component[] = [Icon, Button, Tag, Divider, Row, Col, Layout, Header, Footer, Aside, Main, Card, Alert];
 
-export { Icon, Button, Tag, Divider, Row, Col, Layout, Header, Footer, Aside, Main, Card };
+export { Icon, Button, Tag, Divider, Row, Col, Layout, Header, Footer, Aside, Main, Card, Alert };
 
 export default (app: App) => {
     components.forEach(comp => {
