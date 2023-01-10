@@ -10,6 +10,7 @@
 @import "./footer.scss";
 @import "./aside.scss";
 @import "./main.scss";
+@import "./card.scss";
 
 :root {
     @each $name, $color in $colors {
