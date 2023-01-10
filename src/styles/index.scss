@@ -5,6 +5,11 @@
 @import "./divider.scss";
 @import "./row.scss";
 @import "./col.scss";
+@import "./layout.scss";
+@import "./header.scss";
+@import "./footer.scss";
+@import "./aside.scss";
+@import "./main.scss";
 
 :root {
     @each $name, $color in $colors {
