@@ -3,6 +3,8 @@
 @import "./button.scss";
 @import "./tag.scss";
 @import "./divider.scss";
+@import "./row.scss";
+@import "./col.scss";
 
 :root {
     @each $name, $color in $colors {
