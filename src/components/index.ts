@@ -21,6 +21,9 @@ import Breadcrumb from "./breadcrumb/index";
 import BreadcrumbItem from "./breadcrumb-item/index";
 import Timeline from "./timeline/index";
 import TimelineItem from "./timeline-item/index";
+import CollapseTransition from "./collapse-transition/index";
+import Collapse from "./collapse/index";
+import CollapseItem from "./collapse-item/index";
 
 const components: Component[] = [
     Icon,
@@ -45,6 +48,9 @@ const components: Component[] = [
     BreadcrumbItem,
     Timeline,
     TimelineItem,
+    CollapseTransition,
+    Collapse,
+    CollapseItem,
 ];
 
 export {
@@ -70,6 +76,9 @@ export {
     BreadcrumbItem,
     Timeline,
     TimelineItem,
+    CollapseTransition,
+    Collapse,
+    CollapseItem,
 };
 
 export default (app: App) => {
