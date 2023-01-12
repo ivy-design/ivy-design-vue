@@ -43,7 +43,6 @@ export default defineComponent({
                 }
                 emit("update:modelValue", value.value);
             }
-            console.log(value.value);
         });
 
         return () => <div class="ivy-collapse">{slots.default?.()}</div>;
