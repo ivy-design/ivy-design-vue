@@ -17,6 +17,8 @@ import { VirtualListItem } from "./virtual-list/index";
 import CountUp from "./count-up/index";
 import Cell from "./cell/index";
 import CellGroup from "./cell-group/index";
+import Breadcrumb from "./breadcrumb/index";
+import BreadcrumbItem from "./breadcrumb-item/index";
 
 const components: Component[] = [
     Icon,
@@ -37,6 +39,8 @@ const components: Component[] = [
     CountUp,
     CellGroup,
     Cell,
+    Breadcrumb,
+    BreadcrumbItem,
 ];
 
 export {
@@ -58,6 +62,8 @@ export {
     CountUp,
     CellGroup,
     Cell,
+    Breadcrumb,
+    BreadcrumbItem,
 };
 
 export default (app: App) => {

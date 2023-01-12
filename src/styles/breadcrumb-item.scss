@@ -1,0 +1,33 @@
+@import "./common/var.scss";
+.ivy-breadcrumb-item {
+    display: inline-flex;
+    align-items: center;
+    color: var(--ivy-color-text-primary);
+    &:not(:first-child) {
+        margin-left: var(--ivy-breadcrumb-gutter, 6px);
+    }
+    & > a {
+        &:hover {
+            color: var(--ivy-color-primary);
+        }
+    }
+    &-text {
+        text-decoration: none;
+        transition: color 0.2s ease-in-out;
+        color: var(--ivy-color-text-primary);
+    }
+    &-symbol {
+        margin-left: var(--ivy-breadcrumb-gutter, 6px);
+    }
+    &:last-child {
+        font-weight: 700;
+        color: var(ivy-color-text-regular);
+        cursor: default;
+        .ivy-breadcrumb-item-text {
+            color: var(--ivy-color-text-secondary);
+        }
+        .ivy-breadcrumb-item-symbol {
+            display: none;
+        }
+    }
+}

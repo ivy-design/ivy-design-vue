@@ -1,23 +1,34 @@
 <script setup lang="ts">
-// import { reactive } from "vue";
+import { ref, onMounted } from "vue";
+interface Data {
+    text: string;
+    id: number;
+}
+const data = ref<Data[]>([]);
+
+onMounted(() => {
+    for (let index = 0; index < 1000; index++) {
+        data.value.push({
+            text: `第${index}个子项`,
+            id: index,
+        });
+    }
+});
 </script>
 
 <template>
+    <router-view></router-view>
     <div>
-        <ivy-alert style="width: 700px; margin-top: 48px" type="success" header="标题" show-icon>
-            <p>dfasfdasdfsadfdsfsadf发射点发大水发的法大师傅撒旦富士达法撒旦法撒旦 书法大赛</p>
-        </ivy-alert>
-        <ivy-alert style="width: 700px; margin-top: 48px" type="warning" show-icon>
-            <template #header> Card 标题 slot </template>
-            <p>dfasfdasdfsadfdsfsadf发射点发大水发的法大师傅撒旦富士达法撒旦法撒旦 书法大赛</p>
-        </ivy-alert>
-        <ivy-alert style="width: 700px; margin-top: 48px" type="danger" show-icon>
-            <template #header> Card 标题 slot </template>
-            <p>dfasfdasdfsadfdsfsadf发射点发大水发的法大师傅撒旦富士达法撒旦法撒旦 书法大赛</p>
-        </ivy-alert>
-        <ivy-alert style="width: 700px; margin-top: 48px" type="info" header="标题" show-icon>
-            <p>dfasfdasdfsadfdsfsadf发射点发大水发的法大师傅撒旦富士达法撒旦法撒旦 书法大赛</p>
-        </ivy-alert>
+        <!-- <ivy-count-up :end="400" :duration="6000" prefix="￥"></ivy-count-up> -->
+        <!-- <ivy-virtual-list height="600px" style="width: 700px; margin-top: 48px" :source="data" item-height="42px">
+            <ivy-virtual-list-item v-for="item in data" :key="item.id">{{ item.text }}</ivy-virtual-list-item>
+        </ivy-virtual-list> -->
+
+        <ivy-breadcrumb>
+            <ivy-breadcrumb-item to="/">首页</ivy-breadcrumb-item>
+            <ivy-breadcrumb-item to="/layout">Layout</ivy-breadcrumb-item>
+            <ivy-breadcrumb-item>current</ivy-breadcrumb-item>
+        </ivy-breadcrumb>
     </div>
 </template>
 
@@ -33,5 +44,23 @@
 }
 .margin-top > div:nth-child(even) {
     background-color: blanchedalmond;
+}
+.page-radio {
+    font-size: 14px;
+    background-color: #fff;
+}
+.page-radio-item {
+    padding: 20px;
+}
+h1 {
+    font-weight: 500;
+    font-size: 1.7em;
+}
+.page-radio-item-content {
+    padding: 20px;
+    border: 1px solid #eeeeee;
+}
+.progress-item + .progress-item {
+    margin-top: 20px;
 }
 </style>

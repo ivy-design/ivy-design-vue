@@ -6,10 +6,7 @@ export default defineComponent({
     name: `${prefix}icon`,
     props: {
         name: String,
-        size: {
-            type: [Number, String],
-            default: 20,
-        },
+        size: [Number, String],
     },
     setup(props) {
         return () => (
