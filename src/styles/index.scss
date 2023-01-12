@@ -15,9 +15,13 @@
 @import "./virtual-list.scss";
 @import "./cell.scss";
 @import "./cell-group.scss";
+@import "./breadcrumb.scss";
+@import "./breadcrumb-item.scss";
+@import "./timeline.scss";
+@import "./timeline-item.scss";
 
 :root {
-    @each $name, $color in $colors {
+    @each $name, $color in $maps {
         --#{$name}: #{$color};
     }
 }

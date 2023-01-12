@@ -7,7 +7,7 @@ $ivy-color-warning: #e6a23c !default;
 $ivy-color-danger: #f56c6c !default;
 $ivy-color-info: #909399 !default;
 
-$colors: (
+$maps: (
     ivy-color-white: #fff,
     ivy-color-black: #000,
     ivy-color-primary: #409eff,
@@ -69,4 +69,9 @@ $colors: (
     ivy-border-color-lighter: #ebeef5,
     ivy-border-color-extra-light: #f2f6fc,
     ivy-shadow: drop-shadow(0 0 10px rgba(0, 0, 0, 0.15)),
+    ivy-font-size: 14px,
+    ivy-font-size-small: 12px,
+
+    ivy-timeline-node-size: 12px,
+    ivy-timeline-node-size-large: 14px,
 ) !default;

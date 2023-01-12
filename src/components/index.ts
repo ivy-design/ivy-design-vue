@@ -19,6 +19,8 @@ import Cell from "./cell/index";
 import CellGroup from "./cell-group/index";
 import Breadcrumb from "./breadcrumb/index";
 import BreadcrumbItem from "./breadcrumb-item/index";
+import Timeline from "./timeline/index";
+import TimelineItem from "./timeline-item/index";
 
 const components: Component[] = [
     Icon,
@@ -41,6 +43,8 @@ const components: Component[] = [
     Cell,
     Breadcrumb,
     BreadcrumbItem,
+    Timeline,
+    TimelineItem,
 ];
 
 export {
@@ -64,6 +68,8 @@ export {
     Cell,
     Breadcrumb,
     BreadcrumbItem,
+    Timeline,
+    TimelineItem,
 };
 
 export default (app: App) => {
