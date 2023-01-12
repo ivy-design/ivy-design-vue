@@ -12,10 +12,53 @@ import Aside from "./aside/index";
 import Main from "./main/index";
 import Card from "./card/index";
 import Alert from "./alert/index";
+import VirtualList from "./virtual-list/index";
+import { VirtualListItem } from "./virtual-list/index";
+import CountUp from "./count-up/index";
+import Cell from "./cell/index";
+import CellGroup from "./cell-group/index";
 
-const components: Component[] = [Icon, Button, Tag, Divider, Row, Col, Layout, Header, Footer, Aside, Main, Card, Alert];
+const components: Component[] = [
+    Icon,
+    Button,
+    Tag,
+    Divider,
+    Row,
+    Col,
+    Layout,
+    Header,
+    Footer,
+    Aside,
+    Main,
+    Card,
+    Alert,
+    VirtualList,
+    VirtualListItem,
+    CountUp,
+    CellGroup,
+    Cell,
+];
 
-export { Icon, Button, Tag, Divider, Row, Col, Layout, Header, Footer, Aside, Main, Card, Alert };
+export {
+    Icon,
+    Button,
+    Tag,
+    Divider,
+    Row,
+    Col,
+    Layout,
+    Header,
+    Footer,
+    Aside,
+    Main,
+    Card,
+    Alert,
+    VirtualList,
+    VirtualListItem,
+    CountUp,
+    CellGroup,
+    Cell,
+};
 
 export default (app: App) => {
     components.forEach(comp => {

@@ -12,6 +12,9 @@
 @import "./main.scss";
 @import "./card.scss";
 @import "./alert.scss";
+@import "./virtual-list.scss";
+@import "./cell.scss";
+@import "./cell-group.scss";
 
 :root {
     @each $name, $color in $colors {
