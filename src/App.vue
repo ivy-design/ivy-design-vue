@@ -3,23 +3,71 @@ import { ref, onMounted } from "vue";
 interface Data {
     text: string;
     id: number;
+    name: string;
+    age: number;
 }
-const data = ref<Data[]>([]);
-
-const visible = ref(false);
-
-const open = () => {
-    visible.value = true;
-};
-
-onMounted(() => {
-    for (let index = 0; index < 1000; index++) {
-        data.value.push({
-            text: `第${index}个子项`,
-            id: index,
-        });
-    }
-});
+const data = ref<Data[]>([
+    {
+        id: 1,
+        name: "张三",
+        age: 18,
+        text: "随便写的",
+    },
+    {
+        id: 2,
+        name: "张三",
+        age: 18,
+        text: "随便写的",
+    },
+    {
+        id: 3,
+        name: "张三",
+        age: 18,
+        text: "随便写的",
+    },
+    {
+        id: 4,
+        name: "张三",
+        age: 18,
+        text: "随便写的",
+    },
+    {
+        id: 5,
+        name: "张三",
+        age: 18,
+        text: "随便写的",
+    },
+    {
+        id: 6,
+        name: "张三",
+        age: 18,
+        text: "随便写的",
+    },
+    {
+        id: 7,
+        name: "张三",
+        age: 18,
+        text: "随便写的",
+    },
+    {
+        id: 8,
+        name: "张三",
+        age: 18,
+        text: "随便写的",
+    },
+    {
+        id: 9,
+        name: "张三",
+        age: 18,
+        text: "随便写的",
+    },
+    {
+        id: 10,
+        name: "张三",
+        age: 18,
+        text: "随便写的",
+    },
+]);
 </script>
 
 <template>
@@ -30,17 +78,12 @@ onMounted(() => {
             <ivy-virtual-list-item v-for="item in data" :key="item.id">{{ item.text }}</ivy-virtual-list-item>
         </ivy-virtual-list> -->
 
-        <ivy-button @click="open" type="primary">打开dialog</ivy-button>
-
-        <ivy-dialog v-model="visible" header="Dialog 标题">
-            <ivy-card header="卡片标题" shadow="never">
-                <p>
-                    通常我们不建议使用嵌套对话框。 如果你需要在页面上呈现多个对话框，你可以简单地打平它们，以便它们彼此之间是平级关系。
-                    如果必须要在一个对话框内展示另一个对话框，可以将内部嵌套的对话框属性 append-to-body 设置为 true，嵌套的对话框将附加到
-                    body 而不是其父节点，这样两个对话框都可以被正确地渲染。
-                </p>
-            </ivy-card>
-        </ivy-dialog>
+        <ivy-table :data="data" header="Dialog 标题">
+            <ivy-table-column prop="id" label="id" width="100px"> </ivy-table-column>
+            <ivy-table-column prop="name" label="姓名"> </ivy-table-column>
+            <ivy-table-column prop="age" label="年龄"> </ivy-table-column>
+            <ivy-table-column prop="text" label="备注"> </ivy-table-column>
+        </ivy-table>
     </div>
 </template>
 

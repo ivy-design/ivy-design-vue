@@ -27,6 +27,8 @@ import CollapseItem from "./collapse-item/index";
 import Steps from "./steps/index";
 import Step from "./step/index";
 import Dialog from "./dialog/index";
+import Table from "./table/index";
+import TableColumn from "./table-column/index";
 
 const components: Component[] = [
     Icon,
@@ -57,6 +59,8 @@ const components: Component[] = [
     Steps,
     Step,
     Dialog,
+    Table,
+    TableColumn,
 ];
 
 export {
@@ -88,6 +92,8 @@ export {
     Steps,
     Step,
     Dialog,
+    Table,
+    TableColumn,
 };
 
 export default (app: App) => {

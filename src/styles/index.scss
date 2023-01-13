@@ -25,6 +25,7 @@
 @import "./steps.scss";
 @import "./step.scss";
 @import "./dialog.scss";
+@import "./table.scss";
 
 :root {
     @each $name, $color in $maps {
