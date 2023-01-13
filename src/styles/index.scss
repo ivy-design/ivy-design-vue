@@ -24,6 +24,7 @@
 @import "./collapse-transition.scss";
 @import "./steps.scss";
 @import "./step.scss";
+@import "./dialog.scss";
 
 :root {
     @each $name, $color in $maps {

@@ -24,6 +24,9 @@ import TimelineItem from "./timeline-item/index";
 import CollapseTransition from "./collapse-transition/index";
 import Collapse from "./collapse/index";
 import CollapseItem from "./collapse-item/index";
+import Steps from "./steps/index";
+import Step from "./step/index";
+import Dialog from "./dialog/index";
 
 const components: Component[] = [
     Icon,
@@ -51,6 +54,9 @@ const components: Component[] = [
     CollapseTransition,
     Collapse,
     CollapseItem,
+    Steps,
+    Step,
+    Dialog,
 ];
 
 export {
@@ -79,6 +85,9 @@ export {
     CollapseTransition,
     Collapse,
     CollapseItem,
+    Steps,
+    Step,
+    Dialog,
 };
 
 export default (app: App) => {
