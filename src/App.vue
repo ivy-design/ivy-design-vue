@@ -78,18 +78,31 @@ const data = ref<Data[]>([
             <ivy-virtual-list-item v-for="item in data" :key="item.id">{{ item.text }}</ivy-virtual-list-item>
         </ivy-virtual-list> -->
 
-        <ivy-table :data="data" header="Dialog 标题">
+        <!-- <ivy-table :data="data" header="Dialog 标题">
             <ivy-table-column prop="id" label="id" width="100px"> </ivy-table-column>
             <ivy-table-column prop="name" label="姓名"> </ivy-table-column>
             <ivy-table-column prop="age" label="年龄"> </ivy-table-column>
             <ivy-table-column prop="text" label="备注"> </ivy-table-column>
-        </ivy-table>
+        </ivy-table> -->
+
+        <ivy-badge :value="11" class="margin-right">
+            <ivy-button>通知</ivy-button>
+        </ivy-badge>
+        <ivy-badge :value="100" class="margin-right">1232132</ivy-badge>
+        <ivy-badge :value="11" type="primary" class="margin-right">2</ivy-badge>
+        <ivy-badge :value="11" type="danger" class="margin-right">2</ivy-badge>
+        <ivy-badge :value="11" type="success" class="margin-right">2</ivy-badge>
+        <ivy-badge :value="11" type="warning" class="margin-right">2</ivy-badge>
+        <ivy-badge :value="11" type="info" class="margin-right">2</ivy-badge>
     </div>
 </template>
 
 <style scoped>
 .margin-top {
     margin-top: 24px;
+}
+.margin-right{
+    margin-right: 24px;
 }
 .margin-top > div {
     text-align: center;

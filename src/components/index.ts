@@ -29,6 +29,7 @@ import Step from "./step/index";
 import Dialog from "./dialog/index";
 import Table from "./table/index";
 import TableColumn from "./table-column/index";
+import Badge from "./badge/index";
 
 const components: Component[] = [
     Icon,
@@ -61,6 +62,7 @@ const components: Component[] = [
     Dialog,
     Table,
     TableColumn,
+    Badge,
 ];
 
 export {
@@ -94,6 +96,7 @@ export {
     Dialog,
     Table,
     TableColumn,
+    Badge,
 };
 
 export default (app: App) => {

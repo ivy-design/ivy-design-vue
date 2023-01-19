@@ -12,7 +12,7 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "render-component": "node ./scripts/render-component.mjs"
+    "g": "node ./scripts/render-component.mjs"
   },
   "dependencies": {
     "vue": "^3.2.45",
