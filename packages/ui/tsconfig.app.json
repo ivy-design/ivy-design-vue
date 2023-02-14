@@ -5,6 +5,9 @@
   "compilerOptions": {
     "composite": true,
     "baseUrl": ".",
+    "emitDeclarationOnly": true,
+    "declarationDir": "types",
+    "declaration": true,
     "paths": {
       "@/*": ["./src/*"]
     }

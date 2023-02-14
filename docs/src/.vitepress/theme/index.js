@@ -1,6 +1,6 @@
 import DefaultTheme from "vitepress/theme";
-import { button } from "ivy-design";
-import "ivy-design/dist/style.css";
+import ivyUi from "@ivy-design/vue";
+import "@ivy-design/vue/dist/style.css";
 
 export default {
     ...DefaultTheme,
@@ -9,6 +9,6 @@ export default {
         DefaultTheme.enhanceApp(ctx);
 
         // register your custom global components
-        ctx.app.use(button);
+        ctx.app.use(ivyUi);
     },
 };

@@ -66,7 +66,7 @@ const sidebar = {
 
 export default defineConfig({
     lang: "zh-CN",
-    title: "ivy-ui",
+    title: "@ivy-design/vue",
     lastUpdated: true,
     titleTemplate: ":title",
     themeConfig: {

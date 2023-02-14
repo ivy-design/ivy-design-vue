@@ -44,9 +44,13 @@ export default defineComponent({
                 startTime.value = timestamp;
             }
             const progress = timestamp - startTime.value;
-            currentVal.value = props.start + (props.end - props.start) * (progress / props.duration);
+            currentVal.value =
+                props.start +
+                (props.end - props.start) * (progress / props.duration);
 
-            const isPast = finished.value ? currentVal.value < props.end : currentVal.value > props.end;
+            const isPast = finished.value
+                ? currentVal.value < props.end
+                : currentVal.value > props.end;
 
             currentVal.value = parseVal(isPast ? props.end : currentVal.value);
 
