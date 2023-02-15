@@ -13,12 +13,16 @@
 <ivy-button type="danger">danger</ivy-button>
 <ivy-button type="info">info</ivy-button>
 
+----------
+
 <ivy-button plain>朴素按钮</ivy-button>
 <ivy-button type="primary" plain>主要按钮</ivy-button>
 <ivy-button type="success" plain>success</ivy-button>
 <ivy-button type="warning" plain>warning</ivy-button>
 <ivy-button type="danger" plain>danger</ivy-button>
 <ivy-button type="info" plain>info</ivy-button>
+
+----------
 
 <ivy-button round>圆角按钮</ivy-button>
 <ivy-button type="primary" round>主要按钮</ivy-button>
@@ -60,6 +64,8 @@
 <ivy-button type="warning" disabled>warning</ivy-button>
 <ivy-button type="danger" disabled>danger</ivy-button>
 <ivy-button type="info" disabled>info</ivy-button>
+
+----------
 
 <ivy-button plain disabled>朴素按钮</ivy-button>
 <ivy-button type="primary" plain disabled>主要按钮</ivy-button>

@@ -15,11 +15,11 @@
             </div>
             <div class="page-item-content">
                 <page-demo>
-                    <mx-breadcrumb>
-                        <mx-breadcrumb-item to="name">首页</mx-breadcrumb-item>
-                        <mx-breadcrumb-item to="age">组件</mx-breadcrumb-item>
-                        <mx-breadcrumb-item>面包屑</mx-breadcrumb-item>
-                    </mx-breadcrumb>
+                    <ivy-breadcrumb>
+                        <ivy-breadcrumb-item to="name">首页</ivy-breadcrumb-item>
+                        <ivy-breadcrumb-item to="age">组件</ivy-breadcrumb-item>
+                        <ivy-breadcrumb-item>面包屑</ivy-breadcrumb-item>
+                    </ivy-breadcrumb>
                 </page-demo>
             </div>
         </div>
@@ -29,11 +29,11 @@
             </div>
             <div class="page-item-content">
                 <page-demo>
-                    <mx-breadcrumb separator="/">
-                        <mx-breadcrumb-item to="name">首页</mx-breadcrumb-item>
-                        <mx-breadcrumb-item to="age">组件</mx-breadcrumb-item>
-                        <mx-breadcrumb-item>面包屑</mx-breadcrumb-item>
-                    </mx-breadcrumb>
+                    <ivy-breadcrumb separator="/">
+                        <ivy-breadcrumb-item to="name">首页</ivy-breadcrumb-item>
+                        <ivy-breadcrumb-item to="age">组件</ivy-breadcrumb-item>
+                        <ivy-breadcrumb-item>面包屑</ivy-breadcrumb-item>
+                    </ivy-breadcrumb>
                 </page-demo>
             </div>
         </div>
@@ -46,8 +46,8 @@
                     <p class="page-item-title">Breadcrumb Props</p>
                 </div>
                 <div class="page-item-content">
-                    <mx-table :data="tableData" :columns="tableColumns">
-                    </mx-table>
+                    <ivy-table :data="tableData" :columns="tableColumns">
+                    </ivy-table>
                 </div>
             </div>
             <div class="page-item">
@@ -55,8 +55,8 @@
                     <p class="page-item-title">BreadcrumbItem Props</p>
                 </div>
                 <div class="page-item-content">
-                    <mx-table :data="tableData2" :columns="tableColumns">
-                    </mx-table>
+                    <ivy-table :data="tableData2" :columns="tableColumns">
+                    </ivy-table>
                 </div>
             </div>
         </div>
@@ -110,18 +110,18 @@ export default {
                 },
             ],
             code1: `
-<mx-breadcrumb>
-    <mx-breadcrumb-item to="name">首页</mx-breadcrumb-item>
-    <mx-breadcrumb-item to="age">组件</mx-breadcrumb-item>
-    <mx-breadcrumb-item>面包屑</mx-breadcrumb-item>
-</mx-breadcrumb>
+<ivy-breadcrumb>
+    <ivy-breadcrumb-item to="name">首页</ivy-breadcrumb-item>
+    <ivy-breadcrumb-item to="age">组件</ivy-breadcrumb-item>
+    <ivy-breadcrumb-item>面包屑</ivy-breadcrumb-item>
+</ivy-breadcrumb>
             `,
             code2: `
-<mx-breadcrumb separator="/">
-    <mx-breadcrumb-item to="name">首页</mx-breadcrumb-item>
-    <mx-breadcrumb-item to="age">组件</mx-breadcrumb-item>
-    <mx-breadcrumb-item>面包屑</mx-breadcrumb-item>
-</mx-breadcrumb>
+<ivy-breadcrumb separator="/">
+    <ivy-breadcrumb-item to="name">首页</ivy-breadcrumb-item>
+    <ivy-breadcrumb-item to="age">组件</ivy-breadcrumb-item>
+    <ivy-breadcrumb-item>面包屑</ivy-breadcrumb-item>
+</ivy-breadcrumb>
             `,
         };
     },

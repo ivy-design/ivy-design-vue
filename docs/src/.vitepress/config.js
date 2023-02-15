@@ -13,6 +13,10 @@ const sidebar = {
             text: "基础组件",
             items: [
                 {
+                    text: "Layout 布局组件",
+                    link: "/components/layout.md",
+                },
+                {
                     text: "Button 按钮",
                     link: "/components/button.md",
                 },
@@ -50,11 +54,19 @@ const sidebar = {
                     text: "Tag 标签",
                     link: "/components/tag.md",
                 },
+                {
+                    text: "Timeline 时间线",
+                    link: "/components/timeline.md",
+                },
             ],
         },
         {
             text: "反馈组件",
             items: [
+                {
+                    text: "Alert 提示",
+                    link: "/components/alert.md",
+                },
                 {
                     text: "Dialog 弹窗",
                     link: "/components/dialog.md",
@@ -69,9 +81,12 @@ export default defineConfig({
     title: "@ivy-design/vue",
     lastUpdated: true,
     titleTemplate: ":title",
+    outDir: "./dist",
     themeConfig: {
         lastUpdatedText: "最后更新时间",
+        outlineTitle: "目录导航",
         nav,
+        socialLinks: [{ icon: "github", link: "https://github.com/GuoJikun/fox-design" }],
         sidebar,
     },
 });

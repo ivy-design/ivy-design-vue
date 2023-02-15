@@ -13,46 +13,46 @@
             </div>
             <div class="page-item-content">
                 <page-demo>
-                    <mx-card style="width: 400px;">
+                    <ivy-card style="width: 400px;">
                         <div slot="name">选项</div>
-                        <mx-cell-group>
-                            <mx-cell title="只显示标题"></mx-cell>
-                            <mx-cell
+                        <ivy-cell-group>
+                            <ivy-cell title="只显示标题"></ivy-cell>
+                            <ivy-cell
                                 title="显示label"
                                 label="label的内容"
-                            ></mx-cell>
-                            <mx-cell title="显示extra" extra="extra"></mx-cell>
-                            <mx-cell
+                            ></ivy-cell>
+                            <ivy-cell title="显示extra" extra="extra"></ivy-cell>
+                            <ivy-cell
                                 title="显示向右的icon"
                                 is-link
                                 name="link"
-                            ></mx-cell>
-                            <mx-cell
+                            ></ivy-cell>
+                            <ivy-cell
                                 title="链接"
                                 is-link
                                 name="link"
                                 to="/layout"
                                 @click="handleClick"
                                 extra="详细信息"
-                            ></mx-cell>
-                            <mx-cell
+                            ></ivy-cell>
+                            <ivy-cell
                                 title="新窗口打开"
                                 is-link
                                 name="link"
                                 to="/layout"
                                 @click="handleClick"
                                 target="_blank"
-                            ></mx-cell>
-                            <mx-cell title="禁用" disabled></mx-cell>
-                            <mx-cell title="选中" selected></mx-cell>
-                            <!-- <mx-cell title="开关">
-                                <mx-switch
+                            ></ivy-cell>
+                            <ivy-cell title="禁用" disabled></ivy-cell>
+                            <ivy-cell title="选中" selected></ivy-cell>
+                            <!-- <ivy-cell title="开关">
+                                <ivy-switch
                                     slot="extra"
                                     v-model="status"
-                                ></mx-switch>
-                            </mx-cell> -->
-                        </mx-cell-group>
-                    </mx-card>
+                                ></ivy-switch>
+                            </ivy-cell> -->
+                        </ivy-cell-group>
+                    </ivy-card>
                 </page-demo>
             </div>
         </div>
@@ -63,45 +63,45 @@
             </div>
             <div class="page-item-content">
                 <page-demo>
-                    <mx-card style="width: 400px;">
-                        <mx-cell-group border>
-                            <mx-cell title="只显示标题"></mx-cell>
-                            <mx-cell
+                    <ivy-card style="width: 400px;">
+                        <ivy-cell-group border>
+                            <ivy-cell title="只显示标题"></ivy-cell>
+                            <ivy-cell
                                 title="显示label"
                                 label="label的内容"
-                            ></mx-cell>
-                            <mx-cell title="显示extra" extra="extra"></mx-cell>
-                            <mx-cell
+                            ></ivy-cell>
+                            <ivy-cell title="显示extra" extra="extra"></ivy-cell>
+                            <ivy-cell
                                 title="显示向右的icon"
                                 is-link
                                 name="link"
-                            ></mx-cell>
-                            <mx-cell
+                            ></ivy-cell>
+                            <ivy-cell
                                 title="链接"
                                 is-link
                                 name="link"
                                 to="/layout"
                                 @click="handleClick"
                                 extra="详细信息"
-                            ></mx-cell>
-                            <mx-cell
+                            ></ivy-cell>
+                            <ivy-cell
                                 title="新窗口打开"
                                 is-link
                                 name="link"
                                 to="/layout"
                                 @click="handleClick"
                                 target="_blank"
-                            ></mx-cell>
-                            <mx-cell title="禁用" disabled></mx-cell>
-                            <mx-cell title="选中" selected></mx-cell>
-                            <!-- <mx-cell title="开关">
-                                <mx-switch
+                            ></ivy-cell>
+                            <ivy-cell title="禁用" disabled></ivy-cell>
+                            <ivy-cell title="选中" selected></ivy-cell>
+                            <!-- <ivy-cell title="开关">
+                                <ivy-switch
                                     slot="extra"
                                     v-model="status"
-                                ></mx-switch>
-                            </mx-cell> -->
-                        </mx-cell-group>
-                    </mx-card>
+                                ></ivy-switch>
+                            </ivy-cell> -->
+                        </ivy-cell-group>
+                    </ivy-card>
                 </page-demo>
             </div>
         </div>

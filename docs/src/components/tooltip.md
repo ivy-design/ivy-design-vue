@@ -17,97 +17,97 @@
                 <page-demo>
                     <div style="width: 400px;">
                         <div class="text-center">
-                            <mx-tooltip
+                            <ivy-tooltip
                                 content="Top Left 提示文字"
                                 placement="top-start"
                             >
-                                <mx-button>上左</mx-button>
-                            </mx-tooltip>
-                            <mx-tooltip
+                                <ivy-button>上左</ivy-button>
+                            </ivy-tooltip>
+                            <ivy-tooltip
                                 class="ml-10"
                                 content="Top Center 提示文字"
                                 placement="top"
                             >
-                                <mx-button>上边</mx-button>
-                            </mx-tooltip>
-                            <mx-tooltip
+                                <ivy-button>上边</ivy-button>
+                            </ivy-tooltip>
+                            <ivy-tooltip
                                 class="ml-10"
                                 content="Top Right 提示文字"
                                 placement="top-end"
                             >
-                                <mx-button>上右</mx-button>
-                            </mx-tooltip>
+                                <ivy-button>上右</ivy-button>
+                            </ivy-tooltip>
                         </div>
                         <div class="flex-between">
                             <div style="width: 70px;">
-                                <mx-tooltip
+                                <ivy-tooltip
                                     class="mt-20"
                                     content="Left Top 提示文字"
                                     placement="left-start"
                                 >
-                                    <mx-button>左上</mx-button>
-                                </mx-tooltip>
-                                <mx-tooltip
+                                    <ivy-button>左上</ivy-button>
+                                </ivy-tooltip>
+                                <ivy-tooltip
                                     class="mt-20"
                                     content="Left Center 提示文字"
                                     placement="left"
                                 >
-                                    <mx-button>左边</mx-button>
-                                </mx-tooltip>
-                                <mx-tooltip
+                                    <ivy-button>左边</ivy-button>
+                                </ivy-tooltip>
+                                <ivy-tooltip
                                     class="mt-20"
                                     content="Left Bottom 提示文字"
                                     placement="left-end"
                                 >
-                                    <mx-button>左下</mx-button>
-                                </mx-tooltip>
+                                    <ivy-button>左下</ivy-button>
+                                </ivy-tooltip>
                             </div>
                             <div style="width: 70px;">
-                                <mx-tooltip
+                                <ivy-tooltip
                                     class="mt-20"
                                     content="Right Top 提示文字"
                                     placement="right-start"
                                 >
-                                    <mx-button>右上</mx-button>
-                                </mx-tooltip>
-                                <mx-tooltip
+                                    <ivy-button>右上</ivy-button>
+                                </ivy-tooltip>
+                                <ivy-tooltip
                                     class="mt-20"
                                     content="Right Center 提示文字"
                                     placement="right"
                                 >
-                                    <mx-button>右边</mx-button>
-                                </mx-tooltip>
-                                <mx-tooltip
+                                    <ivy-button>右边</ivy-button>
+                                </ivy-tooltip>
+                                <ivy-tooltip
                                     class="mt-20"
                                     content="Right Bottom 提示文字"
                                     placement="right-end"
                                 >
-                                    <mx-button>右下</mx-button>
-                                </mx-tooltip>
+                                    <ivy-button>右下</ivy-button>
+                                </ivy-tooltip>
                             </div>
                         </div>
                         <div class="text-center">
-                            <mx-tooltip
+                            <ivy-tooltip
                                 class="ml-10"
                                 content="Bottom Left 提示文字"
                                 placement="bottom-start"
                             >
-                                <mx-button>下左</mx-button>
-                            </mx-tooltip>
-                            <mx-tooltip
+                                <ivy-button>下左</ivy-button>
+                            </ivy-tooltip>
+                            <ivy-tooltip
                                 class="ml-10"
                                 content="Bottom Center 提示文字"
                                 placement="bottom"
                             >
-                                <mx-button>下边</mx-button>
-                            </mx-tooltip>
-                            <mx-tooltip
+                                <ivy-button>下边</ivy-button>
+                            </ivy-tooltip>
+                            <ivy-tooltip
                                 class="ml-10"
                                 content="Bottom Right 提示文字"
                                 placement="bottom-end"
                             >
-                                <mx-button>下右</mx-button>
-                            </mx-tooltip>
+                                <ivy-button>下右</ivy-button>
+                            </ivy-tooltip>
                         </div>
                     </div>
                 </page-demo>
@@ -122,19 +122,19 @@
             </div>
             <div class="page-item-content">
                 <page-demo>
-                    <mx-tooltip
+                    <ivy-tooltip
                         content="Bottom Left 提示文字"
                         placement="bottom-start"
                     >
-                        <mx-button>dart(default)</mx-button>
-                    </mx-tooltip>
-                    <mx-tooltip
+                        <ivy-button>dart(default)</ivy-button>
+                    </ivy-tooltip>
+                    <ivy-tooltip
                         class="ml-20"
                         content="Bottom Center 提示文字"
                         theme="light"
                     >
-                        <mx-button>light</mx-button>
-                    </mx-tooltip>
+                        <ivy-button>light</ivy-button>
+                    </ivy-tooltip>
                 </page-demo>
             </div>
         </div>
@@ -147,14 +147,14 @@
             </div>
             <div class="page-item-content">
                 <page-demo>
-                    <mx-tooltip placement="top">
-                        <mx-button>slot content</mx-button>
+                    <ivy-tooltip placement="top">
+                        <ivy-button>slot content</ivy-button>
                         <template v-slot:content>
                             多行信息
                             <br />
                             第二行信息
                         </template>
-                    </mx-tooltip>
+                    </ivy-tooltip>
                 </page-demo>
             </div>
         </div>

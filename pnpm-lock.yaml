@@ -32,11 +32,11 @@ importers:
   docs:
     specifiers:
       '@ivy-design/vue': workspace:*
-      vitepress: 1.0.0-alpha.45
+      vitepress: 1.0.0-alpha.46
     dependencies:
       '@ivy-design/vue': link:../packages/ui
     devDependencies:
-      vitepress: 1.0.0-alpha.45
+      vitepress: 1.0.0-alpha.46
 
   packages/ui:
     specifiers:
@@ -3348,8 +3348,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress/1.0.0-alpha.45:
-    resolution: {integrity: sha512-8AVWdymQqBUPmXmAbpapDDg18iDmkNJ47l5eOklBlAjj3n8P3zDAsBhOWSQ6+Nvm6+/GaZATyAvsrg47JD5Idw==}
+  /vitepress/1.0.0-alpha.46:
+    resolution: {integrity: sha512-HiKiHzC0iTPsRsKs8XcsMeMzCpcCt5LWcX9mpDr288Ju+nQf1G8A2+Wm44ZkBsVv4EHxFK4ChmWyZrL1OJUXpg==}
     hasBin: true
     dependencies:
       '@docsearch/css': 3.3.2

@@ -13,23 +13,23 @@
             </div>
             <div class="page-item-conent">
                 <page-demo>
-                    <mx-steps :active="active">
-                        <mx-step
+                    <ivy-steps :active="active">
+                        <ivy-step
                             title="步骤一"
                             description="这里是该步骤的描述信息"
-                        ></mx-step>
-                        <mx-step
+                        ></ivy-step>
+                        <ivy-step
                             title="步骤二"
                             description="这里是该步骤的描述信息"
-                        ></mx-step>
-                        <mx-step
+                        ></ivy-step>
+                        <ivy-step
                             title="步骤三"
                             description="这里是该步骤的描述信息"
-                        ></mx-step>
-                    </mx-steps>
-                    <mx-button class="mt-20" type="primary" @click="next">
+                        ></ivy-step>
+                    </ivy-steps>
+                    <ivy-button class="mt-20" type="primary" @click="next">
                         下一步
-                    </mx-button>
+                    </ivy-button>
                 </page-demo>
             </div>
         </div>
@@ -42,25 +42,25 @@
             </div>
             <div class="page-item-conent">
                 <page-demo>
-                    <mx-steps :active="active1" status="wait">
-                        <mx-step
+                    <ivy-steps :active="active1" status="wait">
+                        <ivy-step
                             title="步骤一"
                             description="这里是该步骤的描述信息"
-                        ></mx-step>
-                        <mx-step
+                        ></ivy-step>
+                        <ivy-step
                             title="步骤二"
                             description="这里是该步骤的描述信息"
                             status="success"
-                        ></mx-step>
-                        <mx-step
+                        ></ivy-step>
+                        <ivy-step
                             title="步骤三"
                             description="这里是该步骤的描述信息"
                             status="error"
-                        ></mx-step>
-                    </mx-steps>
-                    <mx-button class="mt-20" type="primary" @click="next1">
+                        ></ivy-step>
+                    </ivy-steps>
+                    <ivy-button class="mt-20" type="primary" @click="next1">
                         下一步
-                    </mx-button>
+                    </ivy-button>
                 </page-demo>
             </div>
         </div>
@@ -74,24 +74,24 @@
             <div class="page-item-conent">
                 <page-demo>
                     <div style="height: 240px;">
-                        <mx-steps :active="active1" direction="vertical">
-                            <mx-step
+                        <ivy-steps :active="active1" direction="vertical">
+                            <ivy-step
                                 title="步骤一"
                                 description="这里是该步骤的描述信息"
-                            ></mx-step>
-                            <mx-step
+                            ></ivy-step>
+                            <ivy-step
                                 title="步骤二"
                                 description="这里是该步骤的描述信息"
-                            ></mx-step>
-                            <mx-step
+                            ></ivy-step>
+                            <ivy-step
                                 title="步骤三"
                                 description="这里是该步骤的描述信息"
-                            ></mx-step>
-                        </mx-steps>
+                            ></ivy-step>
+                        </ivy-steps>
                     </div>
-                    <mx-button class="mt-20" type="primary" @click="next1">
+                    <ivy-button class="mt-20" type="primary" @click="next1">
                         下一步
-                    </mx-button>
+                    </ivy-button>
                 </page-demo>
             </div>
         </div>

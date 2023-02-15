@@ -22,19 +22,19 @@
                         business magnate. He was the chairman, chief executive
                         officer, and a co-founder of Apple Inc.
                     </p>
-                    <mx-divider></mx-divider>
+                    <ivy-divider></ivy-divider>
                     <p>
                         Steven Paul Jobs was an American entrepreneur and
                         business magnate. He was the chairman, chief executive
                         officer, and a co-founder of Apple Inc.
                     </p>
-                    <mx-divider>文字在中间</mx-divider>
+                    <ivy-divider>文字在中间</ivy-divider>
                     <p>
                         Steven Paul Jobs was an American entrepreneur and
                         business magnate. He was the chairman, chief executive
                         officer, and a co-founder of Apple Inc.
                     </p>
-                    <mx-divider dashed></mx-divider>
+                    <ivy-divider dashed></ivy-divider>
                     <p>
                         Steven Paul Jobs was an American entrepreneur and
                         business magnate. He was the chairman, chief executive
@@ -56,11 +56,11 @@
             <div class="page-item-content">
                 <page-demo>
                     <span>text</span>
-                    <mx-divider type="vertical"></mx-divider>
+                    <ivy-divider type="vertical"></ivy-divider>
                     <span>image</span>
-                    <mx-divider type="vertical"></mx-divider>
+                    <ivy-divider type="vertical"></ivy-divider>
                     <span>link</span>
-                    <mx-divider type="vertical"></mx-divider>
+                    <ivy-divider type="vertical"></ivy-divider>
                     <div slot="highlight">
                         <high-light :code="code2"></high-light>
                     </div>
@@ -79,19 +79,19 @@
                         business magnate. He was the chairman, chief executive
                         officer, and a co-founder of Apple Inc.
                     </p>
-                    <mx-divider placement="left">文字在左侧</mx-divider>
+                    <ivy-divider placement="left">文字在左侧</ivy-divider>
                     <p>
                         Steven Paul Jobs was an American entrepreneur and
                         business magnate. He was the chairman, chief executive
                         officer, and a co-founder of Apple Inc.
                     </p>
-                    <mx-divider>文字在中间</mx-divider>
+                    <ivy-divider>文字在中间</ivy-divider>
                     <p>
                         Steven Paul Jobs was an American entrepreneur and
                         business magnate. He was the chairman, chief executive
                         officer, and a co-founder of Apple Inc.
                     </p>
-                    <mx-divider placement="right">文字在右侧</mx-divider>
+                    <ivy-divider placement="right">文字在右侧</ivy-divider>
                     <p>
                         Steven Paul Jobs was an American entrepreneur and
                         business magnate. He was the chairman, chief executive
@@ -112,8 +112,8 @@
                     <p class="page-item-title">Divider Props</p>
                 </div>
                 <div class="page-item-content">
-                    <mx-table :data="tableData" :columns="tableColumns">
-                    </mx-table>
+                    <ivy-table :data="tableData" :columns="tableColumns">
+                    </ivy-table>
                 </div>
             </div>
         </div>
@@ -128,28 +128,28 @@ export default {
             tableColumns: columns,
             code1: `
 <p>Steven Paul Jobs was an American entrepreneur and business magnate. He was the chairman, chief executive officer, and a co-founder of Apple Inc.</p>
-<mx-divider></mx-divider>
+<ivy-divider></ivy-divider>
 <p>Steven Paul Jobs was an American entrepreneur and  business magnate. He was the chairman, chief executive officer, and a co-founder of Apple Inc.</p>
-<mx-divider>文字在中间</mx-divider>
+<ivy-divider>文字在中间</ivy-divider>
 <p>Steven Paul Jobs was an American entrepreneur and business magnate. He was the chairman, chief executive officer, and a co-founder of Apple Inc.</p>
-<mx-divider dashed></mx-divider>
+<ivy-divider dashed></ivy-divider>
 <p>Steven Paul Jobs was an American entrepreneur and business magnate. He was the chairman, chief executive officer, and a co-founder of Apple Inc.</p>
             `,
             code2: `
 <span>text</span>
-<mx-divider type="vertical"></mx-divider>
+<ivy-divider type="vertical"></ivy-divider>
 <span>image</span>
-<mx-divider type="vertical"></mx-divider>
+<ivy-divider type="vertical"></ivy-divider>
 <span>link</span>
-<mx-divider type="vertical"></mx-divider>
+<ivy-divider type="vertical"></ivy-divider>
             `,
             code3: `
 <p>Steven Paul Jobs was an American entrepreneur and business magnate. He was the chairman, chief executive officer, and a co-founder of Apple Inc.</p>
-<mx-divider placement="left"></mx-divider>
+<ivy-divider placement="left"></ivy-divider>
 <p>Steven Paul Jobs was an American entrepreneur and  business magnate. He was the chairman, chief executive officer, and a co-founder of Apple Inc.</p>
-<mx-divider>文字在中间</mx-divider>
+<ivy-divider>文字在中间</ivy-divider>
 <p>Steven Paul Jobs was an American entrepreneur and business magnate. He was the chairman, chief executive officer, and a co-founder of Apple Inc.</p>
-<mx-divider placement="right"></mx-divider>
+<ivy-divider placement="right"></ivy-divider>
 <p>Steven Paul Jobs was an American entrepreneur and business magnate. He was the chairman, chief executive officer, and a co-founder of Apple Inc.</p>
             `,
             tableData: [

@@ -1,157 +1,86 @@
-<template>
-    <div class="page-modal">
-        <div class="page-item">
-            <div>
-                <p class="page-title">Alert 警告</p>
-                <p class="page-dec">用于页面中展示重要的提示信息。</p>
-            </div>
-        </div>
-        <div class="page-item">
-            <div>
-                <p class="page-item-title">基本用法</p>
-                <p class="page-item-dec">页面中的非浮层元素，不会自动消失。</p>
-            </div>
-            <div class="page-item-content">
-                <page-demo>
-                    <mx-alert>
-                        <div>这是提示信息</div>
-                        <div>用来让人注意的提示文字</div>
-                    </mx-alert>
-                </page-demo>
-            </div>
-        </div>
-        <div class="page-item">
-            <div>
-                <p class="page-item-title">有状态的提示信息</p>
-            </div>
-            <div class="page-item-content">
-                <page-demo>
-                    <mx-alert type="success">
-                        <div>这是提示信息</div>
-                        <div>用来让人注意的提示文字</div>
-                    </mx-alert>
-                    <mx-alert type="danger">
-                        <div>这是提示信息</div>
-                        <div>用来让人注意的提示文字</div>
-                    </mx-alert>
-                    <mx-alert type="warning">
-                        <div>这是提示信息</div>
-                        <div>用来让人注意的提示文字</div>
-                    </mx-alert>
-                    <mx-alert type="info">
-                        <div>这是提示信息</div>
-                        <div>用来让人注意的提示文字</div>
-                    </mx-alert>
-                </page-demo>
-            </div>
-        </div>
-        <div class="page-item">
-            <div>
-                <p class="page-item-title">自定义颜色</p>
-                <p class="page-item-dec">通过props中的color来自定义颜色</p>
-            </div>
-            <div class="page-item-content">
-                <page-demo>
-                    <mx-alert
-                        type="success"
-                        :color="{
-                            background: 'pink',
-                            line: 'red',
-                            font: 'white',
-                        }"
-                    >
-                        <div>这是提示信息</div>
-                        <div>用来让人注意的提示文字</div>
-                    </mx-alert>
-                    <mx-alert
-                        type="danger"
-                        :color="{ font: 'white', background: 'black' }"
-                    >
-                        <div>这是提示信息</div>
-                        <div>用来让人注意的提示文字</div>
-                    </mx-alert>
-                    <mx-alert type="warning">
-                        <div>这是提示信息</div>
-                        <div>用来让人注意的提示文字</div>
-                    </mx-alert>
-                    <mx-alert type="info">
-                        <div>这是提示信息</div>
-                        <div>用来让人注意的提示文字</div>
-                    </mx-alert>
-                    <div slot="code">
-                        <div>
-                            <mx-alert>
-                                color是一个对象<br />font--字体颜色；line-左侧竖线的颜色；background-背景颜色
-                            </mx-alert>
-                        </div>
-                    </div>
-                </page-demo>
-            </div>
-        </div>
-    </div>
-</template>
+# Alert 警告
 
-<script>
-export default {
-    data() {
-        return {
-            value: '',
-            code1: `
-<mx-alert>
+用于页面中展示重要的提示信息。
+
+## 基本用法
+
+页面中的非浮层元素，不会自动消失。
+
+<ivy-alert header="这是提示信息">
+    <div>用来让人注意的提示文字</div>
+</ivy-alert>
+
+## 显示Icon
+
+通过设置showIcon为true来显示icon
+
+<ivy-alert showIcon header="这是提示信息">
+    <div>用来让人注意的提示文字</div>
+</ivy-alert>
+
+## 更改 Icon 大小
+
+通过设置iconSize来更改icon 大小
+
+<ivy-alert showIcon header="这是提示信息" icon-size="24px">
+    <div>用来让人注意的提示文字</div>
+</ivy-alert>
+
+## 有状态的提示信息
+
+<ivy-alert type="success">
     <div>这是提示信息</div>
     <div>用来让人注意的提示文字</div>
-</mx-alert>
-            `,
-            code2: `
-<mx-alert type="success">
+</ivy-alert>
+
+<ivy-alert type="danger">
     <div>这是提示信息</div>
     <div>用来让人注意的提示文字</div>
-</mx-alert>
-<mx-alert type="danger">
+</ivy-alert>
+
+<ivy-alert type="warning">
     <div>这是提示信息</div>
     <div>用来让人注意的提示文字</div>
-</mx-alert>
-<mx-alert type="warning">
+</ivy-alert>
+
+<ivy-alert type="info">
     <div>这是提示信息</div>
     <div>用来让人注意的提示文字</div>
-</mx-alert>
-<mx-alert type="info">
-    <div>这是提示信息</div>
-    <div>用来让人注意的提示文字</div>
-</mx-alert>
-            `,
-            code3: `
-<mx-alert
-    type="success"
+</ivy-alert>
+
+## 自定义颜色
+
+通过`props`中的`color`来自定义颜色
+
+<ivy-alert
     :color="{
         background: 'pink',
-        line: 'red',
         font: 'white',
     }"
 >
     <div>这是提示信息</div>
     <div>用来让人注意的提示文字</div>
-</mx-alert>
-<mx-alert
-    type="danger"
+</ivy-alert>
+
+<ivy-alert
     :color="{ font: 'white', background: 'black' }"
 >
     <div>这是提示信息</div>
     <div>用来让人注意的提示文字</div>
-</mx-alert>
-<mx-alert type="warning">
-    <div>这是提示信息</div>
-    <div>用来让人注意的提示文字</div>
-</mx-alert>
-<mx-alert type="info">
-    <div>这是提示信息</div>
-    <div>用来让人注意的提示文字</div>
-</mx-alert>
-            `,
-        };
-    },
-};
-</script>
+</ivy-alert>
+
+::: warning
+`color` 是一个对象<br />`font`--字体颜色；`background`-- 背景颜色
+:::
+
+## API
+
+### Props
+
+| 属性| 描述 | 类型 | 可选值 | 默认值 |
+|-|-|-|-|-|
+|type|类型|string|`success/warning/danger/info`|success|
+|showIcon|是否显示icon|boolean|-|false|
 
 <style lang="scss" scoped>
 .page-modal {

@@ -14,23 +14,23 @@
             </div>
             <div class="page-item-content">
                 <page-demo>
-                    <mx-progress :percentage="0"></mx-progress>
-                    <mx-progress class="mt-20" :percentage="50"></mx-progress>
-                    <mx-progress
+                    <ivy-progress :percentage="0"></ivy-progress>
+                    <ivy-progress class="mt-20" :percentage="50"></ivy-progress>
+                    <ivy-progress
                         class="mt-20"
                         :percentage="80"
                         color="pink"
-                    ></mx-progress>
-                    <mx-progress
+                    ></ivy-progress>
+                    <ivy-progress
                         class="mt-20"
                         :percentage="100"
                         status="success"
-                    ></mx-progress>
-                    <mx-progress
+                    ></ivy-progress>
+                    <ivy-progress
                         class="mt-20"
                         :percentage="100"
                         status="danger"
-                    ></mx-progress>
+                    ></ivy-progress>
                     <high-light slot="highlight" :code="code1"></high-light>
                 </page-demo>
             </div>
@@ -44,38 +44,38 @@
             </div>
             <div class="page-item-content">
                 <page-demo>
-                    <mx-progress
+                    <ivy-progress
                         :percentage="0"
                         text-inside
                         :stroke-width="18"
-                    ></mx-progress>
-                    <mx-progress
+                    ></ivy-progress>
+                    <ivy-progress
                         class="mt-20"
                         :percentage="70"
                         text-inside
                         :stroke-width="18"
-                    ></mx-progress>
-                    <mx-progress
+                    ></ivy-progress>
+                    <ivy-progress
                         class="mt-20"
                         :percentage="80"
                         color="pink"
                         text-inside
                         :stroke-width="18"
-                    ></mx-progress>
-                    <mx-progress
+                    ></ivy-progress>
+                    <ivy-progress
                         class="mt-20"
                         :percentage="100"
                         status="success"
                         text-inside
                         :stroke-width="18"
-                    ></mx-progress>
-                    <mx-progress
+                    ></ivy-progress>
+                    <ivy-progress
                         class="mt-20"
                         :percentage="50"
                         status="danger"
                         text-inside
                         :stroke-width="18"
-                    ></mx-progress>
+                    ></ivy-progress>
                     <p slot="description">
                         可通过
                         <code class="code">stroke-width</code>
@@ -100,30 +100,30 @@
             </div>
             <div class="page-item-content">
                 <page-demo>
-                    <mx-progress type="circle" :percentage="0"></mx-progress>
-                    <mx-progress
+                    <ivy-progress type="circle" :percentage="0"></ivy-progress>
+                    <ivy-progress
                         class="ml-20"
                         type="circle"
                         :percentage="25"
-                    ></mx-progress>
-                    <mx-progress
+                    ></ivy-progress>
+                    <ivy-progress
                         class="ml-20"
                         type="circle"
                         :percentage="80"
                         color="#8e71c7"
-                    ></mx-progress>
-                    <mx-progress
+                    ></ivy-progress>
+                    <ivy-progress
                         class="ml-20"
                         type="circle"
                         :percentage="100"
                         status="success"
-                    ></mx-progress>
-                    <mx-progress
+                    ></ivy-progress>
+                    <ivy-progress
                         class="ml-20"
                         type="circle"
                         :percentage="100"
                         status="danger"
-                    ></mx-progress>
+                    ></ivy-progress>
                     <high-light slot="highlight" :code="code3"></high-light>
                 </page-demo>
             </div>
@@ -137,8 +137,8 @@
                     <h1 class="page-item-title">Props</h1>
                 </div>
                 <div class="page-item-content">
-                    <mx-table :columns="propColumns" :data="tableData">
-                    </mx-table>
+                    <ivy-table :columns="propColumns" :data="tableData">
+                    </ivy-table>
                 </div>
             </div>
         </div>
@@ -203,52 +203,52 @@ export default {
                 },
             ],
             code1: `
-<mx-progress :percentage="0"></mx-progress>
-<mx-progress class="mt-20" :percentage="50"></mx-progress>
-<mx-progress class="mt-20" :percentage="80" color="pink"></mx-progress>
-<mx-progress class="mt-20" :percentage="100" status="success"></mx-progress>
-<mx-progress class="mt-20" :percentage="100" status="danger"></mx-progress>
+<ivy-progress :percentage="0"></ivy-progress>
+<ivy-progress class="mt-20" :percentage="50"></ivy-progress>
+<ivy-progress class="mt-20" :percentage="80" color="pink"></ivy-progress>
+<ivy-progress class="mt-20" :percentage="100" status="success"></ivy-progress>
+<ivy-progress class="mt-20" :percentage="100" status="danger"></ivy-progress>
             `,
             code2: `
-<mx-progress
+<ivy-progress
     :percentage="0"
     text-inside
     :stroke-width="18"
-></mx-progress>
-<mx-progress
+></ivy-progress>
+<ivy-progress
     class="mt-20"
     :percentage="70"
     text-inside
     :stroke-width="18"
-></mx-progress>
-<mx-progress
+></ivy-progress>
+<ivy-progress
     class="mt-20"
     :percentage="80"
     color="pink"
     text-inside
     :stroke-width="18"
-></mx-progress>
-<mx-progress
+></ivy-progress>
+<ivy-progress
     class="mt-20"
     :percentage="100"
     status="success"
     text-inside
     :stroke-width="18"
-></mx-progress>
-<mx-progress
+></ivy-progress>
+<ivy-progress
     class="mt-20"
     :percentage="50"
     status="danger"
     text-inside
     :stroke-width="18"
-></mx-progress>
+></ivy-progress>
             `,
             code3: `
-<mx-progress type="circle" :percentage="0"></mx-progress>
-<mx-progress class="ml-20" type="circle" :percentage="25"></mx-progress>
-<mx-progress class="ml-20" type="circle" :percentage="80" color="#8e71c7"></mx-progress>
-<mx-progress class="ml-20" type="circle" :percentage="100" status="success">Done</mx-progress>
-<mx-progress class="ml-20" type="circle" :percentage="100" status="danger">Done</mx-progress>
+<ivy-progress type="circle" :percentage="0"></ivy-progress>
+<ivy-progress class="ml-20" type="circle" :percentage="25"></ivy-progress>
+<ivy-progress class="ml-20" type="circle" :percentage="80" color="#8e71c7"></ivy-progress>
+<ivy-progress class="ml-20" type="circle" :percentage="100" status="success">Done</ivy-progress>
+<ivy-progress class="ml-20" type="circle" :percentage="100" status="danger">Done</ivy-progress>
             `,
         };
     },

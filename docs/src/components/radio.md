@@ -15,8 +15,8 @@
             </div>
             <div class="page-item-content">
                 <page-demo>
-                    <mx-radio v-model="value" label="1">选项一</mx-radio>
-                    <mx-radio v-model="value" label="2">选项二</mx-radio>
+                    <ivy-radio v-model="value" label="1">选项一</ivy-radio>
+                    <ivy-radio v-model="value" label="2">选项二</ivy-radio>
                 </page-demo>
             </div>
         </div>
@@ -27,12 +27,12 @@
             </div>
             <div class="page-item-content">
                 <page-demo>
-                    <mx-radio v-model="value1" label="1" disabled>
+                    <ivy-radio v-model="value1" label="1" disabled>
                         选项一
-                    </mx-radio>
-                    <mx-radio v-model="value1" label="2" disabled>
+                    </ivy-radio>
+                    <ivy-radio v-model="value1" label="2" disabled>
                         选项二
-                    </mx-radio>
+                    </ivy-radio>
                 </page-demo>
             </div>
         </div>
@@ -43,11 +43,11 @@
             </div>
             <div class="page-item-content">
                 <page-demo>
-                    <mx-radio-group v-model="value2">
-                        <mx-radio label="1">选项一</mx-radio>
-                        <mx-radio label="2">选项二</mx-radio>
-                        <mx-radio label="3">选项三</mx-radio>
-                    </mx-radio-group>
+                    <ivy-radio-group v-model="value2">
+                        <ivy-radio label="1">选项一</ivy-radio>
+                        <ivy-radio label="2">选项二</ivy-radio>
+                        <ivy-radio label="3">选项三</ivy-radio>
+                    </ivy-radio-group>
                 </page-demo>
             </div>
         </div>
@@ -60,7 +60,7 @@
                     <h1 class="page-item-title">Radio Props</h1>
                 </div>
                 <div class="page-item-content">
-                    <mx-table :columns="propCol" :data="pcData"></mx-table>
+                    <ivy-table :columns="propCol" :data="pcData"></ivy-table>
                 </div>
             </div>
             <div class="page-item">
@@ -68,7 +68,7 @@
                     <h1 class="page-item-title">Radio Events</h1>
                 </div>
                 <div class="page-item-content">
-                    <mx-table :columns="eventsCol" :data="ecData"></mx-table>
+                    <ivy-table :columns="eventsCol" :data="ecData"></ivy-table>
                 </div>
             </div>
             <div class="page-item">
@@ -76,7 +76,7 @@
                     <h1 class="page-item-title">RadioGroup Props</h1>
                 </div>
                 <div class="page-item-content">
-                    <mx-table :columns="propCol" :data="pcgData"></mx-table>
+                    <ivy-table :columns="propCol" :data="pcgData"></ivy-table>
                 </div>
             </div>
             <div class="page-item">
@@ -84,7 +84,7 @@
                     <h1 class="page-item-title">RadioGroup Events</h1>
                 </div>
                 <div class="page-item-content">
-                    <mx-table :columns="eventsCol" :data="ecData"></mx-table>
+                    <ivy-table :columns="eventsCol" :data="ecData"></ivy-table>
                 </div>
             </div>
         </div>

@@ -1,4 +1,5 @@
 import DefaultTheme from "vitepress/theme";
+import "./common.css";
 import ivyUi from "@ivy-design/vue";
 import "@ivy-design/vue/dist/style.css";
 

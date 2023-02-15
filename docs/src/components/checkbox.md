@@ -15,15 +15,15 @@
             </div>
             <div class="page-item-content">
                 <page-demo>
-                    <mx-checkbox v-model="value">选项一</mx-checkbox>
-                    <mx-checkbox
+                    <ivy-checkbox v-model="value">选项一</ivy-checkbox>
+                    <ivy-checkbox
                         v-model="value1"
                         true-label="1"
                         false-label="0"
                         @change="changes"
                     >
                         选项二
-                    </mx-checkbox>
+                    </ivy-checkbox>
                 </page-demo>
             </div>
         </div>
@@ -34,8 +34,8 @@
             </div>
             <div class="page-item-content">
                 <page-demo>
-                    <mx-checkbox v-model="value" disabled>选项一</mx-checkbox>
-                    <mx-checkbox v-model="value1" disabled>选项二</mx-checkbox>
+                    <ivy-checkbox v-model="value" disabled>选项一</ivy-checkbox>
+                    <ivy-checkbox v-model="value1" disabled>选项二</ivy-checkbox>
                 </page-demo>
             </div>
         </div>
@@ -48,13 +48,13 @@
             </div>
             <div class="page-item-content">
                 <page-demo>
-                    <mx-checkbox-group v-model="value2" @change="handleWitch">
-                        <mx-checkbox label="1">选项一</mx-checkbox>
-                        <mx-checkbox label="2">选项二</mx-checkbox>
-                        <mx-checkbox label="3">选项三</mx-checkbox>
-                        <mx-checkbox label="4" disabled>禁用</mx-checkbox>
-                        <mx-checkbox label="5" disabled>选中且禁用</mx-checkbox>
-                    </mx-checkbox-group>
+                    <ivy-checkbox-group v-model="value2" @change="handleWitch">
+                        <ivy-checkbox label="1">选项一</ivy-checkbox>
+                        <ivy-checkbox label="2">选项二</ivy-checkbox>
+                        <ivy-checkbox label="3">选项三</ivy-checkbox>
+                        <ivy-checkbox label="4" disabled>禁用</ivy-checkbox>
+                        <ivy-checkbox label="5" disabled>选中且禁用</ivy-checkbox>
+                    </ivy-checkbox-group>
                 </page-demo>
             </div>
         </div>
@@ -68,24 +68,24 @@
             </div>
             <div class="page-item-content">
                 <page-demo>
-                    <mx-checkbox
+                    <ivy-checkbox
                         class="mb-20"
                         v-model="checkAll"
                         :indeterminate="isIndeterminate"
                         @change="handleCheckAllChange"
                     >
                         全选
-                    </mx-checkbox>
-                    <mx-checkbox-group
+                    </ivy-checkbox>
+                    <ivy-checkbox-group
                         v-model="value3"
                         @change="handleCheckedCitiesChange"
                     >
-                        <mx-checkbox label="1">选项一</mx-checkbox>
-                        <mx-checkbox label="2">选项二</mx-checkbox>
-                        <mx-checkbox label="3">选项三</mx-checkbox>
-                        <mx-checkbox label="4">禁用</mx-checkbox>
-                        <mx-checkbox label="5">选中且禁用</mx-checkbox>
-                    </mx-checkbox-group>
+                        <ivy-checkbox label="1">选项一</ivy-checkbox>
+                        <ivy-checkbox label="2">选项二</ivy-checkbox>
+                        <ivy-checkbox label="3">选项三</ivy-checkbox>
+                        <ivy-checkbox label="4">禁用</ivy-checkbox>
+                        <ivy-checkbox label="5">选中且禁用</ivy-checkbox>
+                    </ivy-checkbox-group>
                 </page-demo>
             </div>
         </div>

@@ -1,0 +1,78 @@
+/*margin*/
+.margin-top {
+    margin-top: 12px;
+}
+.margin-left {
+    margin-left: 12px;
+}
+.margin-bottom {
+    margin-bottom: 12px;
+}
+.margin-right {
+    margin-right: 12px;
+}
+
+.margin-top-large {
+    margin-top: 24px;
+}
+.margin-left-large {
+    margin-left: 24px;
+}
+.margin-bottom-large {
+    margin-bottom: 24px;
+}
+.margin-right-large {
+    margin-right: 24px;
+}
+
+.margin-top-small {
+    margin-top: 8px;
+}
+.margin-left-small {
+    margin-left: 8px;
+}
+.margin-bottom-small {
+    margin-bottom: 8px;
+}
+.margin-right-small {
+    margin-right: 28px;
+}
+/*padding*/
+.padding-top {
+    padding-top: 12px;
+}
+.padding-left {
+    padding-left: 12px;
+}
+.padding-bottom {
+    padding-bottom: 12px;
+}
+.padding-right {
+    padding-right: 12px;
+}
+
+.padding-top-large {
+    padding-top: 24px;
+}
+.padding-left-large {
+    padding-left: 24px;
+}
+.padding-bottom-large {
+    padding-bottom: 24px;
+}
+.padding-right-large {
+    padding-right: 24px;
+}
+
+.padding-top-small {
+    padding-top: 8px;
+}
+.padding-left-small {
+    padding-left: 8px;
+}
+.padding-bottom-small {
+    padding-bottom: 8px;
+}
+.padding-right-small {
+    padding-right: 28px;
+}

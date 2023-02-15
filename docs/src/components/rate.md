@@ -11,7 +11,7 @@
             </div>
             <div class="page-item-content">
                 <page-demo>
-                    <mx-rate v-model="value"></mx-rate>
+                    <ivy-rate v-model="value"></ivy-rate>
                     <high-light slot="highlight" :code="code1"></high-light>
                 </page-demo>
             </div>
@@ -22,7 +22,7 @@
             </div>
             <div class="page-item-content">
                 <page-demo>
-                    <mx-rate v-model="value1" tigger="click"></mx-rate>
+                    <ivy-rate v-model="value1" tigger="click"></ivy-rate>
                     <high-light slot="highlight" :code="code2"></high-light>
                 </page-demo>
             </div>
@@ -33,12 +33,12 @@
             </div>
             <div class="page-item-content">
                 <page-demo>
-                    <mx-rate
+                    <ivy-rate
                         v-model="value1"
                         tigger="click"
                         icon="ios-heart-empty"
                         active-icon="ios-heart"
-                    ></mx-rate>
+                    ></ivy-rate>
                     <high-light slot="highlight" :code="code3"></high-light>
                 </page-demo>
             </div>
@@ -49,7 +49,7 @@
             </div>
             <div class="page-item-content">
                 <page-demo>
-                    <mx-rate v-model="value2" disabled></mx-rate>
+                    <ivy-rate v-model="value2" disabled></ivy-rate>
                     <high-light slot="highlight" :code="code4"></high-light>
                 </page-demo>
             </div>
@@ -59,7 +59,7 @@
                 <h1 class="page-item-title">Rate Attributes</h1>
             </div>
             <div class="page-item-content">
-                <mx-table :columns="propCol" :data="tableData"></mx-table>
+                <ivy-table :columns="propCol" :data="tableData"></ivy-table>
             </div>
         </div>
     </div>
@@ -104,12 +104,12 @@ export default {
                     defaultValue: 'hover',
                 },
             ],
-            code1: '<mx-rate v-model="value"></mx-rate>',
-            code2: '<mx-rate v-model="value1" tigger="click"></mx-rate>',
+            code1: '<ivy-rate v-model="value"></ivy-rate>',
+            code2: '<ivy-rate v-model="value1" tigger="click"></ivy-rate>',
             code3: `
-<mx-rate v-model="value1" icon="ios-heart-empty" active-icon="ios-heart"></mx-rate>
+<ivy-rate v-model="value1" icon="ios-heart-empty" active-icon="ios-heart"></ivy-rate>
             `,
-            code4: '<mx-rate v-model="value2" disabled></mx-rate>',
+            code4: '<ivy-rate v-model="value2" disabled></ivy-rate>',
         };
     },
 };

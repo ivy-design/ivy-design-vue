@@ -13,20 +13,20 @@
             </div>
             <div class="page-item-content">
                 <page-demo>
-                    <mx-card>
+                    <ivy-card>
                         <div
                             slot="header"
                             style="display: flex;justify-content: space-between;align-items: center;"
                         >
                             <span>卡片名称</span>
-                            <mx-button type="text">操作按钮</mx-button>
+                            <ivy-button type="text">操作按钮</ivy-button>
                         </div>
                         <div>
                             <p>列表内容 1</p>
                             <p>列表内容 2</p>
                             <p>列表内容 3</p>
                         </div>
-                    </mx-card>
+                    </ivy-card>
                     <high-light slot="highlight" :code="code1"></high-light>
                 </page-demo>
             </div>
@@ -38,13 +38,13 @@
             </div>
             <div class="page-item-content">
                 <page-demo>
-                    <mx-card>
+                    <ivy-card>
                         <div>
                             <p>列表内容 1</p>
                             <p>列表内容 2</p>
                             <p>列表内容 3</p>
                         </div>
-                    </mx-card>
+                    </ivy-card>
                 </page-demo>
             </div>
         </div>
@@ -56,19 +56,19 @@
             <div class="page-item-content">
                 <page-demo>
                     <div style="display: inline-block;width: 30%;">
-                        <mx-card>
+                        <ivy-card>
                             <p>总是显示</p>
-                        </mx-card>
+                        </ivy-card>
                     </div>
                     <div style="display: inline-block;width: 30%;margin: 0 5%;">
-                        <mx-card shadow="hover">
+                        <ivy-card shadow="hover">
                             <p>Hover显示</p>
-                        </mx-card>
+                        </ivy-card>
                     </div>
                     <div style="display: inline-block;width: 30%;">
-                        <mx-card shadow="never">
+                        <ivy-card shadow="never">
                             <p>永不显示</p>
-                        </mx-card>
+                        </ivy-card>
                     </div>
                 </page-demo>
             </div>
@@ -78,7 +78,7 @@
                 <p class="page-item-title">Card Attributes</p>
             </div>
             <div class="page-item-content">
-                <mx-table :data="ColData" :columns="tableColumns"></mx-table>
+                <ivy-table :data="ColData" :columns="tableColumns"></ivy-table>
             </div>
         </div>
     </div>
@@ -114,20 +114,20 @@ export default {
                 },
             ],
             code1: `
-<mx-card>
+<ivy-card>
     <div
         slot="header"
         style="display: flex;justify-content: space-between;align-items: center;"
     >
         <span>卡片名称</span>
-        <mx-button type="text">操作按钮</mx-button>
+        <ivy-button type="text">操作按钮</ivy-button>
     </div>
     <div>
         <p>列表内容 1</p>
         <p>列表内容 2</p>
         <p>列表内容 3</p>
     </div>
-</mx-card>
+</ivy-card>
             `,
         };
     },

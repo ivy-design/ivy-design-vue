@@ -1,38 +1,40 @@
 @import "./common/var.scss";
 .ivy-alert {
-    display: flex;
-    align-items: var(--ivy-alert-icon-align, flex-start);
-    padding: 10px 20px;
-    border-radius: var(--ivy-border-radius, 4px);
-    font-size: var(--ivy-alert-font-size, 12px);
-    & + & {
-        margin-top: 20px;
-    }
-    &__title {
-        font-weight: 700;
-        font-size: var(--ivy-alert-header-font-size, 13px);
-    }
-    &__icon {
-        font-size: var(--ivy-alert-icon-size, 16px);
-        margin-right: 8px;
-    }
-    &__description {
-        margin-top: 5px;
-    }
-    &.is-success {
-        background-color: var(--ivy-color-success-light-9);
-        color: var(--ivy-color-success);
-    }
-    &.is-danger {
-        background-color: var(--ivy-color-danger-light-9);
-        color: var(--ivy-color-danger);
-    }
-    &.is-warning {
-        background-color: var(--ivy-color-warning-light-9);
-        color: var(--ivy-color-warning);
-    }
-    &.is-info {
-        background-color: var(--ivy-color-info-light-9);
-        color: var(--ivy-color-info);
-    }
+  display: flex;
+  align-items: var(--ivy-alert-icon-align, flex-start);
+  padding: 10px 20px;
+  border-radius: var(--ivy-border-radius, 4px);
+  font-size: var(--ivy-alert-font-size, 12px);
+  align-items: center;
+  & + & {
+    margin-top: 20px;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: var(--ivy-alert-header-font-size, 13px);
+    line-height: 1em;
+  }
+  &__icon {
+    font-size: var(--ivy-alert-icon-size, 16px);
+    margin-right: 8px;
+  }
+  &__description {
+    margin-top: 5px;
+  }
+  &.is-success {
+    background-color: var(--ivy-color-success-light-9);
+    color: var(--ivy-color-success);
+  }
+  &.is-danger {
+    background-color: var(--ivy-color-danger-light-9);
+    color: var(--ivy-color-danger);
+  }
+  &.is-warning {
+    background-color: var(--ivy-color-warning-light-9);
+    color: var(--ivy-color-warning);
+  }
+  &.is-info {
+    background-color: var(--ivy-color-info-light-9);
+    color: var(--ivy-color-info);
+  }
 }

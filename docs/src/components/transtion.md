@@ -15,7 +15,7 @@
             </div>
             <div class="page-item-content">
                 <page-demo>
-                    <mx-button @click="show = !show">click me</mx-button>
+                    <ivy-button @click="show = !show">click me</ivy-button>
                     <div class="transition-parent">
                         <transition name="mx-fade-in-linear">
                             <div v-show="show" class="transition-box">
@@ -38,7 +38,7 @@
             </div>
             <div class="page-item-content">
                 <page-demo>
-                    <mx-button @click="show2 = !show2">Click Me</mx-button>
+                    <ivy-button @click="show2 = !show2">Click Me</ivy-button>
                     <div class="transition-parent">
                         <transition name="mx-zoom-in-center">
                             <div v-show="show2" class="transition-box">
@@ -71,9 +71,9 @@
             </div>
             <div class="page-item-content">
                 <page-demo>
-                    <mx-button @click="show3 = !show3">Click Me</mx-button>
+                    <ivy-button @click="show3 = !show3">Click Me</ivy-button>
                     <div style="margin-top: 20px; height: 200px;">
-                        <mx-collapse-transition>
+                        <ivy-collapse-transition>
                             <div v-show="show3">
                                 <div class="transition-box">
                                     mx-collapse-transition
@@ -82,7 +82,7 @@
                                     mx-collapse-transition
                                 </div>
                             </div>
-                        </mx-collapse-transition>
+                        </ivy-collapse-transition>
                     </div>
                     <high-light slot="highlight" :code="code3"></high-light>
                 </page-demo>
@@ -99,7 +99,7 @@ export default {
             show2: true,
             show3: true,
             code1: `
-<mx-button @click="show = !show">click me</mx-button>
+<ivy-button @click="show = !show">click me</ivy-button>
 <div style="display: flex; margin-top: 20px; height: 100px;">
     <transition name="mx-fade-in-linear">
         <div v-show="show" class="transition-box">
@@ -114,7 +114,7 @@ export default {
 </div>
             `,
             code2: `
-<mx-button @click="show2 = !show2">Click Me</mx-button>
+<ivy-button @click="show2 = !show2">Click Me</ivy-button>
 <div style="display: flex; margin-top: 20px; height: 100px;">
     <transition name="mx-zoom-in-center">
         <div v-show="show2" class="transition-box">
@@ -136,9 +136,9 @@ export default {
 </div>
             `,
             code3: `
-<mx-button @click="show3 = !show3">Click Me</mx-button>
+<ivy-button @click="show3 = !show3">Click Me</ivy-button>
 <div style="margin-top: 20px; height: 200px;">
-    <mx-collapse-transition>
+    <ivy-collapse-transition>
         <div v-show="show3">
             <div class="transition-box">
                 mx-collapse-transition
@@ -147,7 +147,7 @@ export default {
                 mx-collapse-transition
             </div>
         </div>
-    </mx-collapse-transition>
+    </ivy-collapse-transition>
 </div>
             `,
         };
