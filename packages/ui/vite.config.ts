@@ -22,10 +22,11 @@ export default defineConfig(({ command }) => {
           formats: ["es", "umd"],
         },
         rollupOptions: {
-          external: ["vue"],
+          external: ["vue", "vue-router"],
           output: {
             globals: {
               vue: "Vue",
+              "vue-router": "vueRouter",
             },
             exports: "named",
           },
