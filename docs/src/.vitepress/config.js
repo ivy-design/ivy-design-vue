@@ -2,6 +2,10 @@ import { defineConfig } from "vitepress";
 
 const nav = [
     {
+        text: "指引",
+        link: "/guide/install.md",
+    },
+    {
         text: "组件",
         link: "/components/button.md",
     },
@@ -32,6 +36,15 @@ const sidebar = {
                 {
                     text: "Button 按钮",
                     link: "/components/button.md",
+                },
+            ],
+        },
+        {
+            text: "导航组件",
+            items: [
+                {
+                    text: "Breadcrumb 面包屑",
+                    link: "/components/breadcrumb.md",
                 },
             ],
         },

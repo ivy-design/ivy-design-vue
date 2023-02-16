@@ -1,74 +1,39 @@
-<template>
-    <div class="page">
-        <div class="page-item">
-            <div>
-                <p class="page-title">Breadcrumb 面包屑</p>
-                <p class="page-dec">
-                    显示当前页面的路径，快速返回之前的任意页面。
-                </p>
-            </div>
-        </div>
-        <div class="page-item">
-            <div>
-                <p class="page-item-title">基本用法</p>
-                <p class="page-item-dec">适用广泛的基础用法。</p>
-            </div>
-            <div class="page-item-content">
-                <page-demo>
-                    <ivy-breadcrumb>
-                        <ivy-breadcrumb-item to="name">首页</ivy-breadcrumb-item>
-                        <ivy-breadcrumb-item to="age">组件</ivy-breadcrumb-item>
-                        <ivy-breadcrumb-item>面包屑</ivy-breadcrumb-item>
-                    </ivy-breadcrumb>
-                </page-demo>
-            </div>
-        </div>
-        <div class="page-item">
-            <div>
-                <p class="page-item-title">自定义分隔符</p>
-            </div>
-            <div class="page-item-content">
-                <page-demo>
-                    <ivy-breadcrumb separator="/">
-                        <ivy-breadcrumb-item to="name">首页</ivy-breadcrumb-item>
-                        <ivy-breadcrumb-item to="age">组件</ivy-breadcrumb-item>
-                        <ivy-breadcrumb-item>面包屑</ivy-breadcrumb-item>
-                    </ivy-breadcrumb>
-                </page-demo>
-            </div>
-        </div>
-        <div class="page-item">
-            <div>
-                <p class="page-title">API</p>
-            </div>
-            <div class="page-item">
-                <div>
-                    <p class="page-item-title">Breadcrumb Props</p>
-                </div>
-                <div class="page-item-content">
-                    <ivy-table :data="tableData" :columns="tableColumns">
-                    </ivy-table>
-                </div>
-            </div>
-            <div class="page-item">
-                <div>
-                    <p class="page-item-title">BreadcrumbItem Props</p>
-                </div>
-                <div class="page-item-content">
-                    <ivy-table :data="tableData2" :columns="tableColumns">
-                    </ivy-table>
-                </div>
-            </div>
-        </div>
-    </div>
-</template>
+# Breadcrumb 面包屑
+
+显示当前页面的路径，快速返回之前的任意页面。
+
+## 基本用法
+
+适用广泛的基础用法。
+
+<div class="demo-block">
+    <ivy-breadcrumb>
+        <ivy-breadcrumb-item to="name">首页</ivy-breadcrumb-item>
+        <ivy-breadcrumb-item to="age">组件</ivy-breadcrumb-item>
+        <ivy-breadcrumb-item>面包屑</ivy-breadcrumb-item>
+    </ivy-breadcrumb>
+</div>
+
+## 自定义分隔符
+
+<div class="demo-block">
+    <ivy-breadcrumb separator="/">
+        <ivy-breadcrumb-item to="name">首页</ivy-breadcrumb-item>
+        <ivy-breadcrumb-item to="age">组件</ivy-breadcrumb-item>
+        <ivy-breadcrumb-item>面包屑</ivy-breadcrumb-item>
+    </ivy-breadcrumb>
+</div>
+
+
+## Breadcrumb Props
+
+## BreadcrumbItem Props
+
 
 <script>
-import { columns } from '@/data/table.js';
 export default {
     data() {
         return {
-            tableColumns: columns,
             tableData: [
                 {
                     parameter: 'separator',
@@ -109,20 +74,6 @@ export default {
                     defaultValue: '_self',
                 },
             ],
-            code1: `
-<ivy-breadcrumb>
-    <ivy-breadcrumb-item to="name">首页</ivy-breadcrumb-item>
-    <ivy-breadcrumb-item to="age">组件</ivy-breadcrumb-item>
-    <ivy-breadcrumb-item>面包屑</ivy-breadcrumb-item>
-</ivy-breadcrumb>
-            `,
-            code2: `
-<ivy-breadcrumb separator="/">
-    <ivy-breadcrumb-item to="name">首页</ivy-breadcrumb-item>
-    <ivy-breadcrumb-item to="age">组件</ivy-breadcrumb-item>
-    <ivy-breadcrumb-item>面包屑</ivy-breadcrumb-item>
-</ivy-breadcrumb>
-            `,
         };
     },
     methods: {},

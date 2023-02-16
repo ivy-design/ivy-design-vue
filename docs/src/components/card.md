@@ -1,138 +1,93 @@
-<template>
-    <div class="page-card">
-        <div class="page-item">
-            <div>
-                <p class="page-title">Card 卡片</p>
-                <p class="page-dec">将信息聚合在卡片容器中展示。</p>
-            </div>
-        </div>
-        <div class="page-item">
-            <div>
-                <p class="page-item-title">卡片的基础用法</p>
-                <p class="page-item-dec">包含标题，内容和操作</p>
-            </div>
-            <div class="page-item-content">
-                <page-demo>
-                    <ivy-card>
-                        <div
-                            slot="header"
-                            style="display: flex;justify-content: space-between;align-items: center;"
-                        >
-                            <span>卡片名称</span>
-                            <ivy-button type="text">操作按钮</ivy-button>
-                        </div>
-                        <div>
-                            <p>列表内容 1</p>
-                            <p>列表内容 2</p>
-                            <p>列表内容 3</p>
-                        </div>
-                    </ivy-card>
-                    <high-light slot="highlight" :code="code1"></high-light>
-                </page-demo>
-            </div>
-        </div>
-        <div class="page-item">
-            <div>
-                <p class="page-item-title">卡片的简单用法</p>
-                <p class="page-item-dec">卡片可以只有内容区域</p>
-            </div>
-            <div class="page-item-content">
-                <page-demo>
-                    <ivy-card>
-                        <div>
-                            <p>列表内容 1</p>
-                            <p>列表内容 2</p>
-                            <p>列表内容 3</p>
-                        </div>
-                    </ivy-card>
-                </page-demo>
-            </div>
-        </div>
-        <div class="page-item">
-            <div>
-                <p class="page-item-title">卡片阴影</p>
-                <p class="page-item-dec">可对阴影的显示进行配置。</p>
-            </div>
-            <div class="page-item-content">
-                <page-demo>
-                    <div style="display: inline-block;width: 30%;">
-                        <ivy-card>
-                            <p>总是显示</p>
-                        </ivy-card>
-                    </div>
-                    <div style="display: inline-block;width: 30%;margin: 0 5%;">
-                        <ivy-card shadow="hover">
-                            <p>Hover显示</p>
-                        </ivy-card>
-                    </div>
-                    <div style="display: inline-block;width: 30%;">
-                        <ivy-card shadow="never">
-                            <p>永不显示</p>
-                        </ivy-card>
-                    </div>
-                </page-demo>
-            </div>
-        </div>
-        <div class="page-item">
-            <div>
-                <p class="page-item-title">Card Attributes</p>
-            </div>
-            <div class="page-item-content">
-                <ivy-table :data="ColData" :columns="tableColumns"></ivy-table>
-            </div>
-        </div>
-    </div>
-</template>
+# Card 卡片
 
-<script>
-import { columns } from '@/data/table.js';
-export default {
-    data() {
-        return {
-            tableColumns: columns,
-            ColData: [
-                {
-                    parameter: 'header',
-                    explain: '设置 header',
-                    type: 'String',
-                    optionalValue: '—',
-                    defaultValue: '—',
-                },
-                {
-                    parameter: 'body-style',
-                    explain: '设置 body 的样式',
-                    type: 'Object',
-                    optionalValue: '—',
-                    defaultValue: "{ padding: '16px 20px' }",
-                },
-                {
-                    parameter: 'shadow',
-                    explain: '设置阴影显示时机',
-                    type: 'String',
-                    optionalValue: 'always / hover / never',
-                    defaultValue: 'always',
-                },
-            ],
-            code1: `
+将信息聚合在卡片容器中展示。
+
+## 基础用法
+
+包含标题，内容和操作
+
+Card 组件由 `header` 和 `body` 组成。 `header` 是可选的，其内容取决于一个具名的 slot。
+
 <ivy-card>
-    <div
-        slot="header"
-        style="display: flex;justify-content: space-between;align-items: center;"
-    >
-        <span>卡片名称</span>
-        <ivy-button type="text">操作按钮</ivy-button>
-    </div>
+    <template #header>
+        <div
+            style="display: flex;justify-content: space-between;align-items: center;"
+        >
+            <span>卡片名称</span>
+            <ivy-button>操作按钮</ivy-button>
+        </div>
+    </template>
     <div>
         <p>列表内容 1</p>
         <p>列表内容 2</p>
         <p>列表内容 3</p>
     </div>
 </ivy-card>
-            `,
-        };
-    },
-};
-</script>
+
+```html
+<ivy-card>
+    <template #header>
+        <div
+            style="display: flex;justify-content: space-between;align-items: center;"
+        >
+            <span>卡片名称</span>
+            <ivy-button>操作按钮</ivy-button>
+        </div>
+    </template>
+    <div>
+        <p>列表内容 1</p>
+        <p>列表内容 2</p>
+        <p>列表内容 3</p>
+    </div>
+</ivy-card>
+```
+
+## 简单卡片
+
+卡片可以只有内容区域
+
+<ivy-card>
+    <p>列表内容 1</p>
+    <p>列表内容 2</p>
+    <p>列表内容 3</p>
+</ivy-card>
+
+## 卡片阴影
+
+可对阴影的显示进行配置。
+
+通过 `shadow` 属性设置卡片阴影出现的时机。 该属性的值可以是：`always`、`hover` 或 `never`。
+
+<div class="padding-top">
+    <div style="display: inline-block;width: 30%;">
+        <ivy-card>
+            <p>总是显示</p>
+        </ivy-card>
+    </div>
+    <div style="display: inline-block;width: 30%;margin: 0 5%;">
+        <ivy-card shadow="hover">
+            <p>Hover显示</p>
+        </ivy-card>
+    </div>
+    <div style="display: inline-block;width: 30%;">
+        <ivy-card shadow="never">
+            <p>永不显示</p>
+        </ivy-card>
+    </div>
+</div>
+
+
+
+## API
+
+### Props
+
+| 属性| 描述 | 类型 | 可选值 | 默认值 |
+|-|-|-|-|-|
+|header|设置 header|String|—|—|
+|body-style|设置 body 的样式|Object|—|`{padding: '16px 20px'}`|
+|shadow|设置阴影显示时机|String|always/hover/never|always|
+
 
 <style scoped>
 .page-card {
