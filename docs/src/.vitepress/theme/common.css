@@ -1,3 +1,7 @@
+html,
+body {
+    font-size: 14px;
+}
 /*margin*/
 .margin-top {
     margin-top: 12px;

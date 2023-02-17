@@ -27,7 +27,17 @@
 
 ## Breadcrumb Props
 
+| 属性| 描述 | 类型 | 可选值 | 默认值 |
+|-|-|-|-|-|
+|separator|分隔符|string|-|`/`|
+
 ## BreadcrumbItem Props
+
+| 属性| 描述 | 类型 | 可选值 | 默认值 |
+|-|-|-|-|-|
+|href|跳转的url|string|-|-|
+|separator|分隔符|string|-|`/`|
+|onClick|点击事件|string|-|`/`|
 
 
 <script>

@@ -96,6 +96,15 @@ const sidebar = {
                 },
             ],
         },
+        {
+            text: "其它组件",
+            items: [
+                {
+                    text: "Divider 分割线",
+                    link: "/components/divider.md",
+                },
+            ],
+        },
     ],
 };
 

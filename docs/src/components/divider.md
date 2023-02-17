@@ -1,157 +1,86 @@
-<template>
-    <div class="page">
-        <div class="page-item">
-            <div>
-                <p class="page-title">Divider 分割线</p>
-                <p class="page-dec">
-                    区隔内容的分割线。<br />对不同章节的文本段落进行分割。<br />对行内文字/链接进行分割，例如表格的操作列。
-                </p>
-            </div>
-        </div>
-        <div class="page-item">
-            <div>
-                <p class="page-item-title">基础用法</p>
-                <p class="page-item-dec">
-                    默认为水平分割线，可在中间加入文字。
-                </p>
-            </div>
-            <div class="page-item-content">
-                <page-demo>
-                    <p>
-                        Steven Paul Jobs was an American entrepreneur and
-                        business magnate. He was the chairman, chief executive
-                        officer, and a co-founder of Apple Inc.
-                    </p>
-                    <ivy-divider></ivy-divider>
-                    <p>
-                        Steven Paul Jobs was an American entrepreneur and
-                        business magnate. He was the chairman, chief executive
-                        officer, and a co-founder of Apple Inc.
-                    </p>
-                    <ivy-divider>文字在中间</ivy-divider>
-                    <p>
-                        Steven Paul Jobs was an American entrepreneur and
-                        business magnate. He was the chairman, chief executive
-                        officer, and a co-founder of Apple Inc.
-                    </p>
-                    <ivy-divider dashed></ivy-divider>
-                    <p>
-                        Steven Paul Jobs was an American entrepreneur and
-                        business magnate. He was the chairman, chief executive
-                        officer, and a co-founder of Apple Inc.
-                    </p>
-                    <div slot="highlight">
-                        <high-light :code="code1"></high-light>
-                    </div>
-                </page-demo>
-            </div>
-        </div>
-        <div class="page-item">
-            <div>
-                <p class="page-item-title">垂直分割线</p>
-                <p class="page-item-dec">
-                    使用 type="vertical" 设置为行内的垂直分割线。
-                </p>
-            </div>
-            <div class="page-item-content">
-                <page-demo>
-                    <span>text</span>
-                    <ivy-divider type="vertical"></ivy-divider>
-                    <span>image</span>
-                    <ivy-divider type="vertical"></ivy-divider>
-                    <span>link</span>
-                    <ivy-divider type="vertical"></ivy-divider>
-                    <div slot="highlight">
-                        <high-light :code="code2"></high-light>
-                    </div>
-                </page-demo>
-            </div>
-        </div>
-        <div class="page-item">
-            <div>
-                <p class="page-item-title">标题位置</p>
-                <p class="page-item-dec">修改分割线标题的位置。</p>
-            </div>
-            <div class="page-item-content">
-                <page-demo>
-                    <p>
-                        Steven Paul Jobs was an American entrepreneur and
-                        business magnate. He was the chairman, chief executive
-                        officer, and a co-founder of Apple Inc.
-                    </p>
-                    <ivy-divider placement="left">文字在左侧</ivy-divider>
-                    <p>
-                        Steven Paul Jobs was an American entrepreneur and
-                        business magnate. He was the chairman, chief executive
-                        officer, and a co-founder of Apple Inc.
-                    </p>
-                    <ivy-divider>文字在中间</ivy-divider>
-                    <p>
-                        Steven Paul Jobs was an American entrepreneur and
-                        business magnate. He was the chairman, chief executive
-                        officer, and a co-founder of Apple Inc.
-                    </p>
-                    <ivy-divider placement="right">文字在右侧</ivy-divider>
-                    <p>
-                        Steven Paul Jobs was an American entrepreneur and
-                        business magnate. He was the chairman, chief executive
-                        officer, and a co-founder of Apple Inc.
-                    </p>
-                    <div slot="highlight">
-                        <high-light :code="code3"></high-light>
-                    </div>
-                </page-demo>
-            </div>
-        </div>
-        <div class="page-item">
-            <div>
-                <p class="page-title">API</p>
-            </div>
-            <div class="page-item">
-                <div>
-                    <p class="page-item-title">Divider Props</p>
-                </div>
-                <div class="page-item-content">
-                    <ivy-table :data="tableData" :columns="tableColumns">
-                    </ivy-table>
-                </div>
-            </div>
-        </div>
-    </div>
-</template>
+# Divider 分割线
+
+区隔内容的分割线。<br />对不同章节的文本段落进行分割。<br />对行内文字/链接进行分割，例如表格的操作列。
+
+## 基础用法
+
+默认为水平分割线，可在中间加入文字。
+
+<div class="demo-block">
+        <p>
+            Steven Paul Jobs was an American entrepreneur and
+            business magnate. He was the chairman, chief executive
+            officer, and a co-founder of Apple Inc.
+        </p>
+        <ivy-divider></ivy-divider>
+        <p>
+            Steven Paul Jobs was an American entrepreneur and
+            business magnate. He was the chairman, chief executive
+            officer, and a co-founder of Apple Inc.
+        </p>
+        <ivy-divider>文字在中间</ivy-divider>
+        <p>
+            Steven Paul Jobs was an American entrepreneur and
+            business magnate. He was the chairman, chief executive
+            officer, and a co-founder of Apple Inc.
+        </p>
+        <ivy-divider dashed></ivy-divider>
+        <p>
+            Steven Paul Jobs was an American entrepreneur and
+            business magnate. He was the chairman, chief executive
+            officer, and a co-founder of Apple Inc.
+        </p>
+</div>
+
+## 垂直分割线
+
+使用 type="vertical" 设置为行内的垂直分割线。
+
+<div class="demo-block">
+        <span>text</span>
+        <ivy-divider type="vertical"></ivy-divider>
+        <span>image</span>
+        <ivy-divider type="vertical"></ivy-divider>
+        <span>link</span>
+</div>
+
+## 标题位置
+
+修改分割线标题的位置。
+
+<div class="demo-block">
+        <p>
+            Steven Paul Jobs was an American entrepreneur and
+            business magnate. He was the chairman, chief executive
+            officer, and a co-founder of Apple Inc.
+        </p>
+        <ivy-divider placement="left">文字在左侧</ivy-divider>
+        <p>
+            Steven Paul Jobs was an American entrepreneur and
+            business magnate. He was the chairman, chief executive
+            officer, and a co-founder of Apple Inc.
+        </p>
+        <ivy-divider>文字在中间</ivy-divider>
+        <p>
+            Steven Paul Jobs was an American entrepreneur and
+            business magnate. He was the chairman, chief executive
+            officer, and a co-founder of Apple Inc.
+        </p>
+        <ivy-divider placement="right">文字在右侧</ivy-divider>
+        <p>
+            Steven Paul Jobs was an American entrepreneur and
+            business magnate. He was the chairman, chief executive
+            officer, and a co-founder of Apple Inc.
+        </p>
+</div>
+
+## Props
+
 
 <script>
-import { columns } from '@/data/table.js';
 export default {
     data() {
         return {
-            tableColumns: columns,
-            code1: `
-<p>Steven Paul Jobs was an American entrepreneur and business magnate. He was the chairman, chief executive officer, and a co-founder of Apple Inc.</p>
-<ivy-divider></ivy-divider>
-<p>Steven Paul Jobs was an American entrepreneur and  business magnate. He was the chairman, chief executive officer, and a co-founder of Apple Inc.</p>
-<ivy-divider>文字在中间</ivy-divider>
-<p>Steven Paul Jobs was an American entrepreneur and business magnate. He was the chairman, chief executive officer, and a co-founder of Apple Inc.</p>
-<ivy-divider dashed></ivy-divider>
-<p>Steven Paul Jobs was an American entrepreneur and business magnate. He was the chairman, chief executive officer, and a co-founder of Apple Inc.</p>
-            `,
-            code2: `
-<span>text</span>
-<ivy-divider type="vertical"></ivy-divider>
-<span>image</span>
-<ivy-divider type="vertical"></ivy-divider>
-<span>link</span>
-<ivy-divider type="vertical"></ivy-divider>
-            `,
-            code3: `
-<p>Steven Paul Jobs was an American entrepreneur and business magnate. He was the chairman, chief executive officer, and a co-founder of Apple Inc.</p>
-<ivy-divider placement="left"></ivy-divider>
-<p>Steven Paul Jobs was an American entrepreneur and  business magnate. He was the chairman, chief executive officer, and a co-founder of Apple Inc.</p>
-<ivy-divider>文字在中间</ivy-divider>
-<p>Steven Paul Jobs was an American entrepreneur and business magnate. He was the chairman, chief executive officer, and a co-founder of Apple Inc.</p>
-<ivy-divider placement="right"></ivy-divider>
-<p>Steven Paul Jobs was an American entrepreneur and business magnate. He was the chairman, chief executive officer, and a co-founder of Apple Inc.</p>
-            `,
             tableData: [
                 {
                     parameter: 'direction',
