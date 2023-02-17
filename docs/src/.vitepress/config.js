@@ -12,6 +12,16 @@ const nav = [
 ];
 
 const sidebar = {
+    "/guide/": [
+        {
+            text: "快速开始",
+            link: "/guide/install.md",
+        },
+        {
+            text: "更新日志",
+            link: "/guide/changelog.md",
+        },
+    ],
     "/components/": [
         {
             text: "基础组件",

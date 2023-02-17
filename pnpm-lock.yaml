@@ -33,10 +33,14 @@ importers:
     specifiers:
       '@ivy-design/vue': workspace:*
       vitepress: 1.0.0-alpha.46
+      vue: ^3.2.45
+      vue-router: ^4.1.6
     dependencies:
       '@ivy-design/vue': link:../packages/ui
     devDependencies:
       vitepress: 1.0.0-alpha.46
+      vue: 3.2.45
+      vue-router: 4.1.6_vue@3.2.45
 
   packages/ui:
     specifiers:
@@ -1025,7 +1029,7 @@ packages:
       vite: ^4.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 4.0.4_@types+node@18.11.18
+      vite: 4.0.4
       vue: 3.2.45
     dev: true
 
@@ -1123,13 +1127,8 @@ packages:
       '@vue/compiler-dom': 3.2.45
       '@vue/shared': 3.2.45
 
-  /@vue/devtools-api/6.4.5:
-    resolution: {integrity: sha512-JD5fcdIuFxU4fQyXUu3w2KpAJHzTVdN+p4iOX2lMWSHMOoQdMAcpFLZzm9Z/2nmsoZ1a96QEhZ26e50xLBsgOQ==}
-    dev: false
-
   /@vue/devtools-api/6.5.0:
     resolution: {integrity: sha512-o9KfBeaBmCKl10usN4crU53fYtC1r7jJwdGKjPT24t348rHxgfpZ0xL3Xm/gLUYnc0oTp8LAmrxOeLyu6tbk2Q==}
-    dev: true
 
   /@vue/eslint-config-prettier/7.0.0_crnjwcwerrbat3mlbmrsoa543e:
     resolution: {integrity: sha512-/CTc6ML3Wta1tCe1gUeO0EYnVXfo3nJXsIhZ8WJr3sov+cGASr6yuiibJTL6lmIBm7GobopToOuB3B6AWyV0Iw==}
@@ -3467,9 +3466,8 @@ packages:
     peerDependencies:
       vue: ^3.2.0
     dependencies:
-      '@vue/devtools-api': 6.4.5
+      '@vue/devtools-api': 6.5.0
       vue: 3.2.45
-    dev: false
 
   /vue-template-compiler/2.7.14:
     resolution: {integrity: sha512-zyA5Y3ArvVG0NacJDkkzJuPQDF8RFeRlzV2vLeSnhSpieO6LK2OVbdLPi5MPPs09Ii+gMO8nY4S3iKQxBxDmWQ==}

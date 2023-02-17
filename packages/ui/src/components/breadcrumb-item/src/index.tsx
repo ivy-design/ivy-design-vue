@@ -1,52 +1,41 @@
-import { defineComponent, inject } from "vue";
-import { RouterLink } from "vue-router";
+import { h, defineComponent, inject, type PropType, computed } from "vue";
 import { prefix } from "@/utils";
+import { useBrowserLocation } from "../../../use/useBrowserLocation";
 
 export default defineComponent({
   name: `${prefix}breadcrumb-item`,
   props: {
-    to: {
-      type: [String, Object],
-    },
-    append: {
+    separator: String,
+    href: String,
+    clickable: {
       type: Boolean,
-      default: false,
+      default: true,
     },
-    replace: {
-      type: Boolean,
-      default: false,
-    },
-    target: {
-      type: String,
-      default: "_self",
-    },
+    onClick: Function as PropType<(e: MouseEvent) => void>,
   },
   setup(props, { slots }) {
     const separator = inject("separator");
-
-    const renderInner = () => {
-      if (props.to) {
-        return (
-          <RouterLink
-            to={props.to}
-            replace={props.replace}
-            target={props.target}
-            class="ivy-breadcrumb-item-text"
-          >
-            {slots.default?.()}
-          </RouterLink>
-        );
-      } else {
-        return (
-          <span class="ivy-breadcrumb-item-text">{slots.default?.()}</span>
-        );
-      }
-    };
+    const htmlTagRef = computed(() => (props.href ? "a" : "span"));
+    const browserLocationRef = useBrowserLocation();
+    const ariaCurrentRef = computed(() =>
+      browserLocationRef.value.href === props.href ? "location" : null
+    );
 
     return () => (
       <div class="ivy-breadcrumb-item">
-        {renderInner()}
-        <div class="ivy-breadcrumb-item-symbol">{separator}</div>
+        {h(
+          htmlTagRef.value,
+          {
+            class: "ivy-breadcrumb-item-text",
+            "aria-current": ariaCurrentRef.value,
+            href: props.href,
+            onClick: props.onClick,
+          },
+          slots.default?.() ?? []
+        )}
+        <div class="ivy-breadcrumb-item-symbol" aria-hidden="true">
+          {props.separator ?? separator}
+        </div>
       </div>
     );
   },

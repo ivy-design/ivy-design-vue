@@ -8,8 +8,8 @@
 
 <div class="demo-block">
     <ivy-breadcrumb>
-        <ivy-breadcrumb-item to="name">首页</ivy-breadcrumb-item>
-        <ivy-breadcrumb-item to="age">组件</ivy-breadcrumb-item>
+        <ivy-breadcrumb-item href="/name">首页</ivy-breadcrumb-item>
+        <ivy-breadcrumb-item href="/age">组件</ivy-breadcrumb-item>
         <ivy-breadcrumb-item>面包屑</ivy-breadcrumb-item>
     </ivy-breadcrumb>
 </div>
@@ -17,9 +17,9 @@
 ## 自定义分隔符
 
 <div class="demo-block">
-    <ivy-breadcrumb separator="/">
-        <ivy-breadcrumb-item to="name">首页</ivy-breadcrumb-item>
-        <ivy-breadcrumb-item to="age">组件</ivy-breadcrumb-item>
+    <ivy-breadcrumb separator=">">
+        <ivy-breadcrumb-item href="/name">首页</ivy-breadcrumb-item>
+        <ivy-breadcrumb-item href="/age">组件</ivy-breadcrumb-item>
         <ivy-breadcrumb-item>面包屑</ivy-breadcrumb-item>
     </ivy-breadcrumb>
 </div>
