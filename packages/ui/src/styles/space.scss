@@ -1,6 +1,14 @@
 .ivy-space {
   display: flex;
-  gap: 12px;
+  &.is-small {
+    gap: 8px;
+  }
+  &.is-medium {
+    gap: 12px;
+  }
+  &.is-large {
+    gap: 24px;
+  }
   &.is-vertical {
     flex-direction: column;
   }
