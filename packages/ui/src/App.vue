@@ -71,9 +71,29 @@ const data = ref<Data[]>([
 </script>
 
 <template>
-  <router-view></router-view>
+  <!-- <router-view></router-view> -->
   <div>
-    <ivy-count-up :end="400" :duration="6000" prefix="￥"></ivy-count-up>
+    <ivy-space>
+      <ivy-button>123</ivy-button>
+      <ivy-button>ddd</ivy-button>
+      <ivy-button>fff</ivy-button>
+    </ivy-space>
+    <ivy-space vertical>
+      <ivy-button>123</ivy-button>
+      <ivy-button>ddd</ivy-button>
+      <ivy-button>fff</ivy-button>
+    </ivy-space>
+    <ivy-space gap="50">
+      <ivy-button>123</ivy-button>
+      <ivy-button>ddd</ivy-button>
+      <ivy-button>fff</ivy-button>
+    </ivy-space>
+    <ivy-space vertical gap="50">
+      <ivy-button>123</ivy-button>
+      <ivy-button>ddd</ivy-button>
+      <ivy-button>fff</ivy-button>
+    </ivy-space>
+    <!-- <ivy-count-up :end="400" :duration="6000" prefix="￥"></ivy-count-up> -->
     <!-- <ivy-virtual-list height="600px" style="width: 700px; margin-top: 48px" :source="data" item-height="42px">
             <ivy-virtual-list-item v-for="item in data" :key="item.id">{{ item.text }}</ivy-virtual-list-item>
         </ivy-virtual-list> -->

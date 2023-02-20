@@ -1,0 +1,7 @@
+.ivy-space {
+  display: flex;
+  gap: 12px;
+  &.is-vertical {
+    flex-direction: column;
+  }
+}
