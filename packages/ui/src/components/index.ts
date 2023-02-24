@@ -31,7 +31,6 @@ import Table from "./table/index";
 import TableColumn from "./table-column/index";
 import Badge from "./badge/index";
 import Space from "./space/index";
-import { Grid, GridItem } from "./grid/index";
 
 const components: Component[] = [
   Icon,
@@ -66,8 +65,6 @@ const components: Component[] = [
   TableColumn,
   Badge,
   Space,
-  Grid,
-  GridItem,
 ];
 
 export {
@@ -103,11 +100,13 @@ export {
   TableColumn,
   Badge,
   Space,
-  Grid,
-  GridItem,
 };
 
+let INSTALLED_KEY = false;
+
 export default (app: App) => {
+  if (INSTALLED_KEY) return;
+  INSTALLED_KEY = true;
   components.forEach((comp) => {
     app.component(comp.name as string, comp);
   });
