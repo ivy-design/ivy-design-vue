@@ -8,15 +8,15 @@ hero:
   actions:
     - theme: brand
       text: 快速开始
-      link: /components/index
+      link: /guide/install
     - theme: alt
       text: View on GitHub
       link: https://github.com/GuoJikun/ivy-ui
 features:
-  - title: 原生
-    details: nsu-ui是使用原生web component技术构建的ui库.
-  - title: 简单
-    details: 一个组件就像使用一个div标签一样。
+  - title: Typescript
+    details: \@ivy-design/vue是使用原生TS技术构建的.
+  - title: TSX
+    details: \@ivy-design/vue是使用原生TSX技术构建的.
   - title: 通用
     details: 无论是react、vue、angular还是原生项目均可使用。
 ---

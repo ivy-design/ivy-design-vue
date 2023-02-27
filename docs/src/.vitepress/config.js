@@ -31,6 +31,10 @@ const sidebar = {
                     link: "/components/layout.md",
                 },
                 {
+                    text: "Icon 图标",
+                    link: "/components/icon.md",
+                },
+                {
                     text: "Button 按钮",
                     link: "/components/button.md",
                 },
