@@ -128,3 +128,12 @@
 <ivy-button size="small" round>small</ivy-button>
 <ivy-button size="mini" round>mini</ivy-button>
 ```
+
+## Props
+
+| 属性| 描述 | 类型 | 可选值 | 默认值 |
+|-|-|-|-|-|
+|type|类型|string|`primary/success/warning/danger/info`|primary|
+|round| 圆角按钮 |boolean|—|false|
+|disabled| 禁用按钮 |boolean|—|false|
+| size| 大小 |string|`large/medium/small/mini`| medium |
