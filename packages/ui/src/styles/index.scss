@@ -28,6 +28,7 @@
 @import "./table.scss";
 @import "./badge.scss";
 @import "./space.scss";
+@import "./link.scss";
 :root {
   @each $name, $color in $maps {
     --#{$name}: #{$color};

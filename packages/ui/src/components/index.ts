@@ -31,6 +31,7 @@ import Table from "./table/index";
 import TableColumn from "./table-column/index";
 import Badge from "./badge/index";
 import Space from "./space/index";
+import Link from "./link/index";
 
 const components: Component[] = [
   Icon,
@@ -65,6 +66,7 @@ const components: Component[] = [
   TableColumn,
   Badge,
   Space,
+  Link,
 ];
 
 export {
@@ -100,6 +102,7 @@ export {
   TableColumn,
   Badge,
   Space,
+  Link,
 };
 
 let INSTALLED_KEY = false;

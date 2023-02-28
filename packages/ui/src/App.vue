@@ -71,8 +71,32 @@ const data = ref<Data[]>([
 </script>
 
 <template>
-  <!-- <router-view></router-view> -->
   <div>
+    <div class="margin-top: 24px">
+      <ivy-link>default</ivy-link>
+      <ivy-link type="primary">primary</ivy-link>
+      <ivy-link type="success">success</ivy-link>
+      <ivy-link type="warning">warning</ivy-link>
+      <ivy-link type="danger">danger</ivy-link>
+      <ivy-link type="info">info</ivy-link>
+    </div>
+    <div class="margin-top: 24px">
+      <ivy-link underline>default</ivy-link>
+      <ivy-link type="primary" underline>primary</ivy-link>
+      <ivy-link type="success" underline>success</ivy-link>
+      <ivy-link type="warning" underline>warning</ivy-link>
+      <ivy-link type="danger" underline>danger</ivy-link>
+      <ivy-link type="info" underline>info</ivy-link>
+    </div>
+    <div class="margin-top: 24px">
+      <ivy-link disabled>default</ivy-link>
+      <ivy-link type="primary" disabled underline>primary</ivy-link>
+      <ivy-link type="success" disabled>success</ivy-link>
+      <ivy-link type="warning" disabled>warning</ivy-link>
+      <ivy-link type="danger" disabled>danger</ivy-link>
+      <ivy-link type="info" disabled>info</ivy-link>
+    </div>
+
     <!-- <ivy-count-up :end="400" :duration="6000" prefix="￥"></ivy-count-up> -->
     <!-- <ivy-virtual-list height="600px" style="width: 700px; margin-top: 48px" :source="data" item-height="42px">
             <ivy-virtual-list-item v-for="item in data" :key="item.id">{{ item.text }}</ivy-virtual-list-item>
