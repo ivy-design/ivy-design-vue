@@ -11,7 +11,6 @@ export default defineComponent({
         return ["small", "medium", "large"].includes(val);
       },
     },
-    wrap: Boolean,
     vertical: Boolean,
     gap: [String, Number],
   },
@@ -32,7 +31,7 @@ export default defineComponent({
         <div
           class={[
             "ivy-space",
-            props.gap ? "" : `is-medium`,
+            props.gap ? "" : `is-${props.size}`,
             { "is-vertical": props.vertical },
           ]}
           style={{ gap: getGap.value }}

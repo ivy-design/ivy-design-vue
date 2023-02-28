@@ -42,6 +42,10 @@ const sidebar = {
                     text: "Row/Col 行列",
                     link: "/components/row-col.md",
                 },
+                {
+                    text: "Space 间距",
+                    link: "/components/space.md",
+                },
             ],
         },
         {
