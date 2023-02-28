@@ -46,6 +46,10 @@ const sidebar = {
                     text: "Space 间距",
                     link: "/components/space.md",
                 },
+                {
+                    text: "Link 链接",
+                    link: "/components/link.md",
+                },
             ],
         },
         {
