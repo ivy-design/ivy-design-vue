@@ -59,14 +59,22 @@ const sidebar = {
                     text: "List 列表",
                     link: "/components/list.md",
                 },
+                {
+                    text: "Divider 分割线",
+                    link: "/components/divider.md",
+                },
             ],
         },
         {
             text: "表单组件",
             items: [
                 {
-                    text: "Button 按钮",
-                    link: "/components/button.md",
+                    text: "Form 表单",
+                    link: "/components/form.md",
+                },
+                {
+                    text: "Input 输入框",
+                    link: "/components/input.md",
                 },
             ],
         },
@@ -117,15 +125,15 @@ const sidebar = {
                 },
             ],
         },
-        {
-            text: "其它组件",
-            items: [
-                {
-                    text: "Divider 分割线",
-                    link: "/components/divider.md",
-                },
-            ],
-        },
+        // {
+        //     text: "其它组件",
+        //     items: [
+        //         {
+        //             text: "Divider 分割线",
+        //             link: "/components/divider.md",
+        //         },
+        //     ],
+        // },
     ],
 };
 

@@ -30,6 +30,7 @@
 @import "./space.scss";
 @import "./link.scss";
 @import "./list.scss";
+@import "./form.scss";
 :root {
   @each $name, $color in $maps {
     --#{$name}: #{$color};

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { reactive, ref } from "vue";
 
 const data = ref([
   {
@@ -30,36 +30,32 @@ const data = ref([
       "This is the content, this is the content, this is the content, this is the content.",
   },
 ]);
+
+const formItem = reactive({
+  name: "",
+  age: "",
+  sex: "",
+  address: "",
+});
 </script>
 
 <template>
   <div>
     <div class="margin-top: 24px">
-      <div>
-        <strong>默认尺寸:</strong>
-        <br /><br />
-        <ivy-list header="Header" footer="Footer" border>
-          <ivy-list-item header="This is a piece of text."></ivy-list-item>
-          <ivy-list-item header="This is a piece of text."></ivy-list-item>
-          <ivy-list-item header="This is a piece of text."></ivy-list-item>
-        </ivy-list>
-        <br />
-        <strong>小尺寸:</strong>
-        <br /><br />
-        <ivy-list header="Header" footer="Footer" border size="small">
-          <ivy-list-item header="This is a piece of text."></ivy-list-item>
-          <ivy-list-item header="This is a piece of text."></ivy-list-item>
-          <ivy-list-item header="This is a piece of text."></ivy-list-item>
-        </ivy-list>
-        <br />
-        <strong>大尺寸:</strong>
-        <br /><br />
-        <ivy-list header="Header" footer="Footer" border size="large">
-          <ivy-list-item header="This is a piece of text."></ivy-list-item>
-          <ivy-list-item header="This is a piece of text."></ivy-list-item>
-          <ivy-list-item header="This is a piece of text."></ivy-list-item>
-        </ivy-list>
-      </div>
+      <ivy-form :model="formItem">
+        <ivy-form-item label="姓名">
+          <input type="text" />
+        </ivy-form-item>
+        <ivy-form-item label="年龄">
+          <input type="text" />
+        </ivy-form-item>
+        <ivy-form-item label="性别">
+          <input type="text" />
+        </ivy-form-item>
+        <ivy-form-item label="地址">
+          <input type="text" />
+        </ivy-form-item>
+      </ivy-form>
     </div>
     <div class="margin-top: 24px">
       <ivy-list>
@@ -82,7 +78,6 @@ const data = ref([
         >
           <template #action>
             <a href="">Edit</a>
-
             <a href="">More</a>
           </template>
         </ivy-list-item>
@@ -93,7 +88,6 @@ const data = ref([
         >
           <template #action>
             <a href="">Edit</a>
-
             <a href="">More</a>
           </template>
         </ivy-list-item>
