@@ -2,6 +2,9 @@ html,
 body {
     font-size: 14px;
 }
+table {
+    width: 100%;
+}
 /*margin*/
 .margin-top {
     margin-top: 12px;

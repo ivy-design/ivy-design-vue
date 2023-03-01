@@ -27,10 +27,6 @@ const sidebar = {
             text: "基础组件",
             items: [
                 {
-                    text: "Layout 布局组件",
-                    link: "/components/layout.md",
-                },
-                {
                     text: "Icon 图标",
                     link: "/components/icon.md",
                 },
@@ -39,16 +35,29 @@ const sidebar = {
                     link: "/components/button.md",
                 },
                 {
-                    text: "Row/Col 行列",
-                    link: "/components/row-col.md",
-                },
-                {
                     text: "Space 间距",
                     link: "/components/space.md",
                 },
                 {
                     text: "Link 链接",
                     link: "/components/link.md",
+                },
+            ],
+        },
+        {
+            text: "布局组件",
+            items: [
+                {
+                    text: "Layout 布局组件",
+                    link: "/components/layout.md",
+                },
+                {
+                    text: "Row/Col 行列",
+                    link: "/components/row-col.md",
+                },
+                {
+                    text: "List 列表",
+                    link: "/components/list.md",
                 },
             ],
         },

@@ -32,6 +32,7 @@ import TableColumn from "./table-column/index";
 import Badge from "./badge/index";
 import Space from "./space/index";
 import Link from "./link/index";
+import { List, ListItem } from "./list/index";
 
 const components: Component[] = [
   Icon,
@@ -67,6 +68,8 @@ const components: Component[] = [
   Badge,
   Space,
   Link,
+  List,
+  ListItem,
 ];
 
 export {
@@ -103,6 +106,8 @@ export {
   Badge,
   Space,
   Link,
+  List,
+  ListItem,
 };
 
 let INSTALLED_KEY = false;

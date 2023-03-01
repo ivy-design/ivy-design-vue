@@ -1,71 +1,33 @@
 <script setup lang="ts">
 import { ref } from "vue";
-interface Data {
-  text: string;
-  id: number;
-  name: string;
-  age: number;
-}
-const data = ref<Data[]>([
+
+const data = ref([
   {
-    id: 1,
-    name: "张三",
-    age: 18,
-    text: "随便写的",
+    title: "This is title 1",
+    description:
+      "This is description, this is description, this is description.",
+    avatar:
+      "https://dev-file.iviewui.com/userinfoPDvn9gKWYihR24SpgC319vXY8qniCqj4/avatar",
+    content:
+      "This is the content, this is the content, this is the content, this is the content.",
   },
   {
-    id: 2,
-    name: "张三",
-    age: 18,
-    text: "随便写的",
+    title: "This is title 2",
+    description:
+      "This is description, this is description, this is description.",
+    avatar:
+      "https://dev-file.iviewui.com/userinfoPDvn9gKWYihR24SpgC319vXY8qniCqj4/avatar",
+    content:
+      "This is the content, this is the content, this is the content, this is the content.",
   },
   {
-    id: 3,
-    name: "张三",
-    age: 18,
-    text: "随便写的",
-  },
-  {
-    id: 4,
-    name: "张三",
-    age: 18,
-    text: "随便写的",
-  },
-  {
-    id: 5,
-    name: "张三",
-    age: 18,
-    text: "随便写的",
-  },
-  {
-    id: 6,
-    name: "张三",
-    age: 18,
-    text: "随便写的",
-  },
-  {
-    id: 7,
-    name: "张三",
-    age: 18,
-    text: "随便写的",
-  },
-  {
-    id: 8,
-    name: "张三",
-    age: 18,
-    text: "随便写的",
-  },
-  {
-    id: 9,
-    name: "张三",
-    age: 18,
-    text: "随便写的",
-  },
-  {
-    id: 10,
-    name: "张三",
-    age: 18,
-    text: "随便写的",
+    title: "This is title 3",
+    description:
+      "This is description, this is description, this is description.",
+    avatar:
+      "https://dev-file.iviewui.com/userinfoPDvn9gKWYihR24SpgC319vXY8qniCqj4/avatar",
+    content:
+      "This is the content, this is the content, this is the content, this is the content.",
   },
 ]);
 </script>
@@ -73,28 +35,93 @@ const data = ref<Data[]>([
 <template>
   <div>
     <div class="margin-top: 24px">
-      <ivy-link>default</ivy-link>
-      <ivy-link type="primary">primary</ivy-link>
-      <ivy-link type="success">success</ivy-link>
-      <ivy-link type="warning">warning</ivy-link>
-      <ivy-link type="danger">danger</ivy-link>
-      <ivy-link type="info">info</ivy-link>
+      <div>
+        <strong>默认尺寸:</strong>
+        <br /><br />
+        <ivy-list header="Header" footer="Footer" border>
+          <ivy-list-item header="This is a piece of text."></ivy-list-item>
+          <ivy-list-item header="This is a piece of text."></ivy-list-item>
+          <ivy-list-item header="This is a piece of text."></ivy-list-item>
+        </ivy-list>
+        <br />
+        <strong>小尺寸:</strong>
+        <br /><br />
+        <ivy-list header="Header" footer="Footer" border size="small">
+          <ivy-list-item header="This is a piece of text."></ivy-list-item>
+          <ivy-list-item header="This is a piece of text."></ivy-list-item>
+          <ivy-list-item header="This is a piece of text."></ivy-list-item>
+        </ivy-list>
+        <br />
+        <strong>大尺寸:</strong>
+        <br /><br />
+        <ivy-list header="Header" footer="Footer" border size="large">
+          <ivy-list-item header="This is a piece of text."></ivy-list-item>
+          <ivy-list-item header="This is a piece of text."></ivy-list-item>
+          <ivy-list-item header="This is a piece of text."></ivy-list-item>
+        </ivy-list>
+      </div>
     </div>
     <div class="margin-top: 24px">
-      <ivy-link underline>default</ivy-link>
-      <ivy-link type="primary" underline>primary</ivy-link>
-      <ivy-link type="success" underline>success</ivy-link>
-      <ivy-link type="warning" underline>warning</ivy-link>
-      <ivy-link type="danger" underline>danger</ivy-link>
-      <ivy-link type="info" underline>info</ivy-link>
+      <ivy-list>
+        <ivy-list-item
+          avatar="https://dev-file.iviewui.com/userinfoPDvn9gKWYihR24SpgC319vXY8qniCqj4/avatar"
+          header="This is title"
+          description="This is description, this is description."
+        >
+        </ivy-list-item>
+        <ivy-list-item
+          avatar="https://dev-file.iviewui.com/userinfoPDvn9gKWYihR24SpgC319vXY8qniCqj4/avatar"
+          header="This is title"
+          description="This is description, this is description."
+        >
+        </ivy-list-item>
+        <ivy-list-item
+          avatar="https://dev-file.iviewui.com/userinfoPDvn9gKWYihR24SpgC319vXY8qniCqj4/avatar"
+          header="This is title"
+          description="This is description, this is description."
+        >
+          <template #action>
+            <a href="">Edit</a>
+
+            <a href="">More</a>
+          </template>
+        </ivy-list-item>
+        <ivy-list-item
+          avatar="https://dev-file.iviewui.com/userinfoPDvn9gKWYihR24SpgC319vXY8qniCqj4/avatar"
+          header="This is title"
+          description="This is description, this is description."
+        >
+          <template #action>
+            <a href="">Edit</a>
+
+            <a href="">More</a>
+          </template>
+        </ivy-list-item>
+      </ivy-list>
     </div>
     <div class="margin-top: 24px">
-      <ivy-link disabled>default</ivy-link>
-      <ivy-link type="primary" disabled underline>primary</ivy-link>
-      <ivy-link type="success" disabled>success</ivy-link>
-      <ivy-link type="warning" disabled>warning</ivy-link>
-      <ivy-link type="danger" disabled>danger</ivy-link>
-      <ivy-link type="info" disabled>info</ivy-link>
+      <ivy-list vertical border>
+        <ivy-list-item
+          v-for="item in data"
+          :key="item.title"
+          :avatar="item.avatar"
+          :header="item.title"
+          :description="item.description"
+        >
+          {{ item.content }}
+          <template #action>
+            <ivy-icon name="star"></ivy-icon> 123
+            <ivy-icon name="pointer"></ivy-icon> 234
+            <ivy-icon name="chat-square"></ivy-icon> 345
+          </template>
+          <template #extra>
+            <img
+              src="https://dev-file.iviewui.com/5wxHCQMUyrauMCGSVEYVxHR5JmvS7DpH/large"
+              style="width: 280px"
+            />
+          </template>
+        </ivy-list-item>
+      </ivy-list>
     </div>
 
     <!-- <ivy-count-up :end="400" :duration="6000" prefix="￥"></ivy-count-up> -->
