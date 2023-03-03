@@ -1,0 +1,93 @@
+@import "./common/var.scss";
+
+.ivy-radio {
+  color: #606266;
+  font-weight: 500;
+  line-height: 1;
+  position: relative;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  outline: none;
+  font-size: 14px;
+
+  user-select: none;
+  &:not(:last-child) {
+    margin-right: 24px;
+  }
+
+  &__input {
+    white-space: nowrap;
+    cursor: pointer;
+    outline: none;
+    display: inline-flex;
+    line-height: 1;
+    position: relative;
+    vertical-align: middle;
+  }
+  &__inner {
+    border: 1px solid var(--ivy-border-color);
+    border-radius: 100%;
+    width: 14px;
+    height: 14px;
+    background-color: var(--ivy-color-white);
+    position: relative;
+    cursor: pointer;
+    display: inline-flex;
+    box-sizing: border-box;
+    &:after {
+      width: 4px;
+      height: 4px;
+      border-radius: 100%;
+      background-color: var(--ivy-color-white);
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      transition: transform 0.15s ease-in;
+    }
+  }
+  &__input.is-checked {
+    & + .ivy-radio__label {
+      color: var(--ivy-color-primary);
+    }
+    .ivy-radio__inner {
+      border-color: var(--ivy-color-primary);
+      background: var(--ivy-color-primary);
+      &:after {
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+  }
+  &__input.is-disabled {
+    & + .ivy-radio__label {
+      color: var(--ivy-text-color-disabled);
+
+      cursor: not-allowed;
+    }
+    .ivy-radio__inner {
+      background-color: var(ivy-fill-color-light);
+      border-color: #e4e7ed;
+      cursor: not-allowed;
+      &:after {
+        cursor: not-allowed;
+        background-color: var(ivy-fill-color-light);
+      }
+    }
+  }
+  &__input.is-checked.is-disabled {
+    .ivy-radio__inner {
+      background-color: #f5f7fa;
+      border-color: #e4e7ed;
+      &:after {
+        background-color: #c0c4cc;
+      }
+    }
+  }
+  &__label {
+    font-size: 14px;
+    padding-left: 10px;
+  }
+}
