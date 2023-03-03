@@ -24,7 +24,10 @@ export default defineComponent({
       },
     },
     labelWidth: String,
-    labelSuffix: String,
+    labelSuffix: {
+      type: String,
+      default: "",
+    },
     labelPosition: {
       type: String,
       validator(val: string) {
@@ -34,6 +37,9 @@ export default defineComponent({
     inline: Boolean,
   },
   setup(props, { slots, expose, emit }) {
+    provide("labelSuffix", toRef(props, "labelSuffix"));
+    provide("labelWidth", toRef(props, "labelWidth"));
+
     const model = toRef(props, "model");
     // 存放formItem中有prop属性的
     const propList = ref<string[]>([]);

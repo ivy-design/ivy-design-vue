@@ -1,12 +1,12 @@
 @import "./common/var.scss";
 .ivy-form {
-  --ivy-form-text-size-tip: 12px;
+  --ivy-form-text-size-error: 12px;
   --ivy-form-text-size: var(--ivy-font-size);
+  --ivy-form-label-font-size: var(--ivy-font-size);
   --ivy-form-item-gap: 16px;
 
   padding: 0;
-  border-radius: 4px;
-  font-size: var(--ivy-list-font-size);
+  font-size: var(--ivy-form-text-size);
   &--small {
     --ivy-form-item-gap: 16px;
   }
@@ -14,24 +14,45 @@
     --ivy-form-item-gap: 16px;
   }
   &--large {
-    --ivy-list-size: 16px 24px;
     --ivy-form-item-gap: 24px;
-  }
-
-  & &__body {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
   }
 
   &-item {
     width: 100%;
     margin-bottom: var(--ivy-form-item-gap);
+    display: flex;
 
-    &--wrap {
+    &__label {
+      width: max-content;
+      display: inline-flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+      flex: 0 0 auto;
+      font-size: var(--ivy-form-label-font-size);
+      color: var(--ivy-text-color-regular);
+      height: 32px;
+      line-height: 32px;
+      padding: 0 12px 0 0;
+      box-sizing: border-box;
+    }
+    &__content {
       display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      flex: 1;
+      line-height: 32px;
+      position: relative;
+      font-size: var(--font-size);
+      min-width: 0;
+    }
+    &__error {
+      color: var(--ivy-color-danger);
+      font-size: var(--ivy-form-text-size-error);
+      line-height: 1;
+      padding-top: 2px;
+      position: absolute;
+      top: 100%;
+      left: 0;
     }
   }
 }

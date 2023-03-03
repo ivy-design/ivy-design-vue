@@ -1,122 +1,41 @@
 <script setup lang="ts">
 import { reactive, ref } from "vue";
 
-const data = ref([
-  {
-    title: "This is title 1",
-    description:
-      "This is description, this is description, this is description.",
-    avatar:
-      "https://dev-file.iviewui.com/userinfoPDvn9gKWYihR24SpgC319vXY8qniCqj4/avatar",
-    content:
-      "This is the content, this is the content, this is the content, this is the content.",
-  },
-  {
-    title: "This is title 2",
-    description:
-      "This is description, this is description, this is description.",
-    avatar:
-      "https://dev-file.iviewui.com/userinfoPDvn9gKWYihR24SpgC319vXY8qniCqj4/avatar",
-    content:
-      "This is the content, this is the content, this is the content, this is the content.",
-  },
-  {
-    title: "This is title 3",
-    description:
-      "This is description, this is description, this is description.",
-    avatar:
-      "https://dev-file.iviewui.com/userinfoPDvn9gKWYihR24SpgC319vXY8qniCqj4/avatar",
-    content:
-      "This is the content, this is the content, this is the content, this is the content.",
-  },
-]);
-
 const formItem = reactive({
   name: "",
   age: "",
-  sex: "",
+  sex: "1",
   address: "",
+  status: true,
 });
 </script>
 
 <template>
   <div>
     <div class="margin-top: 24px">
-      <ivy-form :model="formItem">
+      <ivy-form :model="formItem" label-width="100px">
         <ivy-form-item label="姓名">
           <input type="text" />
         </ivy-form-item>
-        <ivy-form-item label="年龄">
+        <ivy-form-item label="年龄" label-width="200px">
           <input type="text" />
         </ivy-form-item>
         <ivy-form-item label="性别">
-          <input type="text" />
+          <ivy-radio-group v-model="formItem.sex">
+            <ivy-radio label="1">男</ivy-radio>
+            <ivy-radio label="0">女</ivy-radio>
+          </ivy-radio-group>
         </ivy-form-item>
         <ivy-form-item label="地址">
           <input type="text" />
         </ivy-form-item>
+        <ivy-form-item label="状态">
+          <ivy-switch v-model="formItem.status"> </ivy-switch>
+        </ivy-form-item>
       </ivy-form>
     </div>
-    <div class="margin-top: 24px">
-      <ivy-list>
-        <ivy-list-item
-          avatar="https://dev-file.iviewui.com/userinfoPDvn9gKWYihR24SpgC319vXY8qniCqj4/avatar"
-          header="This is title"
-          description="This is description, this is description."
-        >
-        </ivy-list-item>
-        <ivy-list-item
-          avatar="https://dev-file.iviewui.com/userinfoPDvn9gKWYihR24SpgC319vXY8qniCqj4/avatar"
-          header="This is title"
-          description="This is description, this is description."
-        >
-        </ivy-list-item>
-        <ivy-list-item
-          avatar="https://dev-file.iviewui.com/userinfoPDvn9gKWYihR24SpgC319vXY8qniCqj4/avatar"
-          header="This is title"
-          description="This is description, this is description."
-        >
-          <template #action>
-            <a href="">Edit</a>
-            <a href="">More</a>
-          </template>
-        </ivy-list-item>
-        <ivy-list-item
-          avatar="https://dev-file.iviewui.com/userinfoPDvn9gKWYihR24SpgC319vXY8qniCqj4/avatar"
-          header="This is title"
-          description="This is description, this is description."
-        >
-          <template #action>
-            <a href="">Edit</a>
-            <a href="">More</a>
-          </template>
-        </ivy-list-item>
-      </ivy-list>
-    </div>
-    <div class="margin-top: 24px">
-      <ivy-list vertical border>
-        <ivy-list-item
-          v-for="item in data"
-          :key="item.title"
-          :avatar="item.avatar"
-          :header="item.title"
-          :description="item.description"
-        >
-          {{ item.content }}
-          <template #action>
-            <ivy-icon name="star"></ivy-icon> 123
-            <ivy-icon name="pointer"></ivy-icon> 234
-            <ivy-icon name="chat-square"></ivy-icon> 345
-          </template>
-          <template #extra>
-            <img
-              src="https://dev-file.iviewui.com/5wxHCQMUyrauMCGSVEYVxHR5JmvS7DpH/large"
-              style="width: 280px"
-            />
-          </template>
-        </ivy-list-item>
-      </ivy-list>
-    </div>
+    <div class="margin-top: 24px"></div>
+    <div class="margin-top: 24px"></div>
 
     <!-- <ivy-count-up :end="400" :duration="6000" prefix="￥"></ivy-count-up> -->
     <!-- <ivy-virtual-list height="600px" style="width: 700px; margin-top: 48px" :source="data" item-height="42px">

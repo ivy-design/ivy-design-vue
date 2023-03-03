@@ -33,7 +33,7 @@ import Badge from "./badge/index";
 import Space from "./space/index";
 import Link from "./link/index";
 import { List, ListItem } from "./list/index";
-// import { Form, FormItem } from "./form/index";
+import { Form, FormItem } from "./form/index";
 import { Radio, RadioGroup } from "./radio/index";
 import Switch from "./switch/index";
 
@@ -73,8 +73,8 @@ const components: Component[] = [
   Link,
   List,
   ListItem,
-  // Form,
-  // FormItem,
+  Form,
+  FormItem,
   Radio,
   RadioGroup,
   Switch,
@@ -116,8 +116,8 @@ export {
   Link,
   List,
   ListItem,
-  // Form,
-  // FormItem,
+  Form,
+  FormItem,
   Radio,
   RadioGroup,
   Switch,

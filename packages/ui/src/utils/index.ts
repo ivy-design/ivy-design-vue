@@ -23,3 +23,5 @@ export const cancelAnimation = (() => {
     }
   );
 })();
+
+export type { IvySize } from "./type";

@@ -31,6 +31,8 @@
 @import "./link.scss";
 @import "./list.scss";
 @import "./form.scss";
+@import "./radio.scss";
+@import "./switch.scss";
 :root {
   @each $name, $color in $maps {
     --#{$name}: #{$color};
