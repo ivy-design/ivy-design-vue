@@ -37,6 +37,7 @@ import { Form, FormItem } from "./form/index";
 import { Radio, RadioGroup } from "./radio/index";
 import { Checkbox, CheckboxGroup } from "./checkbox/index";
 import Switch from "./switch/index";
+import Input from "./input/index";
 
 const components: Component[] = [
   Icon,
@@ -81,6 +82,7 @@ const components: Component[] = [
   Switch,
   Checkbox,
   CheckboxGroup,
+  Input,
 ];
 
 export {
@@ -126,6 +128,7 @@ export {
   Switch,
   Checkbox,
   CheckboxGroup,
+  Input,
 };
 
 let INSTALLED_KEY = false;

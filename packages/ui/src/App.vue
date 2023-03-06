@@ -17,7 +17,7 @@ const checked = ref(true);
     <div class="margin-top: 24px">
       <ivy-form :model="formItem" label-width="100px">
         <ivy-form-item label="姓名">
-          <input type="text" />
+          <ivy-input v-model="formItem.name" placeholder="请输入" clearable />
         </ivy-form-item>
         <ivy-form-item label="年龄" label-width="200px">
           <input type="text" />

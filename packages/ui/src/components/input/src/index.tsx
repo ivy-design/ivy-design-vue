@@ -1,10 +1,9 @@
 import { computed, defineComponent, ref } from "vue";
 import { prefix, type IvySize } from "@/utils/index";
-import FoxIcon from "@/components/icon";
+import IvyIcon from "@/components/icon";
 
 export default defineComponent({
   name: `${prefix}input`,
-  components: { FoxIcon },
   props: {
     modelValue: [String, Number],
     clearable: Boolean,
@@ -24,6 +23,7 @@ export default defineComponent({
     },
     size: {
       type: String,
+      default: "medium",
       validator(value: IvySize) {
         return ["large", "small", "medium"].includes(value);
       },
@@ -47,6 +47,23 @@ export default defineComponent({
       isFocus.value = false;
     };
 
+    const fixed = (ev: Event) => {
+      emit("focus", ev);
+    };
+    const blur = (ev: Event) => {
+      emit("blur", ev);
+    };
+    const inputs = (ev: any) => {
+      curValue.value = ev.target?.value;
+      emit("change", curValue.value);
+      emit("input", curValue.value);
+    };
+    const clear = () => {
+      curValue.value = null as any;
+      emit("change", curValue.value);
+      emit("clear");
+    };
+
     const showCloseIcon = computed(() => {
       return props.clearable && isFocus.value && curValue.value;
     });
@@ -56,7 +73,7 @@ export default defineComponent({
         <div
           class={[
             "ivy-input",
-            { "ivy-input--suffix": !!props.suffix || showCloseIcon },
+            { "ivy-input--suffix": !!props.suffix || showCloseIcon.value },
             { "is-disabled": props.disabled },
             `ivy-input--${props.size}`,
           ]}
@@ -64,7 +81,7 @@ export default defineComponent({
           onMouseleave={mouseLeave}
         >
           {props.type === "text" && props.prefix ? (
-            <fox-icon name={props.prefix}></fox-icon>
+            <IvyIcon name={props.prefix}></IvyIcon>
           ) : (
             slots.prefix?.()
           )}
@@ -76,11 +93,11 @@ export default defineComponent({
               min="min"
               placeholder={props.placeholder}
               disabled={props.disabled}
-              type="type"
+              type={props.type}
               value={curValue.value}
-              focus="fixed"
-              blur="blur"
-              input="inputs"
+              onFocus={fixed}
+              onBlur={blur}
+              onInput={inputs}
             />
           ) : (
             <input
@@ -89,69 +106,35 @@ export default defineComponent({
               min="min"
               placeholder={props.placeholder}
               disabled={props.disabled}
-              type="type"
+              type={props.type}
               value={curValue.value}
-              focus="fixed"
-              blur="blur"
-              input="inputs"
+              onFocus={fixed}
+              onBlur={blur}
+              onInput={inputs}
             />
           )}
 
           {props.clearable || props.suffix ? (
-            <div class="fox-input__suffix" v-if="clearable || suffixIcon">
+            <div class="ivy-input__suffix">
               {slots.suffix?.(() =>
                 props.suffix ? (
-                  <fox-icon
-                    class="fox-input__icon"
+                  <IvyIcon
+                    class="ivy-input__icon"
                     name={props.suffix}
-                  ></fox-icon>
+                  ></IvyIcon>
                 ) : null
               )}
               {showCloseIcon.value ? (
-                <fox-icon
-                  name="close"
-                  class="fox-input-close"
-                  v-if="isClose"
-                  onClick="clear"
-                ></fox-icon>
+                <IvyIcon
+                  name="circle-close"
+                  class="ivy-input-close"
+                  onClick={clear}
+                ></IvyIcon>
               ) : null}
             </div>
           ) : null}
         </div>
       );
     };
-  },
-  data() {
-    return {
-      cur: this.value,
-      isFocus: false,
-    };
-  },
-  methods: {
-    mouseEnter() {
-      this.isFocus = true;
-    },
-    mouseLeave() {
-      this.isFocus = false;
-    },
-    fixed(ev: Event) {
-      this.$emit("focus", ev);
-    },
-    blur(ev: Event) {
-      this.$emit("blur", ev);
-      //   this.dispatch("FormItem", "on-form-blur", this.cur);
-    },
-    inputs(ev: any) {
-      this.cur = ev.target?.value;
-      this.$emit("change", this.cur);
-      this.$emit("input", this.cur);
-      //   this.dispatch("FormItem", "on-form-change", ev.target.value);
-    },
-    clear() {
-      this.cur = null as any;
-      this.$emit("change", this.cur);
-      //   this.dispatch("FormItem", "on-form-change", this.cur);
-      this.$emit("clear");
-    },
   },
 });
