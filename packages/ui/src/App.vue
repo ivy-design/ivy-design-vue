@@ -6,8 +6,10 @@ const formItem = reactive({
   age: "",
   sex: "1",
   address: "",
-  status: true,
+  interest: [],
+  status: false,
 });
+const checked = ref(true);
 </script>
 
 <template>
@@ -26,6 +28,15 @@ const formItem = reactive({
             <ivy-radio label="0">女</ivy-radio>
           </ivy-radio-group>
         </ivy-form-item>
+        <ivy-form-item label="爱好">
+          <ivy-checkbox-group v-model="formItem.interest">
+            <ivy-checkbox label="1">读书</ivy-checkbox>
+            <ivy-checkbox label="2">篮球</ivy-checkbox>
+            <ivy-checkbox label="3">乒乓球</ivy-checkbox>
+            <ivy-checkbox label="4">羽毛球</ivy-checkbox>
+            <ivy-checkbox label="5">旅游</ivy-checkbox>
+          </ivy-checkbox-group>
+        </ivy-form-item>
         <ivy-form-item label="地址">
           <input type="text" />
         </ivy-form-item>
@@ -35,6 +46,7 @@ const formItem = reactive({
       </ivy-form>
     </div>
     <div class="margin-top: 24px"></div>
+    <ivy-checkbox v-model="checked">旅游</ivy-checkbox>
     <div class="margin-top: 24px"></div>
 
     <!-- <ivy-count-up :end="400" :duration="6000" prefix="￥"></ivy-count-up> -->

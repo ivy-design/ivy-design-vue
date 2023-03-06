@@ -33,6 +33,7 @@
 @import "./form.scss";
 @import "./radio.scss";
 @import "./switch.scss";
+@import "./checkbox.scss";
 :root {
   @each $name, $color in $maps {
     --#{$name}: #{$color};

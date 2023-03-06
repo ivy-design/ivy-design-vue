@@ -35,6 +35,7 @@ import Link from "./link/index";
 import { List, ListItem } from "./list/index";
 import { Form, FormItem } from "./form/index";
 import { Radio, RadioGroup } from "./radio/index";
+import { Checkbox, CheckboxGroup } from "./checkbox/index";
 import Switch from "./switch/index";
 
 const components: Component[] = [
@@ -78,6 +79,8 @@ const components: Component[] = [
   Radio,
   RadioGroup,
   Switch,
+  Checkbox,
+  CheckboxGroup,
 ];
 
 export {
@@ -121,6 +124,8 @@ export {
   Radio,
   RadioGroup,
   Switch,
+  Checkbox,
+  CheckboxGroup,
 };
 
 let INSTALLED_KEY = false;
