@@ -10,10 +10,17 @@ const formItem = reactive({
   status: false,
 });
 const checked = ref(true);
+const demo1 = "1";
 </script>
 
 <template>
   <div>
+    <ivy-select v-model="demo1">
+      <ivy-option value="1" label="1"></ivy-option>
+      <ivy-option value="2" label="2"></ivy-option>
+      <ivy-option value="3" label="3"></ivy-option>
+      <ivy-option value="4" label="4"></ivy-option>
+    </ivy-select>
     <div class="margin-top: 24px">
       <ivy-form :model="formItem" label-width="100px">
         <ivy-form-item label="姓名">

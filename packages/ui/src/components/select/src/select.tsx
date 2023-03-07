@@ -1,0 +1,97 @@
+import {
+  defineComponent,
+  withDirectives,
+  Transition,
+  Teleport,
+  ref,
+  onMounted,
+  provide,
+  reactive,
+  type ComponentOptions,
+  toRef,
+} from "vue";
+import { prefix } from "@/utils/index";
+import IvyInput from "@/components/input";
+import clickOutside from "../../../directives/click-outside";
+import IvyOption from "./option";
+
+export default defineComponent({
+  name: `${prefix}select`,
+
+  props: {
+    emptyText: String,
+    modelValue: [String, Number],
+    disabled: Boolean,
+    teleport: Boolean,
+    placeholder: {
+      type: String,
+      default: "请选择",
+    },
+  },
+  emits: ["update:modelValue", "change"],
+  setup(props, { slots, emit }) {
+    const visible = ref(false);
+    const handleClose = () => {
+      visible.value = false;
+    };
+
+    const curValue = toRef(props, "modelValue");
+    const curLabel = ref<number | string>("");
+
+    const updateLabel = (value: string | number) => {
+      curLabel.value = value;
+    };
+
+    provide("updateLabel", updateLabel);
+    provide("closeDropdown", handleClose);
+
+    const children = reactive<ComponentOptions[]>(slots.default?.() || []);
+    onMounted(() => {
+      children.find((c) => {
+        if (c.props.value === curValue.value) {
+          updateLabel(c.props.label || c.props.value);
+        }
+      });
+    });
+
+    const handleClick = () => {
+      visible.value = true;
+    };
+
+    return () => {
+      return (
+        <div
+          class={["ivy-select", { "is-focus": visible.value }]}
+          onClick={handleClick}
+        >
+          <IvyInput
+            modelValue={curValue.value}
+            onUpdate:modelValue={(value: any) =>
+              emit("update:modelValue", value)
+            }
+            suffix="arrow-down"
+            disabled={props.disabled}
+            placeholder={props.placeholder}
+          ></IvyInput>
+          <Teleport to="body" disabled={!props.teleport}>
+            <Transition name="ivy-zoom-in-top">
+              {withDirectives(
+                <div v-show={visible.value} class="ivy-transfer">
+                  <ul ref="scrollbar" class="ivy-select__scroll">
+                    {children.map((c) => (
+                      <IvyOption {...c.props} />
+                    ))}
+                  </ul>
+                  <p class="ivy-select-dropdown__empty">
+                    {children.length === 0 ? props.emptyText ?? "暂无数据" : ""}
+                  </p>
+                </div>,
+                [[clickOutside, handleClose]]
+              )}
+            </Transition>
+          </Teleport>
+        </div>
+      );
+    };
+  },
+});

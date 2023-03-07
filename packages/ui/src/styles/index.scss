@@ -1,4 +1,5 @@
 @import "./common/var.scss";
+@import "./common/transition.scss";
 @import "./icon.scss";
 @import "./button.scss";
 @import "./tag.scss";
@@ -35,6 +36,8 @@
 @import "./switch.scss";
 @import "./checkbox.scss";
 @import "./input.scss";
+@import "./select.scss";
+
 :root {
   @each $name, $color in $maps {
     --#{$name}: #{$color};

@@ -38,6 +38,7 @@ import { Radio, RadioGroup } from "./radio/index";
 import { Checkbox, CheckboxGroup } from "./checkbox/index";
 import Switch from "./switch/index";
 import Input from "./input/index";
+import { Select, Option } from "./select/index";
 
 const components: Component[] = [
   Icon,
@@ -83,6 +84,8 @@ const components: Component[] = [
   Checkbox,
   CheckboxGroup,
   Input,
+  Select,
+  Option,
 ];
 
 export {
@@ -129,6 +132,8 @@ export {
   Checkbox,
   CheckboxGroup,
   Input,
+  Select,
+  Option,
 };
 
 let INSTALLED_KEY = false;
