@@ -24,4 +24,17 @@ export const cancelAnimation = (() => {
   );
 })();
 
-export type { IvySize, IvyInputValue } from "./types";
+export type { IvySize, IvyInputValue, IvyTheme, IvyType } from "./types";
+
+export class Type {
+  public static is(val: any): string {
+    return Object.prototype.toString
+      .call(val)
+      .slice(8, -1)
+      .replace(/^[A-Z]/, (str) => str.toLowerCase());
+  }
+
+  public static isObject(val: any): boolean {
+    return Type.is(val) === "object";
+  }
+}

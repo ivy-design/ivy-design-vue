@@ -1,5 +1,5 @@
-import { defineComponent, ref, Transition } from "vue";
-import { prefix } from "@/utils";
+import { defineComponent, ref, Transition, type PropType } from "vue";
+import { prefix, type IvyType } from "@/utils";
 import ivyIcon from "../../icon/index";
 
 export default defineComponent({
@@ -9,7 +9,7 @@ export default defineComponent({
     animation: Boolean,
     closable: Boolean,
     type: {
-      type: String,
+      type: String as PropType<IvyType>,
       default: "primary",
       validator(val: string) {
         return ["primary", "success", "warning", "danger", "info"].includes(
@@ -32,6 +32,7 @@ export default defineComponent({
       },
     },
   },
+  emits: ["close"],
   setup(props, { emit, slots }) {
     const transfer = ref(props.animation ? "" : "ivy-zoom-in-center");
 
