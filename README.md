@@ -1,68 +1,39 @@
-# ivy-ui
+# @ivy-design/vue
 
-This template should help get you started developing with Vue 3 in Vite.
+## 项目介绍
 
-## Recommended IDE Setup
+> 正在开发中...
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+是一个使用ts和vue3开发的通用组件库，目前主体样式来自elementPlus
 
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
-
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+## 安装
 
 ```sh
-pnpm install
+pnpm i @ivy-design/vue
 ```
 
-### Compile and Hot-Reload for Development
+## 在项目中使用
 
-```sh
-pnpm dev
+```js
+import { createApp } from 'vue'
+import App from './App.vue'
+import ivyDesign from '@ivy-design/vue'
+import '@ivy-design/vue/dist/style.css'
+// 省略其它内容
+
+const app = createApp(App)
+
+app.use(ivyDesign)
+
 ```
 
-### Type-Check, Compile and Minify for Production
 
-```sh
-pnpm build
-```
+## 项目构成
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+docs 是文档，使用 `vitepress` 搭建
 
-```sh
-pnpm test:unit
-```
+packages/ui 是组件库的主体
 
-### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
+## 参与开发
 
-```sh
-pnpm test:e2e:dev
-```
-
-This runs the end-to-end tests against the Vite development server.
-It is much faster than the production build.
-
-But it's still recommended to test the production build with `test:e2e` before deploying (e.g. in CI environments):
-
-```sh
-pnpm build
-pnpm test:e2e
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-pnpm lint
-```
+具体请联系本人
