@@ -38,6 +38,7 @@
 @import "./input.scss";
 @import "./select.scss";
 @import "./progress.scss";
+@import "./drawer.scss";
 
 :root {
   @each $name, $color in $maps {

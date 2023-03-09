@@ -40,6 +40,7 @@ import Switch from "./switch/index";
 import Input from "./input/index";
 import { Select, Option } from "./select/index";
 import Progress from "./progress/index";
+import Drawer from "./drawer/index";
 
 const components: Component[] = [
   Icon,
@@ -88,6 +89,7 @@ const components: Component[] = [
   Select,
   Option,
   Progress,
+  Drawer,
 ];
 
 export {
@@ -137,6 +139,7 @@ export {
   Select,
   Option,
   Progress,
+  Drawer,
 };
 
 let INSTALLED_KEY = false;

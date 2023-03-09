@@ -9,20 +9,16 @@ const formItem = reactive({
   interest: [],
   status: false,
 });
-const inputObj = reactive({
-  value: "",
-  count: 0,
-});
-const handleChange = (val: any) => {
-  inputObj.count = inputObj.count + 1;
-  inputObj.value = val;
+
+const visible = ref(false);
+const handleOpen = (val: any) => {
+  visible.value = true;
 };
-const demo1 = "1";
 </script>
 
 <template>
   <div>
-    <ivy-select v-model="demo1">
+    <!-- <ivy-select v-model="demo1">
       <ivy-option value="1" label="1"></ivy-option>
       <ivy-option value="2" label="2"></ivy-option>
       <ivy-option value="3" label="3"></ivy-option>
@@ -58,9 +54,45 @@ const demo1 = "1";
           <ivy-switch v-model="formItem.status"> </ivy-switch>
         </ivy-form-item>
       </ivy-form>
-    </div>
+    </div> -->
     <div class="margin-top: 24px"></div>
-
+    <ivy-button @click="visible = true">Open</ivy-button>
+    <ivy-drawer
+      v-model="visible"
+      header="Drawer 的标题"
+      :mask-close="false"
+      :show-mask="true"
+    >
+      <ivy-form :model="formItem" label-width="100px">
+        <ivy-form-item label="姓名">
+          <ivy-input v-model="formItem.name" placeholder="请输入" clearable />
+        </ivy-form-item>
+        <ivy-form-item label="年龄" label-width="200px">
+          <input type="text" />
+        </ivy-form-item>
+        <ivy-form-item label="性别">
+          <ivy-radio-group v-model="formItem.sex">
+            <ivy-radio label="1">男</ivy-radio>
+            <ivy-radio label="0">女</ivy-radio>
+          </ivy-radio-group>
+        </ivy-form-item>
+        <ivy-form-item label="爱好">
+          <ivy-checkbox-group v-model="formItem.interest">
+            <ivy-checkbox label="1">读书</ivy-checkbox>
+            <ivy-checkbox label="2">篮球</ivy-checkbox>
+            <ivy-checkbox label="3">乒乓球</ivy-checkbox>
+            <ivy-checkbox label="4">羽毛球</ivy-checkbox>
+            <ivy-checkbox label="5">旅游</ivy-checkbox>
+          </ivy-checkbox-group>
+        </ivy-form-item>
+        <ivy-form-item label="地址">
+          <input type="text" />
+        </ivy-form-item>
+        <ivy-form-item label="状态">
+          <ivy-switch v-model="formItem.status"> </ivy-switch>
+        </ivy-form-item>
+      </ivy-form>
+    </ivy-drawer>
     <div class="margin-top: 24px"></div>
 
     <!-- <ivy-count-up :end="400" :duration="6000" prefix="￥"></ivy-count-up> -->
