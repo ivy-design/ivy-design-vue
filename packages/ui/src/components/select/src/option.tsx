@@ -16,6 +16,7 @@ export default defineComponent({
 
   setup(props) {
     const updateLabel = inject<Function | null>("updateLabel", null);
+    const updateValue = inject<Function | null>("updateValue", null);
     const closeDropdown = inject<Function | null>("closeDropdown", null);
 
     const curLabel = computed(() => {
@@ -27,6 +28,9 @@ export default defineComponent({
     const handleClick = () => {
       if (props.disabled) {
         return;
+      }
+      if (updateValue) {
+        updateValue(props.value);
       }
       if (updateLabel) {
         updateLabel?.(props.label);

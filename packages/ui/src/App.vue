@@ -9,7 +9,14 @@ const formItem = reactive({
   interest: [],
   status: false,
 });
-const checked = ref(true);
+const inputObj = reactive({
+  value: "",
+  count: 0,
+});
+const handleChange = (val: any) => {
+  inputObj.count = inputObj.count + 1;
+  inputObj.value = val;
+};
 const demo1 = "1";
 </script>
 
@@ -53,36 +60,7 @@ const demo1 = "1";
       </ivy-form>
     </div>
     <div class="margin-top: 24px"></div>
-    <ivy-progress percentage="80" class="margin-top: 24px">旅游</ivy-progress>
-    <ivy-progress
-      percentage="80"
-      status="success
-    "
-      class="margin-top: 24px"
-      >旅游</ivy-progress
-    >
-    <ivy-progress percentage="80" status="danger" class="margin-top: 24px">
-      旅游
-    </ivy-progress>
-    <ivy-progress percentage="80" type="circle" class="margin-top: 24px">
-      旅游
-    </ivy-progress>
-    <ivy-progress
-      percentage="80"
-      status="success"
-      type="circle"
-      class="margin-top: 24px"
-    >
-      旅游
-    </ivy-progress>
-    <ivy-progress
-      percentage="80"
-      status="danger"
-      type="circle"
-      class="margin-top: 24px"
-    >
-      旅游
-    </ivy-progress>
+
     <div class="margin-top: 24px"></div>
 
     <!-- <ivy-count-up :end="400" :duration="6000" prefix="￥"></ivy-count-up> -->

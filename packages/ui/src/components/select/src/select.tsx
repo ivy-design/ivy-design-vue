@@ -8,7 +8,6 @@ import {
   provide,
   reactive,
   type ComponentOptions,
-  toRef,
 } from "vue";
 import { prefix } from "@/utils/index";
 import IvyInput from "@/components/input";
@@ -35,14 +34,18 @@ export default defineComponent({
       visible.value = false;
     };
 
-    const curValue = toRef(props, "modelValue");
+    const curValue = ref(props.modelValue);
     const curLabel = ref<number | string>("");
 
     const updateLabel = (value: string | number) => {
       curLabel.value = value;
     };
+    const updateValue = (value: string | number) => {
+      curValue.value = value;
+    };
 
     provide("updateLabel", updateLabel);
+    provide("updateValue", updateValue);
     provide("closeDropdown", handleClose);
 
     const children = reactive<ComponentOptions[]>(slots.default?.() || []);
@@ -65,12 +68,11 @@ export default defineComponent({
           onClick={handleClick}
         >
           <IvyInput
-            modelValue={curValue.value}
+            modelValue={curLabel.value}
             onUpdate:modelValue={(value: any) => {
               emit("update:modelValue", value);
-              console.log(value, "value");
             }}
-            suffix="arrow-down"
+            suffix="arrow-right"
             disabled={props.disabled}
             placeholder={props.placeholder}
           ></IvyInput>
