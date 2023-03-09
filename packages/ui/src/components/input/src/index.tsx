@@ -60,6 +60,7 @@ export default defineComponent({
 
     const clear = () => {
       curValue.value = null as any;
+      emit("update:modelValue", curValue.value);
       emit("change", curValue.value);
       emit("clear");
     };
