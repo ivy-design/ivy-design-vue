@@ -1,81 +1,91 @@
 @import "./common/var.scss";
 
 .ivy-input {
+  --ivy-input-height: 32px;
+  --ivy-input-inner-height: calc(var(--ivy-input-height) - 2px);
   position: relative;
   font-size: 14px;
-  display: inline-block;
-  width: 220px;
-  &__inner {
-    position: relative;
-    -webkit-appearance: none;
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  border-radius: 4px;
+  box-sizing: border-box;
+  & &__wrapper {
+    height: var(--ivy-input-height);
+    color: var(--ivy-text-color-regular);
+    flex-grow: 1;
+    display: inline-flex;
+    align-items: center;
+    box-shadow: 0 0 0 1px var(--ivy-border-color) inset;
     background-color: var(--ivy-color-white);
     background-image: none;
+    transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    padding: 1px 11px;
     border-radius: 4px;
-    border: 1px solid var(--ivy-border-color);
-    box-sizing: border-box;
-    color: #606266;
-    display: inline-block;
-    font-size: inherit;
-    height: 32px;
-    line-height: 32px;
-    outline: none;
-    padding: 0 12px;
-    transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
-    width: 100%;
-    z-index: 0;
-    &:focus {
-      border-color: var(--ivy-color-primary);
+    &.is-focus {
+      box-shadow: 0 0 0 1px var(--ivy-color-primary) inset;
     }
+  }
+  &__inner {
+    -webkit-appearance: none;
+    color: #606266;
+    font-size: inherit;
+    height: var(--ivy-input-inner-height);
+    line-height: var(--ivy-input-inner-height);
+    padding: 0;
+    outline: none;
+    border: none;
+    background: none;
+    box-sizing: border-box;
+    flex-grow: 1;
   }
   &-close {
     cursor: pointer;
     font-size: 16px;
-  }
-  &__suffix {
     position: absolute;
-    height: 100%;
-    right: 5px;
-    top: 0;
-    text-align: center;
-    color: #c0c4cc;
-    transition: all 0.3s;
+    right: 0;
     z-index: 1;
   }
-  &__icon,
-  &-close {
-    width: 25px;
-    line-height: 36px;
+  &--icon {
+    font-size: 16px;
   }
-  &__prefix,
-  &__icon {
+
+  &--prefix,
+  &--suffix {
+    display: inline-flex;
     height: 100%;
-    text-align: center;
+    align-content: center;
+    align-items: center;
     transition: all 0.3s;
+    &:empty {
+      display: none;
+    }
   }
+  &--prefix {
+    & > :last-child {
+      margin-right: 8px;
+    }
+  }
+  &--suffix {
+    & > :first-child {
+      margin-left: 8px;
+    }
+  }
+
   &.is-disabled {
-    .ivy-input__inner {
-      background-color: #f5f7fa;
-      border-color: #e4e7ed;
-      color: #c0c4cc;
+    box-shadow: 0 0 0 1px #e4e7ed inset;
+    background-color: #f5f7fa;
+    color: #c0c4cc;
+    cursor: not-allowed;
+    * {
       cursor: not-allowed;
     }
   }
 }
-.ivy-input--suffix {
-  .ivy-input__inner {
-    padding-right: 30px;
-  }
-}
 
 .ivy-input--large {
-  .ivy-input__inner {
-    height: 40px;
-    line-height: 40px;
-  }
+  --ivy-input-height: 40px;
 }
 .ivy-input--small {
-  .ivy-input__inner {
-    height: 28px;
-    line-height: 28px;
-  }
+  --ivy-input-height: 28px;
 }

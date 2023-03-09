@@ -1,4 +1,4 @@
-import { computed, defineComponent, ref } from "vue";
+import { computed, defineComponent, onUpdated, ref, nextTick } from "vue";
 import { prefix, type IvySize } from "@/utils/index";
 import IvyIcon from "@/components/icon";
 
@@ -40,26 +40,24 @@ export default defineComponent({
   setup(props, { slots, emit }) {
     const curValue = ref(props.modelValue);
     const isFocus = ref(false);
+    const isHover = ref(false);
 
     const mouseEnter = () => {
-      isFocus.value = true;
+      isHover.value = true;
     };
     const mouseLeave = () => {
-      isFocus.value = false;
+      isHover.value = false;
     };
 
-    const fixed = (ev: Event) => {
+    const handleFocus = (ev: Event) => {
+      isFocus.value = true;
       emit("focus", ev);
     };
     const blur = (ev: Event) => {
+      isFocus.value = false;
       emit("blur", ev);
     };
-    const inputs = (ev: any) => {
-      curValue.value = ev.target?.value;
-      emit("change", curValue.value);
-      emit("input", curValue.value);
-      emit("update:modelValue", curValue.value);
-    };
+
     const clear = () => {
       curValue.value = null as any;
       emit("change", curValue.value);
@@ -67,7 +65,44 @@ export default defineComponent({
     };
 
     const showCloseIcon = computed(() => {
-      return props.clearable && isFocus.value && curValue.value;
+      if (props.disabled) return false;
+      if (props.clearable && curValue.value) {
+        if (isFocus.value || isHover.value) {
+          return true;
+        }
+        return false;
+      }
+      return false;
+    });
+
+    /**合成事件 composition */
+    const isComposition = ref(false);
+    const updateCompositionStatus = (status: boolean = false) => {
+      isComposition.value = status;
+    };
+
+    const handleCompositionStart = () => {
+      updateCompositionStatus(true);
+    };
+    const handleCompositionEnd = () => {
+      updateCompositionStatus(false);
+    };
+
+    const handleInput = (ev: any) => {
+      if (isComposition.value) return;
+      curValue.value = ev.target?.value;
+      emit("input", curValue.value);
+      emit("update:modelValue", curValue.value);
+    };
+
+    const handleChange = () => {
+      emit("change", curValue.value);
+    };
+
+    onUpdated(() => {
+      nextTick(() => {
+        curValue.value = props.modelValue;
+      });
     });
 
     return () => {
@@ -75,66 +110,66 @@ export default defineComponent({
         <div
           class={[
             "ivy-input",
-            { "ivy-input--suffix": !!props.suffix || showCloseIcon.value },
             { "is-disabled": props.disabled },
             `ivy-input--${props.size}`,
           ]}
           onMouseenter={mouseEnter}
           onMouseleave={mouseLeave}
         >
-          {props.type === "text" && props.prefix ? (
-            <IvyIcon name={props.prefix}></IvyIcon>
-          ) : (
-            slots.prefix?.()
-          )}
-          {props.readonly ? (
-            <input
-              readonly
-              class="ivy-input__inner"
-              max="max"
-              min="min"
-              placeholder={props.placeholder}
-              disabled={props.disabled}
-              type={props.type}
-              value={curValue.value}
-              onFocus={fixed}
-              onBlur={blur}
-              onInput={inputs}
-            />
-          ) : (
-            <input
-              class="ivy-input__inner"
-              max="max"
-              min="min"
-              placeholder={props.placeholder}
-              disabled={props.disabled}
-              type={props.type}
-              value={curValue.value}
-              onFocus={fixed}
-              onBlur={blur}
-              onInput={inputs}
-            />
-          )}
+          <div class={["ivy-input__wrapper", { "is-focus": isFocus.value }]}>
+            <div class="ivy-input--prefix">
+              {slots.prefix ? (
+                slots.prefix?.()
+              ) : props.prefix ? (
+                <IvyIcon class="ivy-input--icon" name={props.prefix}></IvyIcon>
+              ) : null}
+            </div>
 
-          {props.clearable || props.suffix ? (
-            <div class="ivy-input__suffix">
-              {slots.suffix?.(() =>
-                props.suffix ? (
-                  <IvyIcon
-                    class="ivy-input__icon"
-                    name={props.suffix}
-                  ></IvyIcon>
-                ) : null
-              )}
-              {showCloseIcon.value ? (
+            {props.readonly ? (
+              <input
+                readonly
+                class="ivy-input__inner"
+                max="max"
+                min="min"
+                placeholder={props.placeholder}
+                disabled={props.disabled}
+                type={props.type}
+                value={curValue.value}
+                onFocus={handleFocus}
+                onBlur={blur}
+                onInput={handleInput}
+              />
+            ) : (
+              <input
+                class="ivy-input__inner"
+                max="max"
+                min="min"
+                placeholder={props.placeholder}
+                disabled={props.disabled}
+                type={props.type}
+                value={curValue.value}
+                onFocus={handleFocus}
+                onBlur={blur}
+                onInput={handleInput}
+                onCompositionstart={handleCompositionStart}
+                onCompositionend={handleCompositionEnd}
+                onChange={handleChange}
+              />
+            )}
+            <div class="ivy-input--suffix">
+              {slots.suffix ? (
+                slots.suffix?.()
+              ) : showCloseIcon.value ? (
                 <IvyIcon
                   name="circle-close"
                   class="ivy-input-close"
                   onClick={clear}
                 ></IvyIcon>
+              ) : props.suffix ? (
+                <IvyIcon class="ivy-input--icon" name={props.suffix}></IvyIcon>
               ) : null}
             </div>
-          ) : null}
+          </div>
         </div>
       );
     };
