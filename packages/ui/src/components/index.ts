@@ -39,6 +39,7 @@ import { Checkbox, CheckboxGroup } from "./checkbox/index";
 import Switch from "./switch/index";
 import Input from "./input/index";
 import { Select, Option } from "./select/index";
+import Progress from "./progress/index";
 
 const components: Component[] = [
   Icon,
@@ -86,6 +87,7 @@ const components: Component[] = [
   Input,
   Select,
   Option,
+  Progress,
 ];
 
 export {
@@ -134,6 +136,7 @@ export {
   Input,
   Select,
   Option,
+  Progress,
 };
 
 let INSTALLED_KEY = false;

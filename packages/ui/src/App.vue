@@ -53,7 +53,36 @@ const demo1 = "1";
       </ivy-form>
     </div>
     <div class="margin-top: 24px"></div>
-    <ivy-checkbox v-model="checked">旅游</ivy-checkbox>
+    <ivy-progress percentage="80" class="margin-top: 24px">旅游</ivy-progress>
+    <ivy-progress
+      percentage="80"
+      status="success
+    "
+      class="margin-top: 24px"
+      >旅游</ivy-progress
+    >
+    <ivy-progress percentage="80" status="danger" class="margin-top: 24px">
+      旅游
+    </ivy-progress>
+    <ivy-progress percentage="80" type="circle" class="margin-top: 24px">
+      旅游
+    </ivy-progress>
+    <ivy-progress
+      percentage="80"
+      status="success"
+      type="circle"
+      class="margin-top: 24px"
+    >
+      旅游
+    </ivy-progress>
+    <ivy-progress
+      percentage="80"
+      status="danger"
+      type="circle"
+      class="margin-top: 24px"
+    >
+      旅游
+    </ivy-progress>
     <div class="margin-top: 24px"></div>
 
     <!-- <ivy-count-up :end="400" :duration="6000" prefix="￥"></ivy-count-up> -->

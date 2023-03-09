@@ -66,9 +66,10 @@ export default defineComponent({
         >
           <IvyInput
             modelValue={curValue.value}
-            onUpdate:modelValue={(value: any) =>
-              emit("update:modelValue", value)
-            }
+            onUpdate:modelValue={(value: any) => {
+              emit("update:modelValue", value);
+              console.log(value, "value");
+            }}
             suffix="arrow-down"
             disabled={props.disabled}
             placeholder={props.placeholder}
@@ -82,9 +83,12 @@ export default defineComponent({
                       <IvyOption {...c.props} />
                     ))}
                   </ul>
-                  <p class="ivy-select-dropdown__empty">
-                    {children.length === 0 ? props.emptyText ?? "暂无数据" : ""}
-                  </p>
+
+                  {children.length === 0 ? (
+                    <p class="ivy-select-dropdown__empty">
+                      {props.emptyText ?? "暂无数据"}
+                    </p>
+                  ) : null}
                 </div>,
                 [[clickOutside, handleClose]]
               )}

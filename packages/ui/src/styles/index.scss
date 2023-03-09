@@ -37,6 +37,7 @@
 @import "./checkbox.scss";
 @import "./input.scss";
 @import "./select.scss";
+@import "./progress.scss";
 
 :root {
   @each $name, $color in $maps {

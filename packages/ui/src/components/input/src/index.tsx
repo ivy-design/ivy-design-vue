@@ -36,6 +36,7 @@ export default defineComponent({
       required: false,
     },
   },
+  emits: ["update:modelValue", "change", "input", "focus", "clear", "blur"],
   setup(props, { slots, emit }) {
     const curValue = ref(props.modelValue);
     const isFocus = ref(false);
@@ -57,6 +58,7 @@ export default defineComponent({
       curValue.value = ev.target?.value;
       emit("change", curValue.value);
       emit("input", curValue.value);
+      emit("update:modelValue", curValue.value);
     };
     const clear = () => {
       curValue.value = null as any;
