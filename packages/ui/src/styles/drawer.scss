@@ -58,7 +58,7 @@
     &-left {
       &-enter-active,
       &-leave-active {
-        transition: all 0.3s;
+        transition: all 0.2s;
         & .ivy-drawer__wrapper {
           transition: all 0.3s;
         }
@@ -79,7 +79,7 @@
     &-right {
       &-enter-active,
       &-leave-active {
-        transition: all 0.3s;
+        transition: all 0.2;
         & .ivy-drawer__wrapper {
           transition: all 0.3s;
         }
@@ -100,7 +100,7 @@
     &-bottom {
       &-enter-active,
       &-leave-active {
-        transition: all 0.3s;
+        transition: all 0.2;
         & .ivy-drawer__wrapper {
           transition: all 0.3s;
         }
@@ -121,7 +121,7 @@
     &-top {
       &-enter-active,
       &-leave-active {
-        transition: all 0.3s;
+        transition: all 0.2;
         & .ivy-drawer__wrapper {
           transition: all 0.3s;
         }

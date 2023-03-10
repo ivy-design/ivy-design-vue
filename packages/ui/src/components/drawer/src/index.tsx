@@ -6,6 +6,7 @@ import {
   Transition,
   nextTick,
   type PropType,
+  withModifiers,
 } from "vue";
 import { prefix } from "@/utils";
 
@@ -65,7 +66,7 @@ export default defineComponent({
             <div
               class={[`${prefix}drawer`, { "is-mask": props.showMask }]}
               style={{ "--ivy-drawer-size": props.size }}
-              onClick={handleClose}
+              onClick={withModifiers(handleClose, ["self"])}
               v-show={visible.value}
             >
               <div
