@@ -41,6 +41,7 @@ import Input from "./input/index";
 import { Select, Option } from "./select/index";
 import Progress from "./progress/index";
 import Drawer from "./drawer/index";
+import Tooltip from "./tooltip/index";
 
 const components: Component[] = [
   Icon,
@@ -90,6 +91,7 @@ const components: Component[] = [
   Option,
   Progress,
   Drawer,
+  Tooltip,
 ];
 
 export {
@@ -140,6 +142,7 @@ export {
   Option,
   Progress,
   Drawer,
+  Tooltip,
 };
 
 let INSTALLED_KEY = false;

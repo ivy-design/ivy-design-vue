@@ -56,43 +56,43 @@ const handleOpen = (val: any) => {
       </ivy-form>
     </div> -->
     <div class="margin-top: 24px"></div>
-    <ivy-button @click="visible = true">Open</ivy-button>
-    <ivy-drawer
-      v-model="visible"
-      header="Drawer 的标题"
-      :show-mask="true"
-      placement="left"
-    >
-      <ivy-form :model="formItem" label-width="100px">
-        <ivy-form-item label="姓名">
-          <ivy-input v-model="formItem.name" placeholder="请输入" clearable />
-        </ivy-form-item>
-        <ivy-form-item label="年龄" label-width="200px">
-          <input type="text" />
-        </ivy-form-item>
-        <ivy-form-item label="性别">
-          <ivy-radio-group v-model="formItem.sex">
-            <ivy-radio label="1">男</ivy-radio>
-            <ivy-radio label="0">女</ivy-radio>
-          </ivy-radio-group>
-        </ivy-form-item>
-        <ivy-form-item label="爱好">
-          <ivy-checkbox-group v-model="formItem.interest">
-            <ivy-checkbox label="1">读书</ivy-checkbox>
-            <ivy-checkbox label="2">篮球</ivy-checkbox>
-            <ivy-checkbox label="3">乒乓球</ivy-checkbox>
-            <ivy-checkbox label="4">羽毛球</ivy-checkbox>
-            <ivy-checkbox label="5">旅游</ivy-checkbox>
-          </ivy-checkbox-group>
-        </ivy-form-item>
-        <ivy-form-item label="地址">
-          <input type="text" />
-        </ivy-form-item>
-        <ivy-form-item label="状态">
-          <ivy-switch v-model="formItem.status"> </ivy-switch>
-        </ivy-form-item>
-      </ivy-form>
-    </ivy-drawer>
+
+    <ivy-tooltip content="这是一段提示文本" placement="top-start">
+      <ivy-button>Open</ivy-button>
+    </ivy-tooltip>
+    <ivy-tooltip content="这是一段提示文本" placement="top">
+      <ivy-button>Open</ivy-button>
+    </ivy-tooltip>
+    <ivy-tooltip content="这是一段提示文本" placement="top-end">
+      <ivy-button>Open</ivy-button>
+    </ivy-tooltip>
+    <ivy-tooltip content="这是一段提示文本" placement="left-start">
+      <ivy-button>Open</ivy-button>
+    </ivy-tooltip>
+    <ivy-tooltip content="这是一段提示文本" placement="left">
+      <ivy-button>Open</ivy-button>
+    </ivy-tooltip>
+    <ivy-tooltip content="这是一段提示文本" placement="left-end">
+      <ivy-button>Open</ivy-button>
+    </ivy-tooltip>
+    <ivy-tooltip content="这是一段提示文本" placement="right-start">
+      <ivy-button>Open</ivy-button>
+    </ivy-tooltip>
+    <ivy-tooltip content="这是一段提示文本" placement="right">
+      <ivy-button>Open</ivy-button>
+    </ivy-tooltip>
+    <ivy-tooltip content="这是一段提示文本" placement="right-end">
+      <ivy-button>Open</ivy-button>
+    </ivy-tooltip>
+    <ivy-tooltip content="这是一段提示文本" placement="bottom-start">
+      <ivy-button>Open</ivy-button>
+    </ivy-tooltip>
+    <ivy-tooltip content="这是一段提示文本" placement="bottom">
+      <ivy-button>Open</ivy-button>
+    </ivy-tooltip>
+    <ivy-tooltip content="这是一段提示文本" placement="bottom-end">
+      <ivy-button>Open</ivy-button>
+    </ivy-tooltip>
     <div class="margin-top: 24px"></div>
 
     <!-- <ivy-count-up :end="400" :duration="6000" prefix="￥"></ivy-count-up> -->
