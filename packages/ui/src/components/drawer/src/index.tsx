@@ -58,11 +58,10 @@ export default defineComponent({
         }
       });
     });
-
     return () => {
       return (
         <Teleport to="body" disabled={!props.teleported}>
-          <Transition>
+          <Transition name={`ivy-drawer-animate-${props.placement}`}>
             <div
               class={[`${prefix}drawer`, { "is-mask": props.showMask }]}
               style={{ "--ivy-drawer-size": props.size }}

@@ -60,8 +60,8 @@ const handleOpen = (val: any) => {
     <ivy-drawer
       v-model="visible"
       header="Drawer 的标题"
-      :mask-close="false"
       :show-mask="true"
+      placement="left"
     >
       <ivy-form :model="formItem" label-width="100px">
         <ivy-form-item label="姓名">

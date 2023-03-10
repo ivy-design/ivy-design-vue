@@ -85,8 +85,7 @@ $maps: (
   ivy-border-radius: 4px,
   ivy-border-radius-medium: 8px,
 
-  /* Transition */ ivy-all-transition: all 0.3s
-    cubic-bezier(0.645, 0.045, 0.355, 1),
+  ivy-all-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),
   ivy-fade-transition: opacity 300ms cubic-bezier(0.23, 1, 0.32, 1),
   ivy-fade-linear-transition: opacity 200ms linear,
   ivy-md-fade-transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1) opacity
