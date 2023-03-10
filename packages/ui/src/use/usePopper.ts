@@ -29,6 +29,12 @@ export default (conf = {}) => {
               element: arrowRef.value,
             },
           },
+          {
+            name: "computeStyles",
+            options: {
+              gpuAcceleration: true,
+            },
+          },
         ],
         ...conf,
       }

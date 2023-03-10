@@ -1,4 +1,11 @@
-import { computed, defineComponent, onMounted, ref, Transition } from "vue";
+import {
+  computed,
+  defineComponent,
+  onMounted,
+  ref,
+  Teleport,
+  Transition,
+} from "vue";
 import { prefix, type IvyTheme } from "@/utils/index";
 import usePopper from "@/use/usePopper";
 
@@ -72,6 +79,7 @@ export default defineComponent({
       default: "dark",
     },
     maxWidth: String,
+    teleported: Boolean,
   },
 
   setup(props, { slots }) {
@@ -119,24 +127,26 @@ export default defineComponent({
           <div class={[prefixCls + "-rel"]} ref={triggerRef}>
             {slots.default?.()}
           </div>
-          <Transition name="fade">
-            <div
-              class={[prefixCls + "-popper", prefixCls + "-" + props.theme]}
-              ref={targetRef}
-              v-show={!props.disabled && (visible.value || props.always)}
-              onMouseenter={handleShowPopper}
-              onMouseleave={handleClosePopper}
-              data-transfer="transfer"
-            >
-              <div class={[prefixCls + "-arrow"]} ref={arrowRef}></div>
+          <Teleport to="body" disabled={!props.teleported}>
+            <Transition name="fade">
               <div
-                class={`${prefixCls}-inner`}
-                style={{ maxWidth: props.maxWidth }}
+                class={[prefixCls + "-popper", prefixCls + "-" + props.theme]}
+                ref={targetRef}
+                v-show={!props.disabled && (visible.value || props.always)}
+                onMouseenter={handleShowPopper}
+                onMouseleave={handleClosePopper}
+                data-transfer="transfer"
               >
-                {slots.content?.() ?? props.content}
+                <div class={[prefixCls + "-arrow"]} ref={arrowRef}></div>
+                <div
+                  class={`${prefixCls}-inner`}
+                  style={{ maxWidth: props.maxWidth }}
+                >
+                  {slots.content?.() ?? props.content}
+                </div>
               </div>
-            </div>
-          </Transition>
+            </Transition>
+          </Teleport>
         </div>
       );
     };

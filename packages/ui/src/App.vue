@@ -58,40 +58,40 @@ const handleOpen = (val: any) => {
     <div class="margin-top: 24px"></div>
 
     <ivy-tooltip content="这是一段提示文本" placement="top-start">
-      <ivy-button>Open</ivy-button>
+      <ivy-button>top-start</ivy-button>
     </ivy-tooltip>
     <ivy-tooltip content="这是一段提示文本" placement="top">
-      <ivy-button>Open</ivy-button>
+      <ivy-button>top</ivy-button>
     </ivy-tooltip>
     <ivy-tooltip content="这是一段提示文本" placement="top-end">
-      <ivy-button>Open</ivy-button>
+      <ivy-button>top-end</ivy-button>
     </ivy-tooltip>
     <ivy-tooltip content="这是一段提示文本" placement="left-start">
-      <ivy-button>Open</ivy-button>
+      <ivy-button>left-start</ivy-button>
     </ivy-tooltip>
     <ivy-tooltip content="这是一段提示文本" placement="left">
-      <ivy-button>Open</ivy-button>
+      <ivy-button>left</ivy-button>
     </ivy-tooltip>
     <ivy-tooltip content="这是一段提示文本" placement="left-end">
-      <ivy-button>Open</ivy-button>
+      <ivy-button>left-end</ivy-button>
     </ivy-tooltip>
     <ivy-tooltip content="这是一段提示文本" placement="right-start">
-      <ivy-button>Open</ivy-button>
+      <ivy-button>right-start</ivy-button>
     </ivy-tooltip>
     <ivy-tooltip content="这是一段提示文本" placement="right">
-      <ivy-button>Open</ivy-button>
+      <ivy-button>right</ivy-button>
     </ivy-tooltip>
     <ivy-tooltip content="这是一段提示文本" placement="right-end">
-      <ivy-button>Open</ivy-button>
+      <ivy-button>right-end</ivy-button>
     </ivy-tooltip>
     <ivy-tooltip content="这是一段提示文本" placement="bottom-start">
-      <ivy-button>Open</ivy-button>
+      <ivy-button>bottom-start</ivy-button>
     </ivy-tooltip>
     <ivy-tooltip content="这是一段提示文本" placement="bottom">
-      <ivy-button>Open</ivy-button>
+      <ivy-button>bottom</ivy-button>
     </ivy-tooltip>
     <ivy-tooltip content="这是一段提示文本" placement="bottom-end">
-      <ivy-button>Open</ivy-button>
+      <ivy-button>bottom-end</ivy-button>
     </ivy-tooltip>
     <div class="margin-top: 24px"></div>
 
