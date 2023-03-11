@@ -24,20 +24,13 @@
   &:not(:last-child) {
     margin-right: 12px;
   }
-  &--default {
+  &--default,
+  &--medium {
     padding: 8px 20px;
     font-size: 14px;
     border-radius: 4px;
     &.is-round {
       border-radius: 16px;
-    }
-  }
-  &--mini {
-    padding: 4px 12px;
-    font-size: 12px;
-    border-radius: 2px;
-    &.is-round {
-      border-radius: 11px;
     }
   }
   &--small {

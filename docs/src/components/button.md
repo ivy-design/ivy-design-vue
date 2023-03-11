@@ -90,7 +90,7 @@
 <ivy-button type="info" plain disabled>info</ivy-button>
 ```
 
-## 文字按钮
+<!-- ## 文字按钮
 
 没有边框和背景色的按钮。
 
@@ -101,7 +101,7 @@
 <ivy-button type="text">文字按钮</ivy-button>
 
 <ivy-button disabled type="text">文字按钮</ivy-button>
-```
+``` -->
 
 ## 不同尺寸
 
@@ -110,23 +110,19 @@
 <ivy-button size="large">large</ivy-button>
 <ivy-button>默认</ivy-button>
 <ivy-button size="small">small</ivy-button>
-<ivy-button size="mini">mini</ivy-button>
 
 <ivy-button size="large" round>large</ivy-button>
 <ivy-button round>默认</ivy-button>
 <ivy-button size="small" round>small</ivy-button>
-<ivy-button size="mini" round>mini</ivy-button>
 
 ```html
 <ivy-button size="large">large</ivy-button>
 <ivy-button>默认</ivy-button>
 <ivy-button size="small">small</ivy-button>
-<ivy-button size="mini">mini</ivy-button>
 
 <ivy-button size="large" round>large</ivy-button>
 <ivy-button round>默认</ivy-button>
 <ivy-button size="small" round>small</ivy-button>
-<ivy-button size="mini" round>mini</ivy-button>
 ```
 
 ## Props
@@ -136,4 +132,4 @@
 |type|类型|string|`primary/success/warning/danger/info`|primary|
 |round| 圆角按钮 |boolean|—|false|
 |disabled| 禁用按钮 |boolean|—|false|
-| size| 大小 |string|`large/medium/small/mini`| medium |
+| size| 大小 |string|`large/medium/small`| medium |

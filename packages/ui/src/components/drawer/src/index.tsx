@@ -7,7 +7,6 @@ import {
   nextTick,
   type PropType,
   withModifiers,
-  computed,
   watch,
 } from "vue";
 import { prefix } from "@/utils";
@@ -47,7 +46,6 @@ export default defineComponent({
     watch(
       () => props.placement,
       (val) => {
-        console.log(val);
         placement.value = val;
       }
     );
@@ -84,9 +82,13 @@ export default defineComponent({
                 class={`${prefix}drawer__wrapper`}
                 data-placement={placement.value}
               >
-                {slots.header?.() ?? (
+                {slots.header ? (
+                  <div class={`${prefix}drawer__header`}>
+                    {slots.header?.()}
+                  </div>
+                ) : props.header ? (
                   <div class={`${prefix}drawer__header`}>{props.header}</div>
-                )}
+                ) : null}
                 <div class={`${prefix}drawer__body`}>{slots.default?.()}</div>
               </div>
             </div>

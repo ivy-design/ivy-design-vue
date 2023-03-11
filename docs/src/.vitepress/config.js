@@ -123,6 +123,10 @@ const sidebar = {
                     text: "Dialog 弹窗",
                     link: "/components/dialog.md",
                 },
+                {
+                    text: "Drawer 抽屉",
+                    link: "/components/drawer.md",
+                },
             ],
         },
         // {
