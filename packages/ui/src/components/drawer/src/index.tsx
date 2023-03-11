@@ -7,6 +7,8 @@ import {
   nextTick,
   type PropType,
   withModifiers,
+  computed,
+  watch,
 } from "vue";
 import { prefix } from "@/utils";
 
@@ -40,6 +42,15 @@ export default defineComponent({
   },
   setup(props, { slots, emit }) {
     const visible = ref(props.modelValue);
+    const placement = ref(props.placement);
+
+    watch(
+      () => props.placement,
+      (val) => {
+        console.log(val);
+        placement.value = val;
+      }
+    );
 
     const handleClose = () => {
       if (props.showMask && props.maskClose) {
@@ -62,7 +73,7 @@ export default defineComponent({
     return () => {
       return (
         <Teleport to="body" disabled={!props.teleported}>
-          <Transition name={`ivy-drawer-animate-${props.placement}`}>
+          <Transition name={`ivy-drawer-animate-${placement.value}`}>
             <div
               class={[`${prefix}drawer`, { "is-mask": props.showMask }]}
               style={{ "--ivy-drawer-size": props.size }}
@@ -71,7 +82,7 @@ export default defineComponent({
             >
               <div
                 class={`${prefix}drawer__wrapper`}
-                data-placement={props.placement}
+                data-placement={placement.value}
               >
                 {slots.header?.() ?? (
                   <div class={`${prefix}drawer__header`}>{props.header}</div>
