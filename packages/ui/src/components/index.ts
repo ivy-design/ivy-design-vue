@@ -43,6 +43,7 @@ import Progress from "./progress/index";
 import Drawer from "./drawer/index";
 import Tooltip from "./tooltip/index";
 import Result from "./result/index";
+import Avatar from "./avatar/index";
 
 const components: Component[] = [
   Icon,
@@ -94,6 +95,7 @@ const components: Component[] = [
   Drawer,
   Tooltip,
   Result,
+  Avatar,
 ];
 
 export {
@@ -146,6 +148,7 @@ export {
   Drawer,
   Tooltip,
   Result,
+  Avatar,
 };
 
 let INSTALLED_KEY = false;

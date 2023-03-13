@@ -41,6 +41,7 @@
 @import "./drawer.scss";
 @import "./tooltip.scss";
 @import "./result.scss";
+@import "./avatar.scss";
 
 :root {
   @each $name, $color in $maps {

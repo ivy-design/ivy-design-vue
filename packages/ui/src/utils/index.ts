@@ -24,7 +24,13 @@ export const cancelAnimation = (() => {
   );
 })();
 
-export type { IvySize, IvyInputValue, IvyTheme, IvyType } from "./types";
+export type {
+  IvySize,
+  IvyInputValue,
+  IvyTheme,
+  IvyType,
+  StyleObjectFitValues,
+} from "./types";
 
 export class Type {
   public static is(val: any): string {
