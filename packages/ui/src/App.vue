@@ -55,45 +55,46 @@ const handleOpen = (val: any) => {
         </ivy-form-item>
       </ivy-form>
     </div> -->
-    <div class="margin-top: 24px"></div>
+    <div style="margin-top: 24px; display: flex">
+      <ivy-result
+        icon="success"
+        title="Success Tip"
+        description="this is description"
+      >
+        <template #extra>
+          <ivy-button>操作</ivy-button>
+        </template>
+      </ivy-result>
+      <ivy-result
+        icon="warning"
+        title="Warning Tip"
+        description="this is description"
+      >
+        <template #extra>
+          <ivy-button>操作</ivy-button>
+        </template>
+      </ivy-result>
+      <ivy-result
+        icon="error"
+        title="Error Tip"
+        description="this is description"
+      >
+        <template #extra>
+          <ivy-button>操作</ivy-button>
+        </template>
+      </ivy-result>
+      <ivy-result
+        icon="info"
+        title="Info Tip"
+        description="this is description"
+      >
+        <template #extra>
+          <ivy-button>操作</ivy-button>
+        </template>
+      </ivy-result>
+    </div>
 
-    <ivy-tooltip content="这是一段提示文本" placement="top-start">
-      <ivy-button>top-start</ivy-button>
-    </ivy-tooltip>
-    <ivy-tooltip content="这是一段提示文本" placement="top">
-      <ivy-button>top</ivy-button>
-    </ivy-tooltip>
-    <ivy-tooltip content="这是一段提示文本" placement="top-end">
-      <ivy-button>top-end</ivy-button>
-    </ivy-tooltip>
-    <ivy-tooltip content="这是一段提示文本" placement="left-start">
-      <ivy-button>left-start</ivy-button>
-    </ivy-tooltip>
-    <ivy-tooltip content="这是一段提示文本" placement="left">
-      <ivy-button>left</ivy-button>
-    </ivy-tooltip>
-    <ivy-tooltip content="这是一段提示文本" placement="left-end">
-      <ivy-button>left-end</ivy-button>
-    </ivy-tooltip>
-    <ivy-tooltip content="这是一段提示文本" placement="right-start">
-      <ivy-button>right-start</ivy-button>
-    </ivy-tooltip>
-    <ivy-tooltip content="这是一段提示文本" placement="right">
-      <ivy-button>right</ivy-button>
-    </ivy-tooltip>
-    <ivy-tooltip content="这是一段提示文本" placement="right-end">
-      <ivy-button>right-end</ivy-button>
-    </ivy-tooltip>
-    <ivy-tooltip content="这是一段提示文本" placement="bottom-start">
-      <ivy-button>bottom-start</ivy-button>
-    </ivy-tooltip>
-    <ivy-tooltip content="这是一段提示文本" placement="bottom">
-      <ivy-button>bottom</ivy-button>
-    </ivy-tooltip>
-    <ivy-tooltip content="这是一段提示文本" placement="bottom-end">
-      <ivy-button>bottom-end</ivy-button>
-    </ivy-tooltip>
-    <div class="margin-top: 24px"></div>
+    <div style="margin-top: 24px"></div>
 
     <!-- <ivy-count-up :end="400" :duration="6000" prefix="￥"></ivy-count-up> -->
     <!-- <ivy-virtual-list height="600px" style="width: 700px; margin-top: 48px" :source="data" item-height="42px">

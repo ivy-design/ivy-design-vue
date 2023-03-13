@@ -107,6 +107,10 @@ const sidebar = {
                     link: "/components/tag.md",
                 },
                 {
+                    text: "Result 结果",
+                    link: "/components/result.md",
+                },
+                {
                     text: "Timeline 时间线",
                     link: "/components/timeline.md",
                 },

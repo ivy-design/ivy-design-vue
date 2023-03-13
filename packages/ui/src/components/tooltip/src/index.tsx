@@ -151,14 +151,4 @@ export default defineComponent({
       );
     };
   },
-  computed: {
-    innerClasses() {
-      return [
-        `${prefixCls}-inner`,
-        {
-          [`${prefixCls}-inner-with-width`]: !!this.maxWidth,
-        },
-      ];
-    },
-  },
 });
