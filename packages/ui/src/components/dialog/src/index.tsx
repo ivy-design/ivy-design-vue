@@ -73,7 +73,13 @@ export default defineComponent({
               props.maskOnClickClose ? handlerClose("close") : null;
             }, ["self"])}
           >
-            <div class="ivy-dialog-container" style={{ width: props.width }}>
+            <div
+              role="dialog"
+              aria-modal="true"
+              aria-label={props.header}
+              class="ivy-dialog-container"
+              style={{ width: props.width }}
+            >
               <div class="ivy-dialog-content">
                 {slots.header ? (
                   slots.header?.()
