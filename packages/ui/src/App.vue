@@ -56,73 +56,11 @@ const handleOpen = (val: any) => {
       </ivy-form>
     </div> -->
     <div style="margin-top: 24px">
-      <ivy-avatar type="text" size="large" value="U"> </ivy-avatar>
-      <ivy-avatar type="text" size="medium" value="U"> </ivy-avatar>
-      <ivy-avatar type="text" size="small" value="U"> </ivy-avatar>
-      <br />
-      <br />
-      <ivy-avatar type="text" size="large" value="U" shape="square">
-      </ivy-avatar>
-      <ivy-avatar type="text" size="medium" value="U" shape="square">
-      </ivy-avatar>
-      <ivy-avatar type="text" size="small" value="U" shape="square">
-      </ivy-avatar>
-      <br />
-      <br />
-      <ivy-avatar type="icon" size="large" value="user-filled"> </ivy-avatar>
-      <ivy-avatar type="icon" size="medium" value="user-filled"> </ivy-avatar>
-      <ivy-avatar type="icon" size="small" value="user-filled"> </ivy-avatar>
-      <br />
-      <br />
-      <ivy-avatar type="icon" size="large" value="user-filled" shape="square">
-      </ivy-avatar>
-      <ivy-avatar type="icon" size="medium" value="user-filled" shape="square">
-      </ivy-avatar>
-      <ivy-avatar type="icon" size="small" value="user-filled" shape="square">
-      </ivy-avatar>
-      <br />
-      <br />
-      <ivy-avatar
-        type="img"
-        size="large"
-        value="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"
-      >
-      </ivy-avatar>
-      <ivy-avatar
-        type="img"
-        size="medium"
-        value="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"
-      >
-      </ivy-avatar>
-      <ivy-avatar
-        type="img"
-        size="small"
-        value="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"
-      >
-      </ivy-avatar>
-      <br />
-      <br />
-      <ivy-avatar
-        type="img"
-        size="large"
-        value="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"
-        shape="square"
-      >
-      </ivy-avatar>
-      <ivy-avatar
-        type="img"
-        size="medium"
-        value="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"
-        shape="square"
-      >
-      </ivy-avatar>
-      <ivy-avatar
-        type="img"
-        size="small"
-        value="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"
-        shape="square"
-      >
-      </ivy-avatar>
+      <ivy-steps direction="vertical">
+        <ivy-step header="第一步">fdsfsadfsdaf</ivy-step>
+        <ivy-step header="第二步">fasdfsdf</ivy-step>
+        <ivy-step header="第三步">fsdfsdf</ivy-step>
+      </ivy-steps>
     </div>
 
     <div style="margin-top: 24px"></div>

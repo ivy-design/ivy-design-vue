@@ -85,6 +85,10 @@ const sidebar = {
                     text: "Breadcrumb 面包屑",
                     link: "/components/breadcrumb.md",
                 },
+                {
+                    text: "Steps 步骤条",
+                    link: "/components/steps.md",
+                },
             ],
         },
         {
