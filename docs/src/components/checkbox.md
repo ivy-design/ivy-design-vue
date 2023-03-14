@@ -1,96 +1,70 @@
-<template>
-    <div class="page">
-        <div class="page-item">
-            <div>
-                <h1 class="page-title">Checkbox 多选框</h1>
-                <p class="page-dec">一组备选项中进行多选</p>
-            </div>
-        </div>
-        <div class="page-item">
-            <div>
-                <h1 class="page-item-title">基础用法</h1>
-                <p class="page-item-dec">
-                    单独使用可以表示两种状态之间的切换，写在标签中的内容为checkbox按钮后的介绍。
-                </p>
-            </div>
-            <div class="page-item-content">
-                <page-demo>
-                    <ivy-checkbox v-model="value">选项一</ivy-checkbox>
-                    <ivy-checkbox
-                        v-model="value1"
-                        true-label="1"
-                        false-label="0"
-                        @change="changes"
-                    >
-                        选项二
-                    </ivy-checkbox>
-                </page-demo>
-            </div>
-        </div>
-        <div class="page-item">
-            <div>
-                <h1 class="page-item-title">禁用状态</h1>
-                <p class="page-item-dec">单选框不可用的状态。</p>
-            </div>
-            <div class="page-item-content">
-                <page-demo>
-                    <ivy-checkbox v-model="value" disabled>选项一</ivy-checkbox>
-                    <ivy-checkbox v-model="value1" disabled>选项二</ivy-checkbox>
-                </page-demo>
-            </div>
-        </div>
-        <div class="page-item">
-            <div>
-                <h1 class="page-item-title">多选框组</h1>
-                <p class="page-item-dec">
-                    适用于多个勾选框绑定到同一个数组的情景，通过是否勾选来表示这一组选项中选中的项。
-                </p>
-            </div>
-            <div class="page-item-content">
-                <page-demo>
-                    <ivy-checkbox-group v-model="value2" @change="handleWitch">
-                        <ivy-checkbox label="1">选项一</ivy-checkbox>
-                        <ivy-checkbox label="2">选项二</ivy-checkbox>
-                        <ivy-checkbox label="3">选项三</ivy-checkbox>
-                        <ivy-checkbox label="4" disabled>禁用</ivy-checkbox>
-                        <ivy-checkbox label="5" disabled>选中且禁用</ivy-checkbox>
-                    </ivy-checkbox-group>
-                </page-demo>
-            </div>
-        </div>
-        <div class="page-item">
-            <div>
-                <h1 class="page-item-title">indeterminate 状态</h1>
-                <p class="page-item-dec">
-                    <code class="code">indeterminate</code>
-                    属性用以表示 checkbox 的不确定状态，一般用于实现全选的效果
-                </p>
-            </div>
-            <div class="page-item-content">
-                <page-demo>
-                    <ivy-checkbox
-                        class="mb-20"
-                        v-model="checkAll"
-                        :indeterminate="isIndeterminate"
-                        @change="handleCheckAllChange"
-                    >
-                        全选
-                    </ivy-checkbox>
-                    <ivy-checkbox-group
-                        v-model="value3"
-                        @change="handleCheckedCitiesChange"
-                    >
-                        <ivy-checkbox label="1">选项一</ivy-checkbox>
-                        <ivy-checkbox label="2">选项二</ivy-checkbox>
-                        <ivy-checkbox label="3">选项三</ivy-checkbox>
-                        <ivy-checkbox label="4">禁用</ivy-checkbox>
-                        <ivy-checkbox label="5">选中且禁用</ivy-checkbox>
-                    </ivy-checkbox-group>
-                </page-demo>
-            </div>
-        </div>
-    </div>
-</template>
+# Checkbox 多选框
+
+一组备选项中进行多选
+
+## 基础用法
+
+单独使用可以表示两种状态之间的切换，写在标签中的内容为 `checkbox` 按钮后的介绍。
+
+<div class="demo-block">
+    <ivy-checkbox v-model="value">选项一</ivy-checkbox>
+    <ivy-checkbox
+        v-model="value1"
+        true-label="1"
+        false-label="0"
+        @change="changes"
+    >
+        选项二
+    </ivy-checkbox>
+</div>
+
+## 禁用状态
+
+单选框不可用的状态。
+
+<div class="demo-block">
+        <ivy-checkbox v-model="value" disabled>选项一</ivy-checkbox>
+        <ivy-checkbox v-model="value1" disabled>选项二</ivy-checkbox>
+</div>
+
+## 多选框组
+
+适用于多个勾选框绑定到同一个数组的情景，通过是否勾选来表示这一组选项中选中的项。
+
+<div class="demo-block">
+    <ivy-checkbox-group v-model="value2" @change="handleWitch">
+        <ivy-checkbox label="1">选项一</ivy-checkbox>
+        <ivy-checkbox label="2">选项二</ivy-checkbox>
+        <ivy-checkbox label="3">选项三</ivy-checkbox>
+        <ivy-checkbox label="4" disabled>禁用</ivy-checkbox>
+        <ivy-checkbox label="5" disabled>选中且禁用</ivy-checkbox>
+    </ivy-checkbox-group>
+</div>
+
+## indeterminate 状态
+
+`indeterminate` 属性用以表示 checkbox 的不确定状态，一般用于实现全选的效果
+
+<div class="demo-block">
+    <ivy-checkbox
+        class="mb-20"
+        v-model="checkAll"
+        :indeterminate="isIndeterminate"
+        @change="handleCheckAllChange"
+    >
+        全选
+    </ivy-checkbox>
+    <ivy-checkbox-group
+        v-model="value3"
+        @change="handleCheckedCitiesChange"
+    >
+        <ivy-checkbox label="1">选项一</ivy-checkbox>
+        <ivy-checkbox label="2">选项二</ivy-checkbox>
+        <ivy-checkbox label="3">选项三</ivy-checkbox>
+        <ivy-checkbox label="4">禁用</ivy-checkbox>
+        <ivy-checkbox label="5">选中且禁用</ivy-checkbox>
+    </ivy-checkbox-group>
+</div>
 
 <script>
 const cityOptions = ['1', '2', '3', '4', '5'];

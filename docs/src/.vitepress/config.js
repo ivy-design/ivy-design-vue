@@ -76,6 +76,26 @@ const sidebar = {
                     text: "Input 输入框",
                     link: "/components/input.md",
                 },
+                {
+                    text: "InputNumber 数字输入框",
+                    link: "/components/input-number.md",
+                },
+                {
+                    text: "Select 下拉选择框",
+                    link: "/components/select.md",
+                },
+                {
+                    text: "Radio 单选框",
+                    link: "/components/radio.md",
+                },
+                {
+                    text: "Checkbox 多选框",
+                    link: "/components/checkbox.md",
+                },
+                {
+                    text: "Switch 开关",
+                    link: "/components/switch.md",
+                },
             ],
         },
         {
@@ -88,6 +108,10 @@ const sidebar = {
                 {
                     text: "Steps 步骤条",
                     link: "/components/steps.md",
+                },
+                {
+                    text: "Dropdown 下拉菜单",
+                    link: "/components/dropdown.md",
                 },
             ],
         },
@@ -117,6 +141,10 @@ const sidebar = {
                 {
                     text: "Timeline 时间线",
                     link: "/components/timeline.md",
+                },
+                {
+                    text: "Empty 空状态",
+                    link: "/components/empty.md",
                 },
             ],
         },

@@ -1,107 +1,59 @@
-<template>
-    <div class="page">
-        <div class="page-item">
-            <div>
-                <h1 class="page-title">Radio 单选框</h1>
-                <p class="page-dec">在一组备选项中进行单选</p>
-            </div>
-        </div>
-        <div class="page-item">
-            <div>
-                <h1 class="page-item-title">基础用法</h1>
-                <p class="page-item-dec">
-                    由于选项默认可见，不宜过多，若选项过多，建议使用Select选择器。
-                </p>
-            </div>
-            <div class="page-item-content">
-                <page-demo>
-                    <ivy-radio v-model="value" label="1">选项一</ivy-radio>
-                    <ivy-radio v-model="value" label="2">选项二</ivy-radio>
-                </page-demo>
-            </div>
-        </div>
-        <div class="page-item">
-            <div>
-                <h1 class="page-item-title">禁用状态</h1>
-                <p class="page-item-dec">单选框不可用的状态。</p>
-            </div>
-            <div class="page-item-content">
-                <page-demo>
-                    <ivy-radio v-model="value1" label="1" disabled>
-                        选项一
-                    </ivy-radio>
-                    <ivy-radio v-model="value1" label="2" disabled>
-                        选项二
-                    </ivy-radio>
-                </page-demo>
-            </div>
-        </div>
-        <div class="page-item">
-            <div>
-                <h1 class="page-item-title">单选框组</h1>
-                <p class="page-item-dec">适用于在多个互斥的选项中选择的场景</p>
-            </div>
-            <div class="page-item-content">
-                <page-demo>
-                    <ivy-radio-group v-model="value2">
-                        <ivy-radio label="1">选项一</ivy-radio>
-                        <ivy-radio label="2">选项二</ivy-radio>
-                        <ivy-radio label="3">选项三</ivy-radio>
-                    </ivy-radio-group>
-                </page-demo>
-            </div>
-        </div>
-        <div class="page-item">
-            <div>
-                <h1 class="page-title">API</h1>
-            </div>
-            <div class="page-item">
-                <div>
-                    <h1 class="page-item-title">Radio Props</h1>
-                </div>
-                <div class="page-item-content">
-                    <ivy-table :columns="propCol" :data="pcData"></ivy-table>
-                </div>
-            </div>
-            <div class="page-item">
-                <div>
-                    <h1 class="page-item-title">Radio Events</h1>
-                </div>
-                <div class="page-item-content">
-                    <ivy-table :columns="eventsCol" :data="ecData"></ivy-table>
-                </div>
-            </div>
-            <div class="page-item">
-                <div>
-                    <h1 class="page-item-title">RadioGroup Props</h1>
-                </div>
-                <div class="page-item-content">
-                    <ivy-table :columns="propCol" :data="pcgData"></ivy-table>
-                </div>
-            </div>
-            <div class="page-item">
-                <div>
-                    <h1 class="page-item-title">RadioGroup Events</h1>
-                </div>
-                <div class="page-item-content">
-                    <ivy-table :columns="eventsCol" :data="ecData"></ivy-table>
-                </div>
-            </div>
-        </div>
-    </div>
-</template>
+# Radio 单选框
+
+在一组备选项中进行单选
+
+## 基础用法
+
+由于选项默认可见，不宜过多，若选项过多，建议使用Select选择器。
+
+<div class="demo-block">
+    <ivy-radio v-model="value" label="1">选项一</ivy-radio>
+    <ivy-radio v-model="value" label="2">选项二</ivy-radio>
+</div>
+
+## 禁用状态
+
+单选框不可用的状态。
+
+<div class="demo-block">
+    <ivy-radio v-model="value1" label="1" disabled>
+        选项一
+    </ivy-radio>
+    <ivy-radio v-model="value1" label="2" disabled>
+        选项二
+    </ivy-radio>
+</div>
+
+## 单选框组
+
+适用于在多个互斥的选项中选择的场景
+
+<div class="demo-block">
+    <ivy-radio-group v-model="value2">
+        <ivy-radio label="1">选项一</ivy-radio>
+        <ivy-radio label="2">选项二</ivy-radio>
+        <ivy-radio label="3">选项三</ivy-radio>
+    </ivy-radio-group>
+</div>
+
+
+## Radio Props
+
+## Radio Events
+
+## RadioGroup Props
+
+## RadioGroup Events
+
+
 
 <script>
-import { columns, eventsCol, slotCol } from '@/data/table.js';
 export default {
     data() {
         return {
             value: '2',
             value1: '1',
             value2: '1',
-            propCol: columns,
-            eventsCol,
-            slotCol,
             pcData: [
                 {
                     parameter: 'value/v-model',
