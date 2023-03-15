@@ -19,10 +19,6 @@ export default defineComponent({
     activeText: String,
     inactiveText: String,
     disabled: Boolean,
-    width: {
-      type: String,
-      default: "44px",
-    },
     name: String,
   },
   setup(props, { emit }) {
@@ -63,8 +59,13 @@ export default defineComponent({
           ]}
           onClick={handlerSwitch}
         >
-          <input value={curValue.value} name="name" type="checkbox" hidden />
-          <span class="ivy-switch__core" style={{ width: props.width }}>
+          <input
+            value={curValue.value}
+            name={props.name}
+            type="checkbox"
+            hidden
+          />
+          <span class="ivy-switch__core">
             {props.activeText || props.inactiveText ? (
               <span v-if="activeText || inactiveText">{showText.value}</span>
             ) : null}
