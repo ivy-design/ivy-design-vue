@@ -1,112 +1,100 @@
-<template>
-    <div class="page-radio">
-        <div class="page-item">
-            <div>
-                <p class="page-title">cell 单元格</p>
-                <p class="page-dec">在一组备选项中进行单选</p>
-            </div>
-        </div>
-        <div class="page-item">
-            <div>
-                <p class="page-item-title">基础用法</p>
-                <p class="page-item-dec">包含各类用法的综合示例。</p>
-            </div>
-            <div class="page-item-content">
-                <page-demo>
-                    <ivy-card style="width: 400px;">
-                        <div slot="name">选项</div>
-                        <ivy-cell-group>
-                            <ivy-cell title="只显示标题"></ivy-cell>
-                            <ivy-cell
-                                title="显示label"
-                                label="label的内容"
-                            ></ivy-cell>
-                            <ivy-cell title="显示extra" extra="extra"></ivy-cell>
-                            <ivy-cell
-                                title="显示向右的icon"
-                                is-link
-                                name="link"
-                            ></ivy-cell>
-                            <ivy-cell
-                                title="链接"
-                                is-link
-                                name="link"
-                                to="/layout"
-                                @click="handleClick"
-                                extra="详细信息"
-                            ></ivy-cell>
-                            <ivy-cell
-                                title="新窗口打开"
-                                is-link
-                                name="link"
-                                to="/layout"
-                                @click="handleClick"
-                                target="_blank"
-                            ></ivy-cell>
-                            <ivy-cell title="禁用" disabled></ivy-cell>
-                            <ivy-cell title="选中" selected></ivy-cell>
-                            <!-- <ivy-cell title="开关">
-                                <ivy-switch
-                                    slot="extra"
-                                    v-model="status"
-                                ></ivy-switch>
-                            </ivy-cell> -->
-                        </ivy-cell-group>
-                    </ivy-card>
-                </page-demo>
-            </div>
-        </div>
-        <div class="page-item">
-            <div>
-                <h1>是否显示border</h1>
-                <p>给cell加上边框</p>
-            </div>
-            <div class="page-item-content">
-                <page-demo>
-                    <ivy-card style="width: 400px;">
-                        <ivy-cell-group border>
-                            <ivy-cell title="只显示标题"></ivy-cell>
-                            <ivy-cell
-                                title="显示label"
-                                label="label的内容"
-                            ></ivy-cell>
-                            <ivy-cell title="显示extra" extra="extra"></ivy-cell>
-                            <ivy-cell
-                                title="显示向右的icon"
-                                is-link
-                                name="link"
-                            ></ivy-cell>
-                            <ivy-cell
-                                title="链接"
-                                is-link
-                                name="link"
-                                to="/layout"
-                                @click="handleClick"
-                                extra="详细信息"
-                            ></ivy-cell>
-                            <ivy-cell
-                                title="新窗口打开"
-                                is-link
-                                name="link"
-                                to="/layout"
-                                @click="handleClick"
-                                target="_blank"
-                            ></ivy-cell>
-                            <ivy-cell title="禁用" disabled></ivy-cell>
-                            <ivy-cell title="选中" selected></ivy-cell>
-                            <!-- <ivy-cell title="开关">
-                                <ivy-switch
-                                    slot="extra"
-                                    v-model="status"
-                                ></ivy-switch>
-                            </ivy-cell> -->
-                        </ivy-cell-group>
-                    </ivy-card>
-                </page-demo>
-            </div>
-        </div>
-    </div>
-</template>
+# cell 单元格
+
+在一组备选项中进行单选
+
+## 基础用法
+
+包含各类用法的综合示例。
+
+<div class="demo-block">
+    <ivy-card style="width: 400px;">
+        <div slot="name">选项</div>
+        <ivy-cell-group>
+            <ivy-cell title="只显示标题"></ivy-cell>
+            <ivy-cell
+                title="显示label"
+                label="label的内容"
+            ></ivy-cell>
+            <ivy-cell title="显示extra" extra="extra"></ivy-cell>
+            <ivy-cell
+                title="显示向右的icon"
+                is-link
+                name="link"
+            ></ivy-cell>
+            <ivy-cell
+                title="链接"
+                is-link
+                name="link"
+                to="/layout"
+                @click="handleClick"
+                extra="详细信息"
+            ></ivy-cell>
+            <ivy-cell
+                title="新窗口打开"
+                is-link
+                name="link"
+                to="/layout"
+                @click="handleClick"
+                target="_blank"
+            ></ivy-cell>
+            <ivy-cell title="禁用" disabled></ivy-cell>
+            <ivy-cell title="选中" selected></ivy-cell>
+            <ivy-cell title="开关">
+                <ivy-switch
+                    slot="extra"
+                    v-model="status"
+                ></ivy-switch>
+            </ivy-cell>
+        </ivy-cell-group>
+    </ivy-card>
+</div>
+
+## 是否显示border
+
+给cell加上边框
+
+<div class="demo-block">
+    <ivy-card style="width: 400px;">
+        <ivy-cell-group border>
+            <ivy-cell title="只显示标题"></ivy-cell>
+            <ivy-cell
+                title="显示label"
+                label="label的内容"
+            ></ivy-cell>
+            <ivy-cell title="显示extra" extra="extra"></ivy-cell>
+            <ivy-cell
+                title="显示向右的icon"
+                is-link
+                name="link"
+            ></ivy-cell>
+            <ivy-cell
+                title="链接"
+                is-link
+                name="link"
+                to="/layout"
+                @click="handleClick"
+                extra="详细信息"
+            ></ivy-cell>
+            <ivy-cell
+                title="新窗口打开"
+                is-link
+                name="link"
+                to="/layout"
+                @click="handleClick"
+                target="_blank"
+            ></ivy-cell>
+            <ivy-cell title="禁用" disabled></ivy-cell>
+            <ivy-cell title="选中" selected></ivy-cell>
+            <ivy-cell title="开关">
+                <ivy-switch
+                    slot="extra"
+                    v-model="status"
+                ></ivy-switch>
+            </ivy-cell>
+        </ivy-cell-group>
+    </ivy-card>
+</div>
+
 
 <script>
 export default {

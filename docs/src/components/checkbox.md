@@ -47,7 +47,7 @@
 
 <div class="demo-block">
     <ivy-checkbox
-        class="mb-20"
+        class="margin-bottom-large"
         v-model="checkAll"
         :indeterminate="isIndeterminate"
         @change="handleCheckAllChange"

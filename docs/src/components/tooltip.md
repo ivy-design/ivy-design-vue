@@ -41,21 +41,21 @@
                         <div class="flex-between">
                             <div style="width: 70px;">
                                 <ivy-tooltip
-                                    class="mt-20"
+                                    class="margin-top-large"
                                     content="Left Top 提示文字"
                                     placement="left-start"
                                 >
                                     <ivy-button>左上</ivy-button>
                                 </ivy-tooltip>
                                 <ivy-tooltip
-                                    class="mt-20"
+                                    class="margin-top-large"
                                     content="Left Center 提示文字"
                                     placement="left"
                                 >
                                     <ivy-button>左边</ivy-button>
                                 </ivy-tooltip>
                                 <ivy-tooltip
-                                    class="mt-20"
+                                    class="margin-top-large"
                                     content="Left Bottom 提示文字"
                                     placement="left-end"
                                 >
@@ -64,21 +64,21 @@
                             </div>
                             <div style="width: 70px;">
                                 <ivy-tooltip
-                                    class="mt-20"
+                                    class="margin-top-large"
                                     content="Right Top 提示文字"
                                     placement="right-start"
                                 >
                                     <ivy-button>右上</ivy-button>
                                 </ivy-tooltip>
                                 <ivy-tooltip
-                                    class="mt-20"
+                                    class="margin-top-large"
                                     content="Right Center 提示文字"
                                     placement="right"
                                 >
                                     <ivy-button>右边</ivy-button>
                                 </ivy-tooltip>
                                 <ivy-tooltip
-                                    class="mt-20"
+                                    class="margin-top-large"
                                     content="Right Bottom 提示文字"
                                     placement="right-end"
                                 >
@@ -129,7 +129,7 @@
                         <ivy-button>dart(default)</ivy-button>
                     </ivy-tooltip>
                     <ivy-tooltip
-                        class="ml-20"
+                        class="margin-left-large"
                         content="Bottom Center 提示文字"
                         theme="light"
                     >

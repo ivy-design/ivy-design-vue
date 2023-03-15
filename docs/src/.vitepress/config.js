@@ -146,6 +146,10 @@ const sidebar = {
                     text: "Empty 空状态",
                     link: "/components/empty.md",
                 },
+                {
+                    text: "Progress 进度条",
+                    link: "/components/progress.md",
+                },
             ],
         },
         {

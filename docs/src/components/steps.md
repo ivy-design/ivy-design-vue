@@ -19,7 +19,7 @@
         description="这里是该步骤的描述信息"
     ></ivy-step>
 </ivy-steps>
-<ivy-button class="mt-20" type="primary" @click="next">
+<ivy-button class="margin-top-large" type="primary" @click="next">
     下一步
 </ivy-button>
 </div>
@@ -45,7 +45,7 @@
             status="error"
         ></ivy-step>
     </ivy-steps>
-    <ivy-button class="mt-20" type="primary" @click="next1">
+    <ivy-button class="margin-top-large" type="primary" @click="next1">
         下一步
     </ivy-button>
 </div>
@@ -71,7 +71,7 @@
             ></ivy-step>
         </ivy-steps>
     </div>
-    <ivy-button class="mt-20" type="primary" @click="next1">
+    <ivy-button class="margin-top-large" type="primary" @click="next1">
         下一步
     </ivy-button>
 </div>

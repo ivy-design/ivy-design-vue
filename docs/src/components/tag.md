@@ -58,7 +58,7 @@ Tag 组件提供了三个不同的主题：dark、light 和 plain
         <ivy-tag theme="dark" type="danger">标签 4</ivy-tag>
         <ivy-tag theme="dark" type="info">标签 5</ivy-tag>
     </div>
-    <div class="mt-20">
+    <div class="margin-top-large">
         <span class="margin-right">Plain</span>
         <ivy-tag theme="plain" type="primary">标签 1</ivy-tag>
         <ivy-tag theme="plain" type="success">标签 2</ivy-tag>
