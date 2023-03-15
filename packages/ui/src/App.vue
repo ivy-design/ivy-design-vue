@@ -56,11 +56,9 @@ const handleOpen = (val: any) => {
       </ivy-form>
     </div> -->
     <div style="margin-top: 24px">
-      <ivy-steps direction="vertical">
-        <ivy-step header="第一步">fdsfsadfsdaf</ivy-step>
-        <ivy-step header="第二步">fasdfsdf</ivy-step>
-        <ivy-step header="第三步">fsdfsdf</ivy-step>
-      </ivy-steps>
+      <ivy-empty description="No Data">
+        <ivy-button type="primary">按钮</ivy-button>
+      </ivy-empty>
     </div>
 
     <div style="margin-top: 24px"></div>
