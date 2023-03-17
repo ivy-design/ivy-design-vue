@@ -45,6 +45,7 @@ import Tooltip from "./tooltip/index";
 import Result from "./result/index";
 import Avatar from "./avatar/index";
 import Empty from "./empty/index";
+import { Carousel, CarouselItem } from "./carousel/index";
 
 const components: Component[] = [
   Icon,
@@ -98,6 +99,8 @@ const components: Component[] = [
   Result,
   Avatar,
   Empty,
+  Carousel,
+  CarouselItem,
 ];
 
 export {
@@ -152,6 +155,8 @@ export {
   Result,
   Avatar,
   Empty,
+  Carousel,
+  CarouselItem,
 };
 
 let INSTALLED_KEY = false;

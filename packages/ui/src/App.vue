@@ -56,9 +56,20 @@ const handleOpen = (val: any) => {
       </ivy-form>
     </div> -->
     <div style="margin-top: 24px">
-      <ivy-empty description="No Data">
-        <ivy-button type="primary">按钮</ivy-button>
-      </ivy-empty>
+      <ivy-carousel height="200px" loop>
+        <ivy-carousel-item style="background-color: aquamarine; color: white">
+          1
+        </ivy-carousel-item>
+        <ivy-carousel-item style="background-color: blueviolet; color: white">
+          2
+        </ivy-carousel-item>
+        <ivy-carousel-item style="background-color: burlywood; color: white">
+          3
+        </ivy-carousel-item>
+        <ivy-carousel-item style="background-color: blue; color: white">
+          4
+        </ivy-carousel-item>
+      </ivy-carousel>
     </div>
 
     <div style="margin-top: 24px"></div>

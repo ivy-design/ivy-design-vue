@@ -43,6 +43,7 @@
 @import "./result.scss";
 @import "./avatar.scss";
 @import "./empty.scss";
+@import "./carousel.scss";
 
 :root {
   @each $name, $color in $maps {
