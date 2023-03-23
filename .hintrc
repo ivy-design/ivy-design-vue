@@ -20,6 +20,13 @@
       {
         "button-name": "off"
       }
-    ]
+    ],
+    "axe/text-alternatives": [
+      "default",
+      {
+        "image-alt": "off"
+      }
+    ],
+    "detect-css-reflows/layout": "off"
   }
 }

@@ -46,6 +46,7 @@ import Result from "./result/index";
 import Avatar from "./avatar/index";
 import Empty from "./empty/index";
 import { Carousel, CarouselItem } from "./carousel/index";
+import Image from "./image/index";
 
 const components: Component[] = [
   Icon,
@@ -101,6 +102,7 @@ const components: Component[] = [
   Empty,
   Carousel,
   CarouselItem,
+  Image,
 ];
 
 export {
@@ -157,6 +159,7 @@ export {
   Empty,
   Carousel,
   CarouselItem,
+  Image,
 };
 
 let INSTALLED_KEY = false;
