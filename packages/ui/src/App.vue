@@ -14,6 +14,10 @@ const visible = ref(false);
 const handleOpen = (val: any) => {
   visible.value = true;
 };
+
+const handleResize = (val: any) => {
+  console.log(val);
+};
 </script>
 
 <template>
@@ -55,7 +59,7 @@ const handleOpen = (val: any) => {
         </ivy-form-item>
       </ivy-form>
     </div> -->
-    <div style="margin-top: 24px">
+    <!-- <div style="margin-top: 24px">
       <ivy-carousel height="200px" loop>
         <ivy-carousel-item style="background-color: aquamarine; color: white">
           1
@@ -70,9 +74,22 @@ const handleOpen = (val: any) => {
           4
         </ivy-carousel-item>
       </ivy-carousel>
-    </div>
+    </div> -->
 
-    <div style="margin-top: 24px"></div>
+    <div style="margin-top: 24px">
+      <ivy-grid border square @on-resize="handleResize">
+        <ivy-grid-item>
+          1 <br />
+          1
+        </ivy-grid-item>
+        <ivy-grid-item>2</ivy-grid-item>
+        <ivy-grid-item>3</ivy-grid-item>
+        <ivy-grid-item>4</ivy-grid-item>
+        <ivy-grid-item>5</ivy-grid-item>
+        <ivy-grid-item>6</ivy-grid-item>
+        <ivy-grid-item>7</ivy-grid-item>
+      </ivy-grid>
+    </div>
 
     <!-- <ivy-count-up :end="400" :duration="6000" prefix="￥"></ivy-count-up> -->
     <!-- <ivy-virtual-list height="600px" style="width: 700px; margin-top: 48px" :source="data" item-height="42px">

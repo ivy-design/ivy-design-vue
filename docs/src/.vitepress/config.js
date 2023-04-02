@@ -52,6 +52,10 @@ const sidebar = {
                     link: "/components/layout.md",
                 },
                 {
+                    text: "Grid 宫格",
+                    link: "/components/grid.md",
+                },
+                {
                     text: "Row/Col 行列",
                     link: "/components/row-col.md",
                 },
