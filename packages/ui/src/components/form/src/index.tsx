@@ -35,6 +35,10 @@ export default defineComponent({
       },
     },
     inline: Boolean,
+    rules: {
+      type: Object as PropType<{ [x: string]: unknown }>,
+      default: () => ({}),
+    },
   },
   setup(props, { slots, expose, emit }) {
     provide("labelSuffix", toRef(props, "labelSuffix"));
@@ -44,7 +48,7 @@ export default defineComponent({
     // 存放formItem中有prop属性的
     const propList = ref<string[]>([]);
     const insertPropList = (val: string) => {
-      propList.value.push(val);
+      if (!propList.value.includes(val)) propList.value.push(val);
     };
     provide("insertPropList", insertPropList);
     // 存放只读的model，方便resetFields方法使用

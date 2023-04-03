@@ -7,6 +7,9 @@ export default defineComponent({
     label: String,
     prop: String,
     labelWidth: String,
+    rule: {
+      type: [Array, Object],
+    },
   },
   setup(props, { slots }) {
     const suffix = inject("labelSuffix", ref(""));
