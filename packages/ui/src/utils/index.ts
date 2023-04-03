@@ -25,6 +25,7 @@ export const cancelAnimation = (() => {
 })();
 
 export type {
+  Record,
   IvySize,
   IvyInputValue,
   IvyTheme,
