@@ -7,13 +7,14 @@ import {
   toRef,
   type PropType,
 } from "vue";
-import { prefix } from "@/utils";
+import { prefix, type Record } from "@/utils";
+import Schema, { type Rule, type Rules } from "async-validator";
 
 export default defineComponent({
   name: `${prefix}form`,
   props: {
     model: {
-      type: Object as PropType<{ [x: string]: unknown }>,
+      type: Object as PropType<Record<string, any>>,
       required: true,
     },
     size: {
@@ -36,7 +37,7 @@ export default defineComponent({
     },
     inline: Boolean,
     rules: {
-      type: Object as PropType<{ [x: string]: unknown }>,
+      type: Object as PropType<Rules>,
       default: () => ({}),
     },
   },
@@ -44,17 +45,36 @@ export default defineComponent({
     provide("labelSuffix", toRef(props, "labelSuffix"));
     provide("labelWidth", toRef(props, "labelWidth"));
 
-    const model = toRef(props, "model");
+    const model = ref(props.model);
     // 存放formItem中有prop属性的
     const propList = ref<string[]>([]);
     const insertPropList = (val: string) => {
       if (!propList.value.includes(val)) propList.value.push(val);
     };
     provide("insertPropList", insertPropList);
+
+    const rules = ref<Rules>(props.rules);
+    const updateRules = (key: keyof Rules, val: Rule) => {
+      rules.value[key] = val;
+    };
+    provide("updateRules", updateRules);
+
+    let validatorInstance: Schema | null = null;
+    const genSchema = () => {
+      validatorInstance = new Schema(rules.value);
+    };
+
+    const validate = (callback: Function) => {
+      validatorInstance?.validate(model.value, (errors, fields) => {
+        callback(errors, fields);
+      });
+    };
+    expose({ validate });
     // 存放只读的model，方便resetFields方法使用
     let modelRaw: any = null;
     onMounted(() => {
       modelRaw = toRaw(model);
+      genSchema();
     });
     expose({
       resetFields: () => {
