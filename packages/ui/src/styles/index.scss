@@ -45,6 +45,7 @@
 @import "./empty.scss";
 @import "./carousel.scss";
 @import "./grid.scss";
+@import "./image.scss";
 
 :root {
   @each $name, $color in $maps {

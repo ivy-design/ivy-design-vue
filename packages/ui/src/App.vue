@@ -91,6 +91,11 @@ const handleResize = (val: any) => {
       </ivy-grid>
     </div>
 
+    <div style="margin-top: 24px; height: 100vh"></div>
+    <ivy-image
+      lazy
+      src="https://xx.nonewall.com:12443/download/group1/M00/00/54/wKi8oGQX0LWAXqS7AAcDz1BtTmQ787.png"
+    ></ivy-image>
     <!-- <ivy-count-up :end="400" :duration="6000" prefix="￥"></ivy-count-up> -->
     <!-- <ivy-virtual-list height="600px" style="width: 700px; margin-top: 48px" :source="data" item-height="42px">
             <ivy-virtual-list-item v-for="item in data" :key="item.id">{{ item.text }}</ivy-virtual-list-item>
