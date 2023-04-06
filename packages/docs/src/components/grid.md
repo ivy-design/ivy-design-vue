@@ -9,7 +9,7 @@
 设置 `Grid` 属性 `col` 可以指定最大支持的列数
 
 <div class="demo-block">
-<ivy-grid border cols="4">
+<ivy-grid border :cols="4">
     <ivy-grid-item>
         1
     </ivy-grid-item>
