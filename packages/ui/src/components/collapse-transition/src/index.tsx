@@ -1,5 +1,4 @@
 import { addClass, removeClass } from "@/utils/dom";
-import { prefix } from "@/utils";
 import { defineComponent, Transition } from "vue";
 
 function transition() {
@@ -68,7 +67,7 @@ function transition() {
 }
 
 export default defineComponent({
-  name: `${prefix}collapse-transition`,
+  name: `Collapse-transition`,
   setup(props, { slots }) {
     const eventList = transition();
     return () => <Transition {...eventList}>{slots.default?.()}</Transition>;

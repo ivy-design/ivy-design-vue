@@ -33,7 +33,10 @@ export default defineComponent({
 
     return () => (
       <div
-        class={["ivy-collapse-item", { "ivy-collapse-item-active": isActive }]}
+        class={[
+          "ivy-collapse-item",
+          { "ivy-collapse-item-active": isActive.value },
+        ]}
       >
         <div class="ivy-collapse-item__header" onclick={handleChange}>
           <Icon
