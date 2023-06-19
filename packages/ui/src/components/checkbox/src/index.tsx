@@ -1,111 +1,103 @@
-import { computed, defineComponent, inject, ref, type PropType } from "vue";
-import { prefix, type IvyInputValue } from "@/utils/index";
+import { computed, defineComponent, inject, ref, type PropType } from 'vue'
+import { prefix, type IvyInputValue } from '@/utils/index'
 
 export default defineComponent({
   name: `${prefix}checkbox`,
 
   props: {
     modelValue: {
-      type: [Number, String, Boolean] as PropType<IvyInputValue>,
+      type: [Number, String, Boolean] as PropType<IvyInputValue>
     },
     label: {
       type: [String, Number, Boolean] as PropType<IvyInputValue>,
-      default: false,
+      default: false
     },
     trueLabel: {
       type: [String, Number, Boolean] as PropType<IvyInputValue>,
-      default: true,
+      default: true
     },
     falseLabel: {
       type: [String, Number, Boolean] as PropType<IvyInputValue>,
-      default: false,
+      default: false
     },
     disabled: Boolean,
     indeterminate: Boolean,
-    name: String,
+    name: String
   },
   setup(props, { slots, emit }) {
-    const curValue = ref(props.modelValue);
-    const hasParent = inject("hasParent", false);
-    const updateValue = inject(
-      "updateValue",
-      (val: IvyInputValue, type: "add" | "remove") => {
-        return { val, type };
-      }
-    );
+    const curValue = ref(props.modelValue)
+    const hasParent = inject('hasParent', false)
+    const updateValue = inject('updateValue', (val: IvyInputValue, type: 'add' | 'remove') => {
+      return { val, type }
+    })
 
-    const hasValue = inject("hasValue", (val: IvyInputValue): boolean => !!val);
+    const hasValue = inject('hasValue', (val: IvyInputValue): boolean => !!val)
 
     const isChecked = computed(() => {
-      let bool = false;
+      let bool = false
       if (hasParent) {
-        bool = hasValue(props.label);
+        bool = hasValue(props.label)
       } else {
-        bool =
-          props.modelValue === props.trueLabel
-            ? !!props.trueLabel
-            : !!props.falseLabel;
-        console.log(bool);
+        bool = props.modelValue === props.trueLabel ? !!props.trueLabel : !!props.falseLabel
+        console.log(bool)
       }
 
-      return bool;
-    });
+      return bool
+    })
 
     const getCheckedValue = (val: IvyInputValue) => {
-      const trueValue = props.trueLabel || true;
-      const falseValue = props.falseLabel || false;
-      const value = val ? trueValue : falseValue;
-      return value;
-    };
+      const trueValue = props.trueLabel || true
+      const falseValue = props.falseLabel || false
+      const value = val ? trueValue : falseValue
+      return value
+    }
     const handleChange = () => {
       if (props.disabled) {
-        return false;
+        return false
       }
       if (hasParent) {
-        const checked = !isChecked.value;
+        const checked = !isChecked.value
         if (checked) {
-          updateValue(props.label, "add");
+          updateValue(props.label, 'add')
         } else {
-          updateValue(props.label, "remove");
+          updateValue(props.label, 'remove')
         }
       } else {
-        curValue.value = !isChecked.value;
-        const value = getCheckedValue(curValue.value);
-        emit("change", value);
-        emit("update:modelValue", value);
+        curValue.value = !isChecked.value
+        const value = getCheckedValue(curValue.value)
+        emit('change', value)
+        emit('update:modelValue', value)
         // this.dispatch("FormItem", "on-form-change", value);
       }
-    };
+    }
 
     return () => {
       return (
         <label class="ivy-checkbox">
           <span
             class={[
-              "ivy-checkbox__input",
-              { "is-checked": isChecked.value },
-              { "is-disabled": props.disabled },
-              { "is-indeterminate": props.indeterminate },
+              'ivy-checkbox__input',
+              { 'is-checked': isChecked.value },
+              { 'is-disabled': props.disabled },
+              { 'is-indeterminate': props.indeterminate }
             ]}
           >
             <span class="ivy-checkbox__inner"></span>
             <input
               value="label"
               type="checkbox"
-              tabIndex="-1"
+              tabindex="-1"
               hidden
               name={props.name}
               onChange={handleChange}
             />
           </span>
 
-          <span
-            class={["ivy-checkbox__label", { "is-disabled": props.disabled }]}
-          >
+          <span class={['ivy-checkbox__label', { 'is-disabled': props.disabled }]}>
             {slots.default?.()}
           </span>
         </label>
-      );
-    };
-  },
-});
+      )
+    }
+  }
+})

@@ -1,63 +1,32 @@
-import { fileURLToPath, URL } from "node:url";
+import { fileURLToPath, URL } from 'node:url'
 
-import { defineConfig } from "vite";
-import vue from "@vitejs/plugin-vue";
-import vueJsx from "@vitejs/plugin-vue-jsx";
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import vueJsx from '@vitejs/plugin-vue-jsx'
 
 // https://vitejs.dev/config/
-export default defineConfig(({ command }) => {
-  if (command === "build") {
-    return {
-      plugins: [vue(), vueJsx()],
-      resolve: {
-        alias: {
-          "@": fileURLToPath(new URL("./src", import.meta.url)),
-        },
-      },
-      build: {
-        lib: {
-          entry: "./src/components/index.ts",
-          name: "ivy-design",
-          fileName: "ivy-design",
-          formats: ["es", "umd"],
-        },
-        rollupOptions: {
-          external: ["vue", "vue-router"],
-          output: {
-            globals: {
-              vue: "Vue",
-              "vue-router": "vueRouter",
-            },
-            exports: "named",
-          },
-        },
-      },
-    };
-  } else {
-    return {
-      plugins: [vue(), vueJsx()],
-      resolve: {
-        alias: {
-          "@": fileURLToPath(new URL("./src", import.meta.url)),
-        },
-      },
-      build: {
-        lib: {
-          entry: "./src/components/index.ts",
-          name: "ivy-design",
-          fileName: "ivy-design",
-          formats: ["es", "umd"],
-        },
-        rollupOptions: {
-          external: ["vue"],
-          output: {
-            globals: {
-              vue: "Vue",
-            },
-            exports: "named",
-          },
-        },
-      },
-    };
+export default defineConfig({
+  plugins: [vue(), vueJsx()],
+  resolve: {
+    alias: {
+      '@': fileURLToPath(new URL('./src', import.meta.url))
+    }
+  },
+  build: {
+    lib: {
+      entry: fileURLToPath(new URL('./src/components/index.ts', import.meta.url)),
+      name: 'ivy-design',
+      fileName: 'ivy-design'
+    },
+    rollupOptions: {
+      external: ['vue', 'dayjs'],
+      output: {
+        exports: 'named',
+        globals: {
+          vue: 'Vue',
+          dayjs: 'dayjs'
+        }
+      }
+    }
   }
-});
+})
