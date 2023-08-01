@@ -2,8 +2,10 @@
   "name": "@ivy-design/vue",
   "version": "1.0.0",
   "private": true,
+  "main": "dist/ivy-design.umd.js",
+  "module": "dist/ivy-design.mjs",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite build --watch",
     "build": "run-p type-check build-only",
     "preview": "vite preview",
     "test:unit": "vitest",
