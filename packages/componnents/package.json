@@ -1,5 +1,5 @@
 {
-  "name": "@ivy-design/vue",
+  "name": "@ivy-design/components",
   "version": "1.0.0",
   "private": true,
   "main": "dist/ivy-design.umd.js",

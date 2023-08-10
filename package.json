@@ -1,7 +1,7 @@
 {
-  "name": "ivy-design",
+  "name": "ivy-design-vue",
   "version": "1.0.0",
-  "workspaces":["packages/*", "docs"],
+  "workspaces":["packages/*", "docs", "play"],
   "private": true,
   "scripts": {
     "dev": "pnpm --filter @ivy-design/vue run dev",
