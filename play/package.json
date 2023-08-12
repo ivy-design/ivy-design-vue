@@ -10,7 +10,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "@ivy-design/vue": "workspace:*",
+    "ivy-design": "workspace:*",
     "vue": "^3.3.4"
   },
   "devDependencies": {
