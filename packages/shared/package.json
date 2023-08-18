@@ -6,8 +6,5 @@
   "module": "src/index.ts",
   "keywords": [],
   "author": "",
-  "peerDependencies": {
-    "vue": "^3.3.4"
-  },
   "license": "MIT"
 }
