@@ -1,4 +1,5 @@
 packages:
-    - "play"
-    - "packages/*"
-    - "docs"
+  - "play"
+  - "packages/*"
+  - "docs"
+  - "ivy-design-vue"

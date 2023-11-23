@@ -1,0 +1,96 @@
+@import "./common/var.scss";
+
+.ivy-divider {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--ivy-color-text-primary);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    &-horizontal {
+        display: block;
+        height: 1px;
+        width: 100%;
+        min-width: 100%;
+        margin: 24px 0;
+        clear: both;
+        .ivy-divider-inner__text {
+            display: inline-block;
+            margin: 0 20px;
+        }
+    }
+    &-text-center,
+    &-text-left,
+    &-text-right {
+        display: table;
+        white-space: nowrap;
+        text-align: center;
+        font-weight: 500;
+        font-size: 16px;
+        margin: 16px 0;
+        border-top: none !important;
+        &:before,
+        &:after {
+            content: "";
+            display: table-cell;
+            position: relative;
+            width: 50%;
+            transform: translateY(50%);
+            top: 50%;
+            border-top: 1px solid var(--ivy-border-color-light);
+        }
+        .ivy-divider-inner__text {
+            display: inline-block;
+            padding: 0px;
+        }
+    }
+    &-default {
+        background-color: var(--ivy-border-color-light);
+    }
+    &-vertical {
+        display: inline-block;
+        margin: 0 10px;
+        width: 1px;
+        height: 0.9em !important;
+        background-color: var(--ivy-border-color-light);
+        vertical-align: middle;
+    }
+    &-text-left {
+        &:before {
+            width: 5%;
+        }
+        &:after {
+            width: 95%;
+        }
+    }
+    &-text-right {
+        &:before {
+            width: 95%;
+        }
+        &:after {
+            width: 5%;
+        }
+    }
+    .ivy-divider-inner__text {
+        box-sizing: border-box;
+        display: inline-block;
+        vertical-align: text-bottom;
+    }
+}
+.is-dashed {
+    background: 0 0;
+    border-top: 1px dashed #e8eaec;
+    height: 1px;
+    &:before,
+    &:after {
+        content: "";
+        display: table-cell;
+        position: relative;
+        width: 50%;
+        transform: translateY(50%);
+        top: 50%;
+        border-top: 1px dashed var(--ivy-border-color-light);
+    }
+}

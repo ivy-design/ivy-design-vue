@@ -1,0 +1,19 @@
+@import "./common/var.scss";
+.ivy-card {
+    border-radius: 4px;
+    background-color: var(--ivy-color-white);
+    overflow: hidden;
+    color: #303133;
+    transition: 0.3s;
+    border: 1px solid var(--ivy-border-color-lighter);
+    &-header {
+        border-bottom: 1px solid var(--ivy-border-color-lighter);
+        padding: 15px 20px;
+        box-sizing: border-box;
+    }
+}
+.ivy-card.is-always-shadow,
+.ivy-card.is-hover-shadow:focus,
+.ivy-card.is-hover-shadow:hover {
+    filter: var(--ivy-shadow);
+}

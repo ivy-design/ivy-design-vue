@@ -1,0 +1,91 @@
+@import "./common/var.scss";
+
+.ivy-input {
+  --ivy-input-height: 32px;
+  --ivy-input-inner-height: calc(var(--ivy-input-height) - 2px);
+  position: relative;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  border-radius: 4px;
+  box-sizing: border-box;
+  & &__wrapper {
+    height: var(--ivy-input-height);
+    color: var(--ivy-text-color-regular);
+    flex-grow: 1;
+    display: inline-flex;
+    align-items: center;
+    box-shadow: 0 0 0 1px var(--ivy-border-color) inset;
+    background-color: var(--ivy-color-white);
+    background-image: none;
+    transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    padding: 1px 11px;
+    border-radius: 4px;
+    &.is-focus {
+      box-shadow: 0 0 0 1px var(--ivy-color-primary) inset;
+    }
+  }
+  &__inner {
+    -webkit-appearance: none;
+    color: #606266;
+    font-size: inherit;
+    height: var(--ivy-input-inner-height);
+    line-height: var(--ivy-input-inner-height);
+    padding: 0;
+    outline: none;
+    border: none;
+    background: none;
+    box-sizing: border-box;
+    flex-grow: 1;
+  }
+  &-close {
+    cursor: pointer;
+    font-size: 16px;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+  }
+  &--icon {
+    font-size: 16px;
+  }
+
+  &--prefix,
+  &--suffix {
+    display: inline-flex;
+    height: 100%;
+    align-content: center;
+    align-items: center;
+    transition: all 0.3s;
+    &:empty {
+      display: none;
+    }
+  }
+  &--prefix {
+    & > :last-child {
+      margin-right: 8px;
+    }
+  }
+  &--suffix {
+    & > :first-child {
+      margin-left: 8px;
+    }
+  }
+
+  &.is-disabled {
+    box-shadow: 0 0 0 1px #e4e7ed inset;
+    background-color: #f5f7fa;
+    color: #c0c4cc;
+    cursor: not-allowed;
+    * {
+      cursor: not-allowed;
+    }
+  }
+}
+
+.ivy-input--large {
+  --ivy-input-height: 40px;
+}
+.ivy-input--small {
+  --ivy-input-height: 28px;
+}

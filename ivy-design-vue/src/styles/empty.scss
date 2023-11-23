@@ -1,0 +1,34 @@
+@import "./common/var.scss";
+.ivy-empty {
+  --ivy-empty-fill: #dcdfe6;
+  --ivy-empty-text-color: var(--ivy-text-color-secondary, #909399);
+  --ivy-empty-description-margin-top: 20px;
+  --ivy-empty-bottom-margin-top: 16px;
+  --ivy-empty-image-size: 200px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  &__image {
+    width: var(--ivy-empty-image-size);
+    height: max-content;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: var(--ivy-empty-fill);
+
+    &--default {
+      max-width: 100%;
+      max-height: 100%;
+      line-height: 1em;
+      fill: currentColor;
+    }
+  }
+  &__description {
+    margin-top: var(--ivy-empty-description-margin-top);
+    font-size: var(--ivy-font-size, 14px);
+    color: var(--ivy-empty-text-color);
+  }
+  &__bottom {
+    margin-top: var(--ivy-empty-bottom-margin-top);
+  }
+}

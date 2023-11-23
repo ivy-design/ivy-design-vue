@@ -1,0 +1,91 @@
+@import "./common/var.scss";
+
+.ivy-timeline-item {
+    position: relative;
+    padding-bottom: 20px;
+
+    &__wrapper {
+        position: relative;
+        padding-left: 28px;
+        top: -3px;
+    }
+
+    &__tail {
+        position: absolute;
+        left: 4px;
+        height: 100%;
+        border-left: 2px solid var(--ivy-border-color-light);
+    }
+
+    &__icon {
+        color: var(--ivy-color-white);
+        font-size: var(--ivy-font-size-small);
+    }
+
+    &__node {
+        position: absolute;
+        background-color: var(--ivy-border-color-light);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &--normal {
+            left: -1px;
+            width: var(--ivy-timeline-node-size);
+            height: var(--ivy-timeline-node-size);
+        }
+
+        &--large {
+            left: -2px;
+            width: var(--ivy-timeline-node-size-large);
+            height: var(--ivy-timeline-node-size-large);
+        }
+
+        &--primary {
+            background-color: var(--ivy-color-primary);
+        }
+
+        &--success {
+            background-color: var(--ivy-color-success);
+        }
+
+        &--warning {
+            background-color: var(--ivy-color-warning);
+        }
+
+        &--danger {
+            background-color: var(--ivy-color-danger);
+        }
+
+        &--info {
+            background-color: var(--ivy-color-info);
+        }
+    }
+
+    &__dot {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__content {
+        color: var(--ivy-color-primary);
+    }
+
+    &__timestamp {
+        color: var(--ivy-color-text-secondary);
+        line-height: 1;
+        font-size: var(--ivy-font-size-small);
+
+        &.is-top {
+            margin-bottom: 8px;
+            padding-top: 4px;
+        }
+
+        &.is-bottom {
+            margin-top: 8px;
+        }
+    }
+}

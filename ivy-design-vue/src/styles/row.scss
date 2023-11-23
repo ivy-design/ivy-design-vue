@@ -1,0 +1,44 @@
+@import "./common/var.scss";
+.ivy-row {
+    position: relative;
+    box-sizing: border-box;
+    &::before,
+    &::after {
+        display: table;
+        content: "";
+    }
+    &::after {
+        clear: both;
+    }
+}
+.ivy-row--flex {
+    display: flex;
+}
+
+.is-justify-start {
+    justify-content: flex-start;
+}
+.is-justify-center {
+    justify-content: flex-center;
+}
+.is-justify-end {
+    justify-content: flex-end;
+}
+.is-justify-space-around {
+    justify-content: space-around;
+}
+.is-justify-space-between {
+    justify-content: space-between;
+}
+.is-align-top {
+    align-content: flex-start;
+    align-items: flex-start;
+}
+.is-align-middle {
+    align-content: center;
+    align-items: center;
+}
+.is-align-bottom {
+    align-content: flex-end;
+    align-items: flex-end;
+}

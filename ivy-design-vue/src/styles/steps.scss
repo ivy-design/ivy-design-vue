@@ -1,0 +1,13 @@
+.ivy-steps {
+    display: flex;
+    width: 100%;
+    font-size: 0;
+    line-height: 1.5;
+    &-horizontal {
+        white-space: nowrap;
+    }
+    &-vertical {
+        height: 100%;
+        flex-direction: column;
+    }
+}

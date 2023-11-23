@@ -1,0 +1,45 @@
+.ivy-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: var(--ivy-avatar-size, 32px);
+  height: var(--ivy-avatar-size, 32px);
+  font-size: var(--ivy-avatar-font-size, 14px);
+  background-color: var(--ivy-text-color-disabled);
+  color: var(--ivy-color-white);
+
+  &--medium {
+    --ivy-avatar-size: 32px;
+    --ivy-avatar-font-size: 14px;
+  }
+
+  &--large {
+    --ivy-avatar-size: 40px;
+    --ivy-avatar-font-size: 20px;
+  }
+
+  &--small {
+    --ivy-avatar-size: 24px;
+    --ivy-avatar-font-size: 14px;
+  }
+
+  &.is-circle {
+    border-radius: 50%;
+  }
+
+  &.is-square {
+    border-radius: 4px;
+  }
+
+  &--inner {
+    line-height: 1em;
+    &.is-img {
+      max-width: 100%;
+      max-width: 100%;
+    }
+    &.is-text {
+      color: var(--ivy-color-white);
+    }
+  }
+}
