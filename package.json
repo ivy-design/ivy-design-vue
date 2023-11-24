@@ -28,6 +28,7 @@
     "@ivy-design/shared": "workspace:*",
     "@ivy-design/theme": "workspace:*",
     "@ivy-design/vue": "workspace:^",
+    "fs-extra": "^11.1.1",
     "vue": "^3.3.4"
   },
   "devDependencies": {
