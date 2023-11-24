@@ -3,7 +3,7 @@ layout: home
 hero:
   heroImage: /logo.png
   heroAlt: Logo image
-  name: "@ivy-design/vue"
+  name: "ivy-design"
   tagline: 一个使用 ts 和 jsx 构建的 vue3 ui 库。
   actions:
     - theme: brand
