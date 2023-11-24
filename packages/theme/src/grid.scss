@@ -1,0 +1,37 @@
+@import "./common/var.scss";
+
+.ivy-grid {
+  --ivy-grid-cols: 3;
+  --ivy-grid-border-color: var(--ivy-border-color);
+  &--flex {
+    display: flex;
+
+    flex-wrap: wrap;
+    &.is-square {
+      height: var(--ivy-grid-col-height);
+    }
+
+    & .ivy-grid-item {
+      flex: 0 0 calc(100% / var(--ivy-grid-cols));
+    }
+  }
+  &--grid {
+    display: grid;
+    grid-template-columns: repeat(var(--ivy-grid-cols), 1fr);
+    &.is-square {
+      height: var(--ivy-grid-col-height);
+    }
+  }
+
+  &.is-border {
+    border-top: 1px solid var(--ivy-grid-border-color);
+    border-left: 1px solid var(--ivy-grid-border-color);
+    & .ivy-grid-item {
+      border-right: 1px solid var(--ivy-grid-border-color);
+      border-bottom: 1px solid var(--ivy-grid-border-color);
+    }
+  }
+  &-item {
+    height: var(--ivy-grid-col-height);
+  }
+}

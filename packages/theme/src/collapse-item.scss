@@ -1,0 +1,54 @@
+@import "./common/var.scss";
+
+.ivy-collapse-item {
+  position: relative;
+  & + & {
+    border-top: 1px solid #dcdee2;
+  }
+  &__header {
+    height: 38px;
+    line-height: 38px;
+    padding-left: 16px;
+    color: #666;
+    cursor: pointer;
+    position: relative;
+    border-bottom: 1px solid transparent;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    & > .ivy-icon-right {
+      transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+      margin-right: 10px;
+    }
+    & > .ivy-icon-right.ivy-collapse-arrow-right {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      margin-top: -7px;
+      margin-right: 16px;
+    }
+    & > .ivy-icon-right.ivy-collapse-arrow-none {
+      display: none;
+    }
+  }
+  &__wrap {
+    color: #515a6e;
+    padding: 0 16px;
+    background-color: #fff;
+    box-sizing: border-box;
+    font-size: 13px;
+    /* will-change: height;
+        overflow: hidden; */
+    /* transition: all .3s; */
+    &-box {
+      padding: 16px 0;
+    }
+  }
+}
+.ivy-collapse-item-active {
+  .ivy-collapse-item__header {
+    & > .ivy-icon-right {
+      transform: rotateZ(90deg);
+    }
+  }
+}

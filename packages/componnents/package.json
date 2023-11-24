@@ -1,0 +1,7 @@
+{
+  "name": "@ivy-design/components",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.ts",
+  "module": "index.ts"
+}

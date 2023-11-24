@@ -1,0 +1,18 @@
+@import "./common/var.scss";
+
+[class*="ivy-col-"] {
+    float: left;
+    box-sizing: border-box;
+}
+
+@for $i from 1 to 25 {
+    .ivy-col-#{$i} {
+        width: calc(#{$i} / 24 * 100%);
+    }
+}
+
+@for $i from 1 to 25 {
+    .ivy-col-offset-#{$i} {
+        margin-left: calc(#{$i} / 24 * 100%);
+    }
+}

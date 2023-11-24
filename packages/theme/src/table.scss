@@ -1,0 +1,21 @@
+@import "./common/var.scss";
+
+.ivy-table {
+    font-size: var(--ivy-font-size);
+    &-col {
+        padding: 6px;
+    }
+    & table {
+        table-layout: fixed;
+    }
+    &.is-border {
+        & table {
+            border-collapse: collapse;
+        }
+        & td,
+        & th {
+            border: 1px solid var(--ivy-border-color-lighter);
+            text-align: left;
+        }
+    }
+}

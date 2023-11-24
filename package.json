@@ -1,7 +1,12 @@
 {
-  "name": "ivy-design",
+  "name": "ivy-design-vue",
   "version": "1.0.0",
-  "workspaces":["packages/*", "docs"],
+  "workspaces": [
+    "packages/*",
+    "docs",
+    "play",
+    "ivy-design-vue"
+  ],
   "private": true,
   "scripts": {
     "dev": "pnpm --filter @ivy-design/vue run dev",
@@ -17,18 +22,16 @@
     "g": "node ./scripts/render-component.mjs"
   },
   "dependencies": {
-    "vue": "^3.2.45",
-    "vue-router": "^4.1.6"
+    "@ivy-design/components": "workspace:*",
+    "@ivy-design/directives": "workspace:*",
+    "@ivy-design/hooks": "workspace:*",
+    "@ivy-design/shared": "workspace:*",
+    "@ivy-design/theme": "workspace:*",
+    "@ivy-design/vue": "workspace:^",
+    "fs-extra": "^11.1.1",
+    "vue": "^3.3.4"
   },
   "devDependencies": {
-    "@rushstack/eslint-patch": "^1.1.4",
-    "@types/jsdom": "^20.0.1",
-    "@types/node": "^18.11.12",
-    "fs-extra": "^11.1.0",
-    "jsdom": "^20.0.3",
-    "npm-run-all": "^4.1.5",
-    "prettier": "^2.7.1",
-    "sass": "^1.57.1",
-    "typescript": "~4.7.4"
+    "sass": "^1.57.1"
   }
 }

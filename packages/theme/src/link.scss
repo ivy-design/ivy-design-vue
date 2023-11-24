@@ -1,0 +1,104 @@
+@import "./common/var.scss";
+a.ivy-link {
+  --ivy-link-color: var(--ivy-text-color-regular);
+  --ivy-link-color-underline: var(--ivy-color-primary);
+  --ivy-link-hover-color: var(--color-primary);
+  --ivy-link-disabled-color: var(---ivy-text-color-disabled);
+
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  position: relative;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  color: var(--ivy-link-color);
+  transition: all 0.2s;
+  &:hover {
+    color: var(--ivy-link-hover-color);
+  }
+
+  &.is-disabled {
+    cursor: not-allowed;
+    color: var(--ivy-link-disabled-color);
+  }
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+  &--default {
+    --ivy-link-color: var(--ivy-text-color-regular);
+    --ivy-link-color-underline: var(--ivy-color-primary);
+    &:hover {
+      --ivy-link-hover-color: var(--ivy-color-primary);
+    }
+    &.is-disabled {
+      --ivy-link-disabled-color: var(--ivy-text-color-disabled);
+    }
+  }
+  &--primary {
+    --ivy-link-color: var(--ivy-color-primary);
+    --ivy-link-color-underline: var(--ivy-color-primary);
+    &:hover {
+      --ivy-link-hover-color: var(--ivy-color-primary-light-3);
+    }
+    &.is-disabled {
+      --ivy-link-disabled-color: var(--ivy-color-primary-light-5);
+    }
+  }
+  &--success {
+    --ivy-link-color: var(--ivy-color-success);
+    --ivy-link-color-underline: var(--ivy-color-success);
+    &:hover {
+      --ivy-link-hover-color: var(--ivy-color-success-light-3);
+    }
+    &.is-disabled {
+      --ivy-link-disabled-color: var(--ivy-color-success-light-5);
+    }
+  }
+  &--warning {
+    --ivy-link-color: var(--ivy-color-warning);
+    --ivy-link-color-underline: var(--ivy-color-warning);
+    &:hover {
+      --ivy-link-hover-color: var(--ivy-color-warning-light-3);
+    }
+    &.is-disabled {
+      --ivy-link-disabled-color: var(--ivy-color-warning-light-5);
+    }
+  }
+  &--danger {
+    --ivy-link-color: var(--ivy-color-danger);
+    --ivy-link-color-underline: var(--ivy-color-danger);
+    &:hover {
+      --ivy-link-hover-color: var(--ivy-color-danger-light-3);
+    }
+    &.is-disabled {
+      --ivy-link-disabled-color: var(--ivy-color-danger-light-5);
+    }
+  }
+  &--info {
+    --ivy-link-color: var(--ivy-color-info);
+    --ivy-link-color-underline: var(--ivy-color-info);
+    &:hover {
+      --ivy-link-hover-color: var(--ivy-color-info-light-3);
+    }
+    &.is-disabled {
+      --ivy-link-disabled-color: var(--ivy-color-info-light-5);
+    }
+  }
+  &.is-underline:not(.is-disabled) {
+    &:hover {
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 1px;
+        width: 100%;
+        background-color: var(--ivy-link-color-underline);
+      }
+    }
+  }
+}

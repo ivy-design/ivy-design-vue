@@ -1,0 +1,9 @@
+@import "./common/var.scss";
+
+.ivy-cell-group {
+    &.is-border {
+        .ivy-cell:not(:first-child) {
+            border-top: 1px solid var(--ivy-border-color-lighter);
+        }
+    }
+}

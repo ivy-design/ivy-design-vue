@@ -1,0 +1,56 @@
+@import './common/var.scss';
+@import './common/transition.scss';
+@import './icon.scss';
+@import './button.scss';
+@import './tag.scss';
+@import './divider.scss';
+@import './row.scss';
+@import './col.scss';
+@import './layout.scss';
+@import './header.scss';
+@import './footer.scss';
+@import './aside.scss';
+@import './main.scss';
+@import './card.scss';
+@import './alert.scss';
+@import './virtual-list.scss';
+@import './cell.scss';
+@import './cell-group.scss';
+@import './breadcrumb.scss';
+@import './breadcrumb-item.scss';
+@import './timeline.scss';
+@import './timeline-item.scss';
+@import './collapse.scss';
+@import './collapse-item.scss';
+@import './collapse-transition.scss';
+@import './steps.scss';
+@import './step.scss';
+@import './dialog.scss';
+@import './table.scss';
+@import './badge.scss';
+@import './space.scss';
+@import './link.scss';
+@import './list.scss';
+@import './form.scss';
+@import './radio.scss';
+@import './switch.scss';
+@import './checkbox.scss';
+@import './input.scss';
+@import './select.scss';
+@import './progress.scss';
+@import './drawer.scss';
+@import './tooltip.scss';
+@import './result.scss';
+@import './avatar.scss';
+@import './empty.scss';
+@import './carousel.scss';
+@import './grid.scss';
+@import './image.scss';
+@import './message.scss';
+@import './text.scss';
+
+:root {
+  @each $name, $color in $maps {
+    --#{$name}: #{$color};
+  }
+}

@@ -1,0 +1,62 @@
+@import "./common/var.scss";
+
+.ivy-badge {
+    display: inline-block;
+    position: relative;
+    &-inner{
+        position: relative;
+        z-index: 0;
+    }
+
+    &-content {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        z-index: 10;
+        transform: translateX(100%) translateY(-50%);
+        background-color: var(--ivy-color-danger);
+        border-radius: 10px;
+        color: #fff;
+        display: inline-block;
+        font-size: 12px;
+        height: 18px;
+        line-height: 16px;
+        padding: 0 6px;
+        text-align: center;
+        white-space: nowrap;
+        border: 1px solid #fff;
+        box-sizing: border-box;
+    }
+
+    &.is-dot sup.ivy-badge-content {
+        height: 8px;
+        width: 8px;
+        line-height: 8px;
+        padding: 0;
+        right: 5px;
+        border-radius: 50%;
+        color: transparent;
+    }
+}
+
+
+.is-primary .ivy-badge-content {
+    background-color: var(--ivy-color-primary);
+}
+.is-success .ivy-badge-content {
+    background-color: var(--ivy-color-success);
+}
+.is-warning .ivy-badge-content {
+    background-color: var(--ivy-color-warning);
+    color: white;
+}
+.is-danger .ivy-badge-content {
+    background-color: var(--ivy-color-danger);
+    color: white;
+}
+.is-info .ivy-badge-content {
+    background-color: var(--ivy-color-info);
+    color: white;
+}
+
+

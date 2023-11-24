@@ -1,0 +1,18 @@
+{
+  "name": "ivy-design",
+  "version": "1.0.0",
+  "description": "",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "peerDependencies": {
+    "vue": "^3.3.4"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

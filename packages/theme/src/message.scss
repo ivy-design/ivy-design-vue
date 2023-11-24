@@ -1,0 +1,39 @@
+@import "./common/var.scss";
+
+.ivy-message {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  &-wrap {
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    & + & {
+      margin-top: 12px;
+    }
+  }
+  &-content {
+    flex: auto;
+  }
+
+  &--success {
+    background-color: var(--ivy-color-success-light-7);
+    color: var(--ivy-color-success);
+  }
+
+  &--warning {
+    background-color: var(--ivy-color-warning-light-7);
+    color: var(--ivy-color-warning);
+  }
+
+  &--error {
+    background-color: var(--ivy-color-danger-light-7);
+    color: var(--ivy-color-danger);
+  }
+
+  &--info {
+    background-color: var(--ivy-color-info-light-7);
+    color: var(--ivy-color-info);
+  }
+}

@@ -1,0 +1,111 @@
+@import "./var.scss";
+
+.fade-in-linear-enter-active,
+.fade-in-linear-leave-active {
+  transition: var(--ivy-fade-linear-transition);
+}
+
+.fade-in-linear-enter,
+.fade-in-linear-leave,
+.fade-in-linear-leave-active {
+  opacity: 0;
+}
+
+.ivy-fade-in-linear-enter-active,
+.ivy-fade-in-linear-leave-active {
+  transition: var(--ivy-fade-linear-transition);
+}
+
+.ivy-fade-in-linear-enter,
+.ivy-fade-in-linear-leave,
+.ivy-fade-in-linear-leave-active {
+  opacity: 0;
+}
+
+.ivy-fade-in-enter-active,
+.ivy-fade-in-leave-active {
+  transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+.ivy-fade-in-enter,
+.ivy-fade-in-leave-active {
+  opacity: 0;
+}
+
+.ivy-zoom-in-center-enter-active,
+.ivy-zoom-in-center-leave-active {
+  transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+.ivy-zoom-in-center-enter,
+.ivy-zoom-in-center-leave-active {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.ivy-zoom-in-top-enter-active,
+.ivy-zoom-in-top-leave-active {
+  opacity: 1;
+  transform: scaleY(1);
+  transition: var(--ivy-md-fade-transition);
+  transform-origin: center top;
+}
+
+.ivy-zoom-in-top-enter,
+.ivy-zoom-in-top-leave-active {
+  opacity: 0;
+  transform: scaleY(0);
+}
+
+.ivy-zoom-in-bottom-enter-active,
+.ivy-zoom-in-bottom-leave-active {
+  opacity: 1;
+  transform: scaleY(1);
+  transition: var(--ivy-md-fade-transition);
+  transform-origin: center bottom;
+}
+
+.ivy-zoom-in-bottom-enter,
+.ivy-zoom-in-bottom-leave-active {
+  opacity: 0;
+  transform: scaleY(0);
+}
+
+.ivy-zoom-in-left-enter-active,
+.ivy-zoom-in-left-leave-active {
+  opacity: 1;
+  transform: scale(1, 1);
+  transition: var(--ivy-md-fade-transition);
+  transform-origin: top left;
+}
+
+.ivy-zoom-in-left-enter,
+.ivy-zoom-in-left-leave-active {
+  opacity: 0;
+  transform: scale(0.45, 0.45);
+}
+
+.collapse-transition {
+  transition: 0.3s height ease-in-out, 0.3s padding-top ease-in-out,
+    0.3s padding-bottom ease-in-out;
+}
+
+.horizontal-collapse-transition {
+  transition: 0.3s width ease-in-out, 0.3s padding-left ease-in-out,
+    0.3s padding-right ease-in-out;
+}
+
+.ivy-list-enter-active,
+.ivy-list-leave-active {
+  transition: all 1s;
+}
+
+.ivy-list-enter,
+.ivy-list-leave-active {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+
+.ivy-opacity-transition {
+  transition: opacity 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+}

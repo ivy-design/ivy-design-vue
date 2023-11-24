@@ -1,0 +1,11 @@
+@import "./common/var.scss";
+.ivy-timeline {
+    margin: 0;
+    font-size: var(--ivy-font-size);
+
+    & .ivy-timeline-item:last-child {
+        & .ivy-timeline-item__tail {
+            display: none;
+        }
+    }
+}
