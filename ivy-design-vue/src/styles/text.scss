@@ -1,0 +1,33 @@
+.ivy-text {
+  --ivy-text-color: var(--ivy-text-color-regular, #606266);
+  --ivy-text-font-size: var(--ivy-font-size, 14px);
+  display: inline-flex;
+  color: var(--ivy-text-color);
+  font-size: var(--ivy-text-font-size);
+  word-break: break-all;
+  &[type='primary'] {
+    --ivy-text-color: var(--ivy-color-primary);
+  }
+  &[type='success'] {
+    --ivy-text-color: var(--ivy-color-success);
+  }
+  &[type='warning'] {
+    --ivy-text-color: var(--ivy-color-warning);
+  }
+  &[type='danger'] {
+    --ivy-text-color: var(--ivy-color-danger);
+  }
+  &[type='info'] {
+    --ivy-text-color: var(--ivy-color-info);
+  }
+  &.is-truncated {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  &.is-line-clamp {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+  }
+}

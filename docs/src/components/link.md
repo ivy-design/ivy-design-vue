@@ -15,7 +15,6 @@
 <ivy-link type="info">info</ivy-link>
 </div>
 
-
 ```html
 <ivy-link>default</ivy-link>
 <ivy-link type="primary">primary</ivy-link>
@@ -61,12 +60,11 @@
 <ivy-link>Without Underline</ivy-link>
 ```
 
-
 ## Props
 
-| 属性| 描述 | 类型 | 可选值 | 默认值 |
-|-|-|-|-|-|
-|type|类型|`enum`|`default/primary/success/warning/danger/info`|default|
-|underline| 圆角按钮 |`boolean`|—|false|
-|disabled| 禁用按钮 |`boolean`|—|false|
-| href| 原生 href 属性 |`string`|-| - |
+| 属性      | 描述           | 类型      | 可选值                                        | 默认值  |
+| --------- | -------------- | --------- | --------------------------------------------- | ------- |
+| type      | 类型           | `enum`    | `default/primary/success/warning/danger/info` | default |
+| underline | 下划线         | `boolean` | —                                             | false   |
+| disabled  | 禁用按钮       | `boolean` | —                                             | false   |
+| href      | 原生 href 属性 | `string`  | -                                             | -       |

@@ -42,6 +42,10 @@ const sidebar = {
           text: "Link 链接",
           link: "/components/link",
         },
+        {
+          text: "Text 文字",
+          link: "/components/text",
+        },
       ],
     },
     {
@@ -170,6 +174,10 @@ const sidebar = {
         {
           text: "Drawer 抽屉",
           link: "/components/drawer",
+        },
+        {
+          text: "Tooltip 文字提示",
+          link: "/components/tooltip",
         },
       ],
     },

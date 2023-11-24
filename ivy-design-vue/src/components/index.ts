@@ -48,6 +48,7 @@ import Empty from './empty/index'
 import { Carousel, CarouselItem } from './carousel/index'
 import { Grid, GridItem } from './grid/index'
 import Image from './image/index'
+import Text from './text/index'
 
 export const components: Component[] = [
   Icon,
@@ -105,7 +106,8 @@ export const components: Component[] = [
   CarouselItem,
   Grid,
   GridItem,
-  Image
+  Image,
+  Text
 ]
 
 export {
@@ -164,5 +166,6 @@ export {
   CarouselItem,
   Grid,
   GridItem,
-  Image
+  Image,
+  Text
 }
