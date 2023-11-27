@@ -198,7 +198,6 @@ export default defineConfig({
   title: "@ivy-design/vue",
   lastUpdated: true,
   titleTemplate: ":title",
-  outDir: "./dist",
   themeConfig: {
     lastUpdatedText: "最后更新时间",
     outlineTitle: "目录导航",
