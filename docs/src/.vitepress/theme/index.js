@@ -12,7 +12,7 @@ export default {
     // register your custom global components
     if (!import.meta.env.SSR) {
       import("@ivy-design/vue").then((ivyUi) => {
-        ctx.app.use(ivyUi);
+        ctx.app.use(ivyUi.default);
       });
     }
   },
