@@ -25,7 +25,6 @@ export default {
             value: 1,
             value1: 2,
             value2: 2,
-            propCol: columns,
             tableData: [
                 {
                     parameter: 'value',
@@ -49,7 +48,7 @@ export default {
                     defaultValue: 'false',
                 },
                 {
-                    parameter: 'tigger',
+                    parameter: 'trigger',
                     explain: '选择方式',
                     type: 'String',
                     optionalValue: 'click,hover',
