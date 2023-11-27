@@ -14,33 +14,33 @@
 
 ```html
 <ivy-image
-    src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
-    style="height: 100px;width: 100px;"
-    fit="fit"
+  src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
+  style="height: 100px;width: 100px;"
+  fit="fit"
 ></ivy-image>
 <ivy-image
-    src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
-    style="height: 100px;width: 100px;"
-    fit="contain"
-    class="ml-10"
+  src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
+  style="height: 100px;width: 100px;"
+  fit="contain"
+  class="ml-10"
 ></ivy-image>
 <ivy-image
-    src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
-    style="height: 100px;width: 100px;"
-    fit="cover"
-    class="ml-10"
+  src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
+  style="height: 100px;width: 100px;"
+  fit="cover"
+  class="ml-10"
 ></ivy-image>
 <ivy-image
-    src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
-    style="height: 100px;width: 100px;"
-    fit="none"
-    class="ml-10"
+  src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
+  style="height: 100px;width: 100px;"
+  fit="none"
+  class="ml-10"
 ></ivy-image>
 <ivy-image
-    src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
-    style="height: 100px;width: 100px;"
-    fit="scale-down"
-    class="ml-10"
+  src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
+  style="height: 100px;width: 100px;"
+  fit="scale-down"
+  class="ml-10"
 ></ivy-image>
 ```
 
@@ -52,13 +52,20 @@
 
 <ivy-image src="http://www.08lr.cn/uploads/allimg/170822/1-1FR21A020.jpg" style="width: 300px;height: 200px;"></ivy-image>
 <ivy-image src="http://www.08lr.cn/uploads/allimg/170822/1-1FR21A020.jpg" style="width: 300px;height: 200px;" class="ml-20">
-    <ivy-icon name="refresh" size="28" spin slot="placeholder"></ivy-icon>
+<ivy-icon name="refresh" size="28" spin slot="placeholder"></ivy-icon>
 </ivy-image>
 
 ```html
-<ivy-image src="http://www.08lr.cn/uploads/allimg/170822/1-1FR21A020.jpg" style="width: 300px;height: 200px;"></ivy-image>
-<ivy-image src="http://www.08lr.cn/uploads/allimg/170822/1-1FR21A020.jpg" style="width: 300px;height: 200px;" class="ml-20">
-    <ivy-icon name="refresh" size="28" spin slot="placeholder"></ivy-icon>
+<ivy-image
+  src="http://www.08lr.cn/uploads/allimg/170822/1-1FR21A020.jpg"
+  style="width: 300px;height: 200px;"
+></ivy-image>
+<ivy-image
+  src="http://www.08lr.cn/uploads/allimg/170822/1-1FR21A020.jpg"
+  style="width: 300px;height: 200px;"
+  class="ml-20"
+>
+  <ivy-icon name="refresh" size="28" spin slot="placeholder"></ivy-icon>
 </ivy-image>
 ```
 
@@ -76,7 +83,7 @@
 ```html
 <ivy-image style="width: 300px;height: 200px;"></ivy-image>
 <ivy-image style="width: 300px;height: 200px;" class="ml-20">
-    <ivy-icon name="picture-outline" size="28" slot="error"></ivy-icon>
+  <ivy-icon name="picture-outline" size="28" slot="error"></ivy-icon>
 </ivy-image>
 ```
 

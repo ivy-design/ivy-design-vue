@@ -4,40 +4,38 @@
 
 ## 基础用法
 
-`Timeline` 可拆分成多个按照时间戳正序或倒序排列的 activity,  时间戳是其区分于其他控件的重要特征，使⽤时注意与 `Steps` 步骤条等区分。
-
+`Timeline` 可拆分成多个按照时间戳正序或倒序排列的 activity, 时间戳是其区分于其他控件的重要特征，使⽤时注意与 `Steps` 步骤条等区分。
 
 <div class="page-item-content">
-        <div style="display: inline-block;width: 280px;">
-            <div class="margin-bottom">倒序</div>
-            <ivy-timeline reverse>
-                <ivy-timeline-item timestamp="2018-04-15">
-                    活动按期开始
-                </ivy-timeline-item>
-                <ivy-timeline-item timestamp="2018-04-13">
-                    通过审核
-                </ivy-timeline-item>
-                <ivy-timeline-item timestamp="2018-04-11">
-                    创建成功
-                </ivy-timeline-item>
-            </ivy-timeline>
-        </div>
-        <div style="display: inline-block;width: 280px">
-            <div class="margin-bottom">正序</div>
-            <ivy-timeline>
-                <ivy-timeline-item timestamp="2018-04-15">
-                    活动按期开始
-                </ivy-timeline-item>
-                <ivy-timeline-item timestamp="2018-04-13">
-                    通过审核
-                </ivy-timeline-item>
-                <ivy-timeline-item timestamp="2018-04-11">
-                    创建成功
-                </ivy-timeline-item>
-            </ivy-timeline>
-        </div>
+    <div style="display: inline-block;width: 280px;">
+        <div class="margin-bottom">倒序</div>
+        <ivy-timeline reverse>
+            <ivy-timeline-item timestamp="2018-04-15">
+                活动按期开始
+            </ivy-timeline-item>
+            <ivy-timeline-item timestamp="2018-04-13">
+                通过审核
+            </ivy-timeline-item>
+            <ivy-timeline-item timestamp="2018-04-11">
+                创建成功
+            </ivy-timeline-item>
+        </ivy-timeline>
+    </div>
+    <div style="display: inline-block;width: 280px">
+        <div class="margin-bottom">正序</div>
+        <ivy-timeline>
+            <ivy-timeline-item timestamp="2018-04-15">
+                活动按期开始
+            </ivy-timeline-item>
+            <ivy-timeline-item timestamp="2018-04-13">
+                通过审核
+            </ivy-timeline-item>
+            <ivy-timeline-item timestamp="2018-04-11">
+                创建成功
+            </ivy-timeline-item>
+        </ivy-timeline>
+    </div>
 </div>
-
 
 ## ⾃定义节点样式
 
@@ -91,26 +89,27 @@
 
 ### Timeline Props
 
-| 属性| 描述 | 类型 | 可选值 | 默认值 |
-|-|-|-|-|-|
-|reverse|指定节点排序方向，默认为正序|boolean|-|false|
+| 属性    | 描述                         | 类型    | 可选值 | 默认值 |
+| ------- | ---------------------------- | ------- | ------ | ------ |
+| reverse | 指定节点排序方向，默认为正序 | boolean | -      | false  |
+
 ### TimelineItem Props
 
-| 属性| 描述 | 类型 | 可选值 | 默认值 |
-|-|-|-|-|-|
-|timestamp|时间戳|string|-|-|
-|hide-timestamp|是否隐藏时间戳|boolean|-|false|
-|placement|时间戳位置|string|`top/bottom`|bottom|
-|type|节点类型|string|`primary/success/warning/danger/info`|-|
-|color|节点颜色|string|`hsl/hsv/hex/rgb`|-|
-|icon|节点图标|string|-|-|
+| 属性           | 描述           | 类型    | 可选值                                | 默认值 |
+| -------------- | -------------- | ------- | ------------------------------------- | ------ |
+| timestamp      | 时间戳         | string  | -                                     | -      |
+| hide-timestamp | 是否隐藏时间戳 | boolean | -                                     | false  |
+| placement      | 时间戳位置     | string  | `top/bottom`                          | bottom |
+| type           | 节点类型       | string  | `primary/success/warning/danger/info` | -      |
+| color          | 节点颜色       | string  | `hsl/hsv/hex/rgb`                     | -      |
+| icon           | 节点图标       | string  | -                                     | -      |
 
 ### TimelineItem Slot
 
-| slot 名称| 描述 |
-|-|-|
-|default|Timeline-Item 的内容|
-|dot|自定义节点|
+| slot 名称 | 描述                 |
+| --------- | -------------------- |
+| default   | Timeline-Item 的内容 |
+| dot       | 自定义节点           |
 
 <script>
 export default {

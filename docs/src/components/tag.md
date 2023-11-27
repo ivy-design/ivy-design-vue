@@ -5,25 +5,25 @@
 ## 基本用法
 
 <div class="demo-block">
-        <ivy-tag type="primary">标签 1</ivy-tag>
-        <ivy-tag type="success">标签 2</ivy-tag>
-        <ivy-tag type="warning">标签 3</ivy-tag>
-        <ivy-tag type="danger">标签 4</ivy-tag>
-        <ivy-tag type="info">标签 5</ivy-tag>
+    <ivy-tag type="primary">标签 1</ivy-tag>
+    <ivy-tag type="success">标签 2</ivy-tag>
+    <ivy-tag type="warning">标签 3</ivy-tag>
+    <ivy-tag type="danger">标签 4</ivy-tag>
+    <ivy-tag type="info">标签 5</ivy-tag>
 </div>
 
 ## 可移除标签
 
 <div class="demo-block">
-        <ivy-tag
-            v-for="tag in tags"
-            :key="tag.type"
-            :type="tag.type"
-            closable
-            @close="handleClose(tag.name)"
-        >
-            {{ tag.name }}
-        </ivy-tag>
+    <ivy-tag
+        v-for="tag in tags"
+        :key="tag.type"
+        :type="tag.type"
+        closable
+        @close="handleClose(tag.name)"
+    >
+        {{ tag.name }}
+    </ivy-tag>
 </div>
 
 ## 不同尺寸
@@ -70,19 +70,19 @@ Tag 组件提供了三个不同的主题：dark、light 和 plain
 
 ## Props
 
-| 属性| 描述 | 类型 | 可选值 | 默认值 |
-|-|-|-|-|-|
-|type|类型|string|`primary/success/warning/danger/info`|primary|
-|size|尺寸|string|`large/small/mini`|-|
-|theme|主题|boolean|`dark / light / plain`|light|
-|closable|是否可关闭|boolean|-|false|
+| 属性     | 描述       | 类型    | 可选值                                | 默认值  |
+| -------- | ---------- | ------- | ------------------------------------- | ------- |
+| type     | 类型       | string  | `primary/success/warning/danger/info` | primary |
+| size     | 尺寸       | string  | `large/small/mini`                    | -       |
+| theme    | 主题       | boolean | `dark / light / plain`                | light   |
+| closable | 是否可关闭 | boolean | -                                     | false   |
 
 ### Events
 
-|事件名称|描述|参数|
-|-|-|-|
-|click|点击 Tag 时触发的事件|-|
-|close|关闭 Tag 时触发的事件|-|
+| 事件名称 | 描述                  | 参数 |
+| -------- | --------------------- | ---- |
+| click    | 点击 Tag 时触发的事件 | -    |
+| close    | 关闭 Tag 时触发的事件 | -    |
 
 <script>
 

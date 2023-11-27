@@ -23,8 +23,8 @@
 单选框不可用的状态。
 
 <div class="demo-block">
-        <ivy-checkbox v-model="value" disabled>选项一</ivy-checkbox>
-        <ivy-checkbox v-model="value1" disabled>选项二</ivy-checkbox>
+    <ivy-checkbox v-model="value" disabled>选项一</ivy-checkbox>
+    <ivy-checkbox v-model="value1" disabled>选项二</ivy-checkbox>
 </div>
 
 ## 多选框组

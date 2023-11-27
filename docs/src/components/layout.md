@@ -2,9 +2,7 @@
 
 用于布局的容器组件，方便快速搭建页面的基本结构：
 
-
 mx-container：外层容器。当子元素中包含 mx-header 或 mx-footer 时，全部子元素会垂直上下排列，否则会水平左右排列。
-
 
 mx-header：顶栏容器。<br />mx-aside：侧边栏容器。<br />mx-main：主要区域容器。<br />mx-footer：底栏容器。
 
@@ -46,7 +44,6 @@ mx-header：顶栏容器。<br />mx-aside：侧边栏容器。<br />mx-main：�
         </ivy-layout>
     </ivy-layout>
 </ivy-layout>
-
 
 <style scoped>
 .page-layout {

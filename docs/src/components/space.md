@@ -1,6 +1,7 @@
 # Space 间距
 
-虽然我们拥有 `Divider` 组件，但很多时候我们需要不是一个被 `Divider` 组件 分割开的页面结构，因此我们会重复的使用很多的 `Divider` 组件，这在我们的开发效率上造成了一定的困扰。 间距组件就是为了解决这种困扰应运而生的。
+虽然我们拥有 `Divider` 组件，但很多时候我们需要不是一个被 `Divider` 组件分割开的页面结构，
+因此我们会重复的使用很多的 `Divider` 组件，这在我们的开发效率上造成了一定的困扰。 间距组件就是为了解决这种困扰应运而生的。
 
 ## 基本用法
 
@@ -71,11 +72,11 @@
 
 ### Props
 
-| 属性| 描述 | 类型 | 可选值 | 默认值 |
-|-|-|-|-|-|
-|vertical|垂直显示|boolean|-|false|
-|size|间距大小|string|`small/medium/large`|medium|
-|gap|自定义间距大小|string/number|-|-|
+| 属性     | 描述           | 类型          | 可选值               | 默认值 |
+| -------- | -------------- | ------------- | -------------------- | ------ |
+| vertical | 垂直显示       | boolean       | -                    | false  |
+| size     | 间距大小       | string        | `small/medium/large` | medium |
+| gap      | 自定义间距大小 | string/number | -                    | -      |
 
 <style lang="scss" scoped>
 .page-modal {

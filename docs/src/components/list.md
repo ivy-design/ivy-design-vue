@@ -108,40 +108,40 @@
 
 ## List Props
 
-| 参数 | 说明 | 类型 | 可选值 | 默认值 |
-|------|------|------|------|------|
-| vertical | 是否竖排 | `Boolean` | - | false |
-| header | 列表头部 | `String` | - | - |
-| footer | 列表底部 | `String` | - | - |
-| border | 是否有边框 | `Boolean` | - | false |
-| split | 是否有分割线 | `Boolean` | - | true |
-| size | 列表大小 | `String` |`small/medium/large` | medium |
+| 参数     | 说明         | 类型      | 可选值               | 默认值 |
+| -------- | ------------ | --------- | -------------------- | ------ |
+| vertical | 是否竖排     | `Boolean` | -                    | false  |
+| header   | 列表头部     | `String`  | -                    | -      |
+| footer   | 列表底部     | `String`  | -                    | -      |
+| border   | 是否有边框   | `Boolean` | -                    | false  |
+| split    | 是否有分割线 | `Boolean` | -                    | true   |
+| size     | 列表大小     | `String`  | `small/medium/large` | medium |
 
 ## List Slots
 
-| 名称 | 说明 |
-|------|------|
-| header | 自定义列表头部 |
+| 名称    | 说明                      |
+| ------- | ------------------------- |
+| header  | 自定义列表头部            |
 | default | 用来放置 `list-item` 元素 |
-| footer | 自定义列表底部 |
+| footer  | 自定义列表底部            |
 
 ## ListItem Props
 
-| 参数 | 说明 | 类型 | 可选值 | 默认值 |
-|------|------|------|------|------|
-| avatar | 头像连接 | `String` | - | false |
-| header | 标题内容 | `String` | - | - |
-| description | 表述内容 | `String` | - | - |
+| 参数        | 说明     | 类型     | 可选值 | 默认值 |
+| ----------- | -------- | -------- | ------ | ------ |
+| avatar      | 头像连接 | `String` | -      | false  |
+| header      | 标题内容 | `String` | -      | -      |
+| description | 表述内容 | `String` | -      | -      |
 
 ## ListItem Slots
 
-| 名称 | 说明 |
-|------|------|
-| default | 自定义内容部分 |
-| header | 自定义列表头部 |
-| description | 自定义描述区域 |
-| extra | 自定义额外的内容，仅当List的 `vertical` 为 true是可用  |
-| action | 自定义操作区域 |
+| 名称        | 说明                                                  |
+| ----------- | ----------------------------------------------------- |
+| default     | 自定义内容部分                                        |
+| header      | 自定义列表头部                                        |
+| description | 自定义描述区域                                        |
+| extra       | 自定义额外的内容，仅当List的 `vertical` 为 true是可用 |
+| action      | 自定义操作区域                                        |
 
 <script setup>
 import { ref } from "vue";

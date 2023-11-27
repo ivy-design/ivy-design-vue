@@ -24,10 +24,10 @@
 
 ## Props
 
-| 属性| 描述 | 类型 | 可选值 | 默认值 |
-|-|-|-|-|-|
-|name| 名称 |String|—|—|
-| size| 大小(px) |string|—| - |
+| 属性 | 描述     | 类型   | 可选值 | 默认值 |
+| ---- | -------- | ------ | ------ | ------ |
+| name | 名称     | String | —      | —      |
+| size | 大小(px) | string | —      | -      |
 
 <script setup>
 import { ref } from 'vue';

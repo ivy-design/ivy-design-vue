@@ -36,7 +36,6 @@
     </ivy-radio-group>
 </div>
 
-
 ## Radio Props
 
 ## Radio Events
@@ -44,8 +43,6 @@
 ## RadioGroup Props
 
 ## RadioGroup Events
-
-
 
 <script>
 export default {

@@ -51,7 +51,14 @@
 
 ```vue
 <ivy-switch v-model="value1" active-text="开" inactive-text="关"></ivy-switch>
-<ivy-switch v-model="value1" active-text="开启状态" inactive-text="关闭状态" width="90px" style="--ivy-switch-width:90px;--ivy-switch-height:30px" class="margin-left-large"></ivy-switch>
+<ivy-switch
+  v-model="value1"
+  active-text="开启状态"
+  inactive-text="关闭状态"
+  width="90px"
+  style="--ivy-switch-width:90px;--ivy-switch-height:30px"
+  class="margin-left-large"
+></ivy-switch>
 ```
 
 <script setup>
@@ -64,13 +71,12 @@ const value3 = ref('1');
 
 ## Props
 
-
-| 参数 | 说明 | 类型 | 可选值 | 默认值 |
-|------|------|------|------|------|
-| model-value/v-model | switch的状态 | `String/Boolean/number` | - | false |
-| disabled | 是否禁用 | `Boolean` | - | false |
-| active-text | switch 的状态为 `on` 时的文字描述 | `String` | - | - |
-| inactive-text | switch 的状态为 `off` 时的文字描述 | `String` | - | - |
-| active-value | switch 状态为 `on` 时的值 | `String` | - | - |
-| inactive-value | switch 状态为 `off` 时的值 | `String` | - | - |
-| name | `input` 原生的 `name` 属性 | `String` | - | - |
+| 参数                | 说明                               | 类型                    | 可选值 | 默认值 |
+| ------------------- | ---------------------------------- | ----------------------- | ------ | ------ |
+| model-value/v-model | switch的状态                       | `String/Boolean/number` | -      | false  |
+| disabled            | 是否禁用                           | `Boolean`               | -      | false  |
+| active-text         | switch 的状态为 `on` 时的文字描述  | `String`                | -      | -      |
+| inactive-text       | switch 的状态为 `off` 时的文字描述 | `String`                | -      | -      |
+| active-value        | switch 状态为 `on` 时的值          | `String`                | -      | -      |
+| inactive-value      | switch 状态为 `off` 时的值         | `String`                | -      | -      |
+| name                | `input` 原生的 `name` 属性         | `String`                | -      | -      |

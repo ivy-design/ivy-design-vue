@@ -99,18 +99,17 @@ const next1 = () => {
 
 ## Steps Props
 
-|属性名|说明|类型|可选值|默认值|
-|-|-|-|-|-|
-|v-model/modelValue|标题|string|—|—|
-|direction|方向|string|`horizontal/vertical`|horizontal|
-|status|当前步骤的状态|string|`wait/process/finish/error`|info|
-|finishStatus|步骤结束的状态|string|`wait/success/process/finish/error`|info|
-
+| 属性名             | 说明           | 类型   | 可选值                              | 默认值     |
+| ------------------ | -------------- | ------ | ----------------------------------- | ---------- |
+| v-model/modelValue | 标题           | string | —                                   | —          |
+| direction          | 方向           | string | `horizontal/vertical`               | horizontal |
+| status             | 当前步骤的状态 | string | `wait/process/finish/error`         | info       |
+| finishStatus       | 步骤结束的状态 | string | `wait/success/process/finish/error` | info       |
 
 ## Step Props
 
-|属性名|说明|类型|可选值|默认值|
-|-|-|-|-|-|
-|header|标题|string|—|—|
-|description|描述|string|—|—|
-|status|步骤的状态|string|`wait/process/finish/error`|wait|
+| 属性名      | 说明       | 类型   | 可选值                      | 默认值 |
+| ----------- | ---------- | ------ | --------------------------- | ------ |
+| header      | 标题       | string | —                           | —      |
+| description | 描述       | string | —                           | —      |
+| status      | 步骤的状态 | string | `wait/process/finish/error` | wait   |
