@@ -49,6 +49,7 @@ import { Carousel, CarouselItem } from './carousel/index'
 import { Grid, GridItem } from './grid/index'
 import Image from './image/index'
 import Text from './text/index'
+import AspectRatio from './aspect-ratio'
 
 export const components: Component[] = [
   Icon,
@@ -107,7 +108,8 @@ export const components: Component[] = [
   Grid,
   GridItem,
   Image,
-  Text
+  Text,
+  AspectRatio
 ]
 
 export {
@@ -167,5 +169,6 @@ export {
   Grid,
   GridItem,
   Image,
-  Text
+  Text,
+  AspectRatio
 }
