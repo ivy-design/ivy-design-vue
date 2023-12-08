@@ -12,7 +12,7 @@
 
 <div style="height: 12px;"></div>
 
-<ivy-aspect-ratio style="border: 1px solid red" ratio="1/1" id="wrap">
+<ivy-aspect-ratio style="border: 1px solid red" :ratio="ratioStr">
     <div style="text-align:center;line-height: 2em;">{{ ratioStr }}</div>
 </ivy-aspect-ratio>
 
@@ -34,6 +34,5 @@ import { ref } from 'vue'
 const ratioStr = ref('1/1')
 const handleClick = (ratio) => {
     ratioStr.value = ratio
-    document.querySelector("#wrap").setAttribute('ratio', ratio)
 }
 </script>
