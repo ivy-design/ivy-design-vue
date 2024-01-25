@@ -55,10 +55,15 @@ p.sidebar-item:not(.sidebar-heading) {
 }
 .align-items-center {
   align-items: center;
+}
+.align-content-center {
   align-content: center;
 }
 .flex-justify-content-between {
   justify-content: space-between;
+}
+.flex-justify-content-center {
+  justify-content: center;
 }
 
 .vp-doc .el-table table {

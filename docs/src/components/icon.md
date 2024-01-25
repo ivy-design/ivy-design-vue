@@ -12,13 +12,14 @@
 
 ## 所有图标
 
-<div style="display:flex;flex-wrap: wrap;border: 1px solid #ddd;border-width: 1px 0 0 1px;">
+<div class="flex flex-wrap" style="border: 1px solid #ddd;border-width: 1px 0 0 1px;">
 <div 
     v-for="(it,i) in iconList"
     :key="i"
-    style="border: 1px solid #ddd;border-width: 0 1px 1px 0;width: 20%;aspect-ratio: 1;display:inline-flex;flex-direction: column;justify-content: center;align-items:center;">
+    class="flex flex-justify-content-center align-items-center"
+    style="border: 1px solid #ddd;border-width: 0 1px 1px 0;width: 20%;aspect-ratio: 1.6;flex-direction: column;">
     <ivy-icon :name="it" size="24" />
-    <span style="margin-top: 8px;">{{ it }}</span>
+    <span class="margin-top-small">{{ it }}</span>
 </div>
 </div>
 
