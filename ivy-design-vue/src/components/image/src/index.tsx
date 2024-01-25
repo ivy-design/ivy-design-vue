@@ -63,7 +63,6 @@ export default defineComponent({
       }
     }
     const imgErrorHandler = () => {
-      console.log(12323)
       success.value = false
       loadState.value = {
         opacity: 0,
