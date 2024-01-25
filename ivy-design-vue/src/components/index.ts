@@ -50,6 +50,7 @@ import { Grid, GridItem } from './grid/index'
 import Image from './image/index'
 import Text from './text/index'
 import AspectRatio from './aspect-ratio'
+import Scrollbar from './scrollbar'
 
 export const components: Component[] = [
   Icon,
@@ -109,7 +110,8 @@ export const components: Component[] = [
   GridItem,
   Image,
   Text,
-  AspectRatio
+  AspectRatio,
+  Scrollbar
 ]
 
 export {
@@ -170,5 +172,6 @@ export {
   GridItem,
   Image,
   Text,
-  AspectRatio
+  AspectRatio,
+  Scrollbar
 }
