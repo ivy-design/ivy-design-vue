@@ -59,9 +59,7 @@ export default defineComponent({
         >
           <input value={curValue.value} name={props.name} type="checkbox" hidden />
           <span class="ivy-switch__core">
-            {props.activeText || props.inactiveText ? (
-              <span v-if="activeText || inactiveText">{showText.value}</span>
-            ) : null}
+            {props.activeText || props.inactiveText ? <span>{showText.value}</span> : null}
           </span>
         </div>
       )

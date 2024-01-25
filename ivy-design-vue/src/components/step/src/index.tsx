@@ -8,7 +8,7 @@ export default defineComponent({
     status: {
       type: String,
       validator(val: string) {
-        return ['wait', 'process', 'finish', 'error'].includes(val)
+        return ['wait', 'process', 'finish', 'error', 'success'].includes(val)
       }
     },
     description: String

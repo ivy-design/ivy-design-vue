@@ -26,7 +26,7 @@
 
 ## 设置状态
 
-通过status设置当前步骤的状态，通过finishStatus设置已完成步骤的状态
+通过status设置当前步骤的状态，通过 finishStatus 设置已完成步骤的状态
 
 <div class="demo-block">
     <ivy-steps v-model="active1" status="wait">

@@ -13,7 +13,7 @@ export default defineComponent({
       type: String,
       default: 'process',
       validator(val: string) {
-        const types = ['wait', 'process', 'finish', 'error']
+        const types = ['wait', 'process', 'finish', 'error', 'success']
         return types.includes(val)
       }
     },
