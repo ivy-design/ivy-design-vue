@@ -4,8 +4,7 @@ import { useThrottleFn, useElementHover, useEventListener, useResizeObserver } f
 import { prefix, Type } from '@/shared'
 
 defineOptions({
-  name: `${prefix}scrollbar`,
-  inheritAttrs: false
+  name: `${prefix}scrollbar`
 })
 
 const props = defineProps({
