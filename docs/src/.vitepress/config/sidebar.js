@@ -18,6 +18,7 @@ const layoutComponents = [
   { text: "List 列表", link: "/components/list" },
   { text: "Divider 分割线", link: "/components/divider" },
   { text: "AspectRatio 比例容器", link: "/components/aspect-ratio" },
+  { text: "Scrollbar 滚动条", link: "/components/scrollbar" },
 ];
 
 const formComponents = [

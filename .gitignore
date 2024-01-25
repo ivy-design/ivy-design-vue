@@ -14,7 +14,7 @@ dist-ssr
 coverage
 *.local
 
-docs/src/.vitepress/cache/
+docs/src/.vitepress/cache
 
 # Editor directories and files
 .vscode/*
