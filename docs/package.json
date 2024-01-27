@@ -10,7 +10,7 @@
   },
   "keywords": [],
   "author": "GuoJiKun",
-  "license": "GPL-V3",
+  "license": "MIT",
   "devDependencies": {
     "vitepress": "1.0.0-rc.40",
     "vue-router": "^4.1.6"

@@ -14,9 +14,9 @@ hero:
       link: https://github.com/GuoJikun/ivy-ui
 features:
   - title: Typescript
-    details: \@ivy-design/vue是使用原生TS技术构建的.
+    details: \@ivy-design/vue 是使用原生TS技术构建的.
   - title: TSX
-    details: \@ivy-design/vue是使用原生TSX技术构建的.
+    details: \@ivy-design/vue 是使用原生TSX技术构建的.
   - title: 通用
     details: 无论是react、vue、angular还是原生项目均可使用。
 ---
