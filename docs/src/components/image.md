@@ -6,41 +6,37 @@
 
 可通过 `fit` 确定图片如何适应到容器框，同原生 `object-fit`。
 
-<ivy-image src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg" style="height: 100px;width: 100px;" fit="fit"></ivy-image>
-<ivy-image src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg" style="height: 100px;width: 100px;" fit="contain" class="margin-left"></ivy-image>
-<ivy-image src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg" style="height: 100px;width: 100px;" fit="cover" class="margin-left"></ivy-image>
-<ivy-image src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg" style="height: 100px;width: 100px;" fit="none" class="margin-left"></ivy-image>
-<ivy-image src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg" style="height: 100px;width: 100px;" fit="scale-down" class="margin-left"></ivy-image>
+<ivy-image src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg" class="img-size-1" fit="fit"></ivy-image>
+<ivy-image src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg" class="img-size-1" fit="contain"></ivy-image>
+<ivy-image src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg" class="img-size-1" fit="cover"></ivy-image>
+<ivy-image src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg" class="img-size-1" fit="none"></ivy-image>
+<ivy-image src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg" class="img-size-1" fit="scale-down"></ivy-image>
 
 ```html
 <ivy-image
   src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
-  style="height: 100px;width: 100px;"
+  class="img-size-1"
   fit="fit"
 ></ivy-image>
 <ivy-image
   src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
-  style="height: 100px;width: 100px;"
+  class="img-size-1"
   fit="contain"
-  class="margin-left"
 ></ivy-image>
 <ivy-image
   src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
-  style="height: 100px;width: 100px;"
+  class="img-size-1"
   fit="cover"
-  class="margin-left"
 ></ivy-image>
 <ivy-image
   src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
-  style="height: 100px;width: 100px;"
+  class="img-size-1"
   fit="none"
-  class="margin-left"
 ></ivy-image>
 <ivy-image
   src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
-  style="height: 100px;width: 100px;"
+  class="img-size-1"
   fit="scale-down"
-  class="margin-left"
 ></ivy-image>
 ```
 
@@ -50,19 +46,19 @@
 
 第一个为默认加载中的占位内容，第二个为自定义加载中的占位内容
 
-<ivy-image lazy src="https://blog.jikun.dev/images/basic/filter.jpg" style="width: 300px;height: 200px;"></ivy-image>
-<ivy-image src="https://blog.jikun.dev/images/basic/filter.jpg" style="width: 300px;height: 200px;">
+<ivy-image lazy src="https://blog.jikun.dev/images/basic/filter.jpg" class="img-size-2"></ivy-image>
+<ivy-image src="https://blog.jikun.dev/images/basic/filter.jpg" class="img-size-2">
 <ivy-icon name="refresh" size="28" spin slot="placeholder"></ivy-icon>
 </ivy-image>
 
 ```html
 <ivy-image
   src="https://blog.jikun.dev/images/basic/filter.jpg"
-  style="width: 300px;height: 200px;"
+  class="img-size-2"
 ></ivy-image>
 <ivy-image
   src="https://blog.jikun.dev/images/basic/filter.jpg"
-  style="width: 300px;height: 200px;"
+  class="img-size-2"
 >
   <ivy-icon name="refresh" size="28" spin slot="placeholder"></ivy-icon>
 </ivy-image>
@@ -74,14 +70,14 @@
 
 第一个为默认加载失败的显示，第二个为自定义错误信息
 
-<ivy-image style="width: 300px;height: 200px;"></ivy-image>
-<ivy-image style="width: 300px;height: 200px;">
+<ivy-image class="img-size-2"></ivy-image>
+<ivy-image class="img-size-2">
 <ivy-icon name="picture" size="28" slot="error"></ivy-icon>
 </ivy-image>
 
 ```html
-<ivy-image style="width: 300px;height: 200px;"></ivy-image>
-<ivy-image style="width: 300px;height: 200px;">
+<ivy-image class="img-size-2"></ivy-image>
+<ivy-image class="img-size-2">
   <ivy-icon name="picture" size="28" slot="error"></ivy-icon>
 </ivy-image>
 ```
@@ -95,8 +91,24 @@
 | alt    | 图片 alt                 | `string`  | -                                    | -       |
 | lazy   | 懒加载                   | `boolean` | -                                    | `false` |
 
-<style scoped>
-ivy-image+ivy-image{
-    margin-left: 24px;
+<style lang="scss" scoped>
+.img {
+  &-size {
+    &-1 {
+      width: 100px;
+      height: 100px;
+      & + & {
+        margin-left: 12px;
+      }
+    }
+    &-2 {
+      width: 300px;
+      height: 200px;
+      & + & {
+        margin-left: 12px;
+      }
+    }
+  }
+  
 }
 </style>

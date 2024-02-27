@@ -1,5 +1,6 @@
-import { defineComponent, ref, onMounted, onUnmounted, type PropType } from 'vue'
+import { defineComponent, ref, onMounted, type PropType } from 'vue'
 import { prefix } from '@/shared'
+import { useEventListener } from '@vueuse/core'
 
 export default defineComponent({
   name: `${prefix}image`,
@@ -76,12 +77,7 @@ export default defineComponent({
 
     onMounted(() => {
       if (props.lazy) {
-        window.addEventListener('scroll', listenScrollHandler)
-      }
-    })
-    onUnmounted(() => {
-      if (props.lazy) {
-        window.removeEventListener('scroll', listenScrollHandler)
+        useEventListener(window, 'scroll', listenScrollHandler)
       }
     })
 

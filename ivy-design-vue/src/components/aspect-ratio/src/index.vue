@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount, watch } from 'vue'
 import { prefix } from '@/shared'
+import { useEventListener } from '@vueuse/core'
 
 defineOptions({
   name: `${prefix}aspect-ratio`
@@ -41,11 +42,7 @@ watch(
 
 onMounted(() => {
   resize()
-  window.addEventListener('resize', resize)
-})
-
-onBeforeUnmount(() => {
-  window.removeEventListener('resize', resize)
+  useEventListener(window, 'resize', resize)
 })
 </script>
 

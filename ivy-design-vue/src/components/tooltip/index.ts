@@ -1,8 +1,8 @@
-import type { App } from "vue";
-import Tooltip from "./src/index";
+import type { App } from 'vue'
+import Tooltip from './src/index.vue'
 
 Tooltip.install = (app: App) => {
-  app.component(Tooltip.name, Tooltip);
-};
+  app.component(Tooltip.name, Tooltip)
+}
 
-export default Tooltip;
+export default Tooltip

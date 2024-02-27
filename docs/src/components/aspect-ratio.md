@@ -12,9 +12,11 @@
 
 <div style="height: 12px;"></div>
 
+<ClientOnly>
 <ivy-aspect-ratio style="border: 1px solid red" :ratio="ratioStr">
     <div style="text-align:center;line-height: 2em;">{{ ratioStr }}</div>
 </ivy-aspect-ratio>
+</ClientOnly>
 
 ```html
 <ivy-aspect-ratio

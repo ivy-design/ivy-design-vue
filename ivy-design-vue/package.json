@@ -47,8 +47,8 @@
     "url": "https://github.com/ivy-design/ivy-design-vue.git"
   },
   "dependencies": {
-    "@popperjs/core": "^2.11.8",
-    "@vueuse/core": "^10.2.0",
+    "@floating-ui/vue": "^1.0.6",
+    "@vueuse/core": "^10.8.0",
     "async-validator": "^4.2.5",
     "vue": "^3.3.4"
   },
