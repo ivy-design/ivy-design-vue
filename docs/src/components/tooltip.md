@@ -15,14 +15,14 @@
             <ivy-button>上左</ivy-button>
         </ivy-tooltip>
         <ivy-tooltip
-            class="ml-10"
+            class="margin-left"
             content="Top Center 提示文字"
             placement="top"
         >
             <ivy-button>上边</ivy-button>
         </ivy-tooltip>
         <ivy-tooltip
-            class="ml-10"
+            class="margin-left"
             content="Top Right 提示文字"
             placement="top-end"
         >
@@ -32,21 +32,21 @@
     <div class="flex-between">
         <div style="width: 70px;">
             <ivy-tooltip
-                class="margin-top-large"
+                class="margin-top"
                 content="Left Top 提示文字"
                 placement="left-start"
             >
                 <ivy-button>左上</ivy-button>
             </ivy-tooltip>
             <ivy-tooltip
-                class="margin-top-large"
+                class="margin-top"
                 content="Left Center 提示文字"
                 placement="left"
             >
                 <ivy-button>左边</ivy-button>
             </ivy-tooltip>
             <ivy-tooltip
-                class="margin-top-large"
+                class="margin-top"
                 content="Left Bottom 提示文字"
                 placement="left-end"
             >
@@ -55,21 +55,21 @@
         </div>
         <div style="width: 70px;">
             <ivy-tooltip
-                class="margin-top-large"
+                class="margin-top"
                 content="Right Top 提示文字"
                 placement="right-start"
             >
                 <ivy-button>右上</ivy-button>
             </ivy-tooltip>
             <ivy-tooltip
-                class="margin-top-large"
+                class="margin-top"
                 content="Right Center 提示文字"
                 placement="right"
             >
                 <ivy-button>右边</ivy-button>
             </ivy-tooltip>
             <ivy-tooltip
-                class="margin-top-large"
+                class="margin-top"
                 content="Right Bottom 提示文字"
                 placement="right-end"
             >
@@ -77,23 +77,23 @@
             </ivy-tooltip>
         </div>
     </div>
-    <div class="text-center">
+    <div class="text-center margin-top">
         <ivy-tooltip
-            class="ml-10"
+            class="margin-left"
             content="Bottom Left 提示文字"
             placement="bottom-start"
         >
             <ivy-button>下左</ivy-button>
         </ivy-tooltip>
         <ivy-tooltip
-            class="ml-10"
+            class="margin-left"
             content="Bottom Center 提示文字"
             placement="bottom"
         >
             <ivy-button>下边</ivy-button>
         </ivy-tooltip>
         <ivy-tooltip
-            class="ml-10"
+            class="margin-left"
             content="Bottom Right 提示文字"
             placement="bottom-end"
         >
@@ -138,6 +138,39 @@ Tooltip 组件提供了两个不同的主题：dark 和 light。
         第二行信息
     </template>
 </ivy-tooltip>
+
+## 可用的 css 变量
+
+:::details 点击展开
+
+```css
+:host {
+  --ivy-tooltip-color: var(--ivy-text-color-primary);
+  --ivy-tooltip-background-color: #fff;
+  --ivy-tooltip-font-size: 13px;
+  --ivy-tooltip-z-index: 1000;
+  --ivy-tooltip-arrow-color: #fff;
+  --ivy-tooltip-arrow-size: 8px;
+  --ivy-tooltip-arrow-border-color: var(--ivy-border-color);
+}
+```
+
+:::
+
+## Props
+
+| 参数      | 说明             | 类型   | 可选值               | 默认值  |
+| --------- | ---------------- | ------ | -------------------- | ------- |
+| content   | tooltip 显示内容 | String | -                    | -       |
+| placement | 位置             | String | [`enum`](#placement) | `top`   |
+| theme     | 主题             | String | `light\dark`         | `light` |
+
+## Slots
+
+| name    | 说明             |
+| ------- | ---------------- |
+| content | tooltip 内容     |
+| default | 用于触发 tooltip |
 
 <style>
 .flex-between {
