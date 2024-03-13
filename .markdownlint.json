@@ -45,7 +45,14 @@
       "ivy-tree",
       "ivy-link",
       "ivy-tag",
-      "ivy-text"
+      "ivy-text",
+      "ivy-command",
+      "ivy-command-group",
+      "ivy-command-list",
+      "ivy-command-item",
+      "ivy-command-search",
+      "ivy-command-dialog",
+      "ivy-command-separator"
     ]
   }
 }

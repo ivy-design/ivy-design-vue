@@ -51,6 +51,15 @@ import Image from './image/index'
 import Text from './text/index'
 import AspectRatio from './aspect-ratio'
 import Scrollbar from './scrollbar'
+import {
+  Command,
+  CommandDialog,
+  CommandGroup,
+  CommandItem,
+  CommandList,
+  CommandSearch,
+  CommandSeparator
+} from './command'
 
 export const components: Component[] = [
   Icon,
@@ -111,7 +120,14 @@ export const components: Component[] = [
   Image,
   Text,
   AspectRatio,
-  Scrollbar
+  Scrollbar,
+  Command,
+  CommandDialog,
+  CommandGroup,
+  CommandItem,
+  CommandList,
+  CommandSearch,
+  CommandSeparator
 ]
 
 export {
@@ -173,5 +189,18 @@ export {
   Image,
   Text,
   AspectRatio,
-  Scrollbar
+  Scrollbar,
+  Command,
+  CommandDialog,
+  CommandGroup,
+  CommandItem,
+  CommandList,
+  CommandSearch,
+  CommandSeparator
+}
+
+export default (app: App): void => {
+  components.forEach((component) => {
+    app.component(component.name, component)
+  })
 }

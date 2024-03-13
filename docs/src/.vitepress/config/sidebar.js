@@ -50,6 +50,7 @@ const dataComponents = [
 
 const feedbackComponents = [
   { text: "Alert 提示", link: "/components/alert" },
+  { text: "Command 命令", link: "/components/command" },
   { text: "Dialog 弹窗", link: "/components/dialog" },
   { text: "Drawer 抽屉", link: "/components/drawer" },
   { text: "Tooltip 文字提示", link: "/components/tooltip" },
